@@ -45,8 +45,4 @@ The project was uploaded and managed using Git commands such as:
 - `git push origin`
 - `git pull origin`
 
-## Author
-
-Sravya Sri
-
-B.Tech Student
+Sravya Sr
