@@ -44,5 +44,3 @@ The project was uploaded and managed using Git commands such as:
 - `git branch`
 - `git push origin`
 - `git pull origin`
-
-Sravya Sr
