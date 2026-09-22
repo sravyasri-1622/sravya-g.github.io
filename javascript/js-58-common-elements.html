@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Common Elements</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            padding: 40px;
+            background: #f4f7fb;
+        }
+
+        .box {
+            background: white;
+            padding: 30px;
+            max-width: 550px;
+            margin: auto;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px #ccc;
+        }
+
+        input,
+        button {
+            padding: 10px;
+            margin: 8px;
+        }
+
+        button {
+            background: #dc2626;
+            color: white;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+
+        <h1>Common Elements</h1>
+
+        <input type="text" id="array1"
+            placeholder="1,2,3,4">
+
+        <br>
+
+        <input type="text" id="array2"
+            placeholder="3,4,5,6">
+
+        <br>
+
+        <button onclick="findCommon()">Find Common</button>
+
+        <p id="result"></p>
+
+        <a href="index.html">Back to Programs</a>
+
+    </div>
+
+    <script>
+
+        function findCommon() {
+
+            let array1 = document.getElementById("array1").value
+                .split(",")
+                .map(Number);
+
+            let array2 = document.getElementById("array2").value
+                .split(",")
+                .map(Number);
+
+            let common = array1.filter(function(value) {
+                return array2.includes(value);
+            });
+
+            document.getElementById("result").innerHTML =
+                "Common Elements: " + [...new Set(common)].join(", ");
+
+        }
+
+    </script>
+
+</body>
+
+</html>

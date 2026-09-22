@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Validation</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            padding: 50px;
+        }
+
+        input {
+            padding: 10px;
+            width: 250px;
+        }
+
+        button {
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2>Mobile Number Validation</h2>
+
+<input type="text" id="phone" placeholder="Enter 10-digit number">
+<button onclick="checkPhone()">Check</button>
+
+<p id="result"></p>
+
+<a href="index.html">← Back to Programs</a>
+
+<script>
+function checkPhone() {
+
+    let phone = document.getElementById("phone").value;
+    let result = document.getElementById("result");
+
+    if (/^[0-9]{10}$/.test(phone)) {
+        result.textContent = "Valid mobile number.";
+    } else {
+        result.textContent = "Enter a valid 10-digit number.";
+    }
+}
+</script>
+
+</body>
+</html>

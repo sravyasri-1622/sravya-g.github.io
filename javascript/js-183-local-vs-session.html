@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>localStorage vs sessionStorage</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            padding: 40px;
+        }
+
+        button {
+            padding: 10px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>localStorage vs sessionStorage</h1>
+
+    <button onclick="saveData()">Save Data</button>
+    <button onclick="displayData()">Display Data</button>
+
+    <p id="result"></p>
+
+    <a href="index.html">← Back to Programs</a>
+
+    <script>
+        function saveData() {
+            localStorage.setItem("localData", "Permanent Data");
+            sessionStorage.setItem("sessionData", "Temporary Data");
+
+            document.getElementById("result").innerHTML =
+                "Data saved in both storage types.";
+        }
+
+        function displayData() {
+            var localData = localStorage.getItem("localData");
+            var sessionData = sessionStorage.getItem("sessionData");
+
+            document.getElementById("result").innerHTML =
+                "localStorage: " + localData +
+                "<br>sessionStorage: " + sessionData;
+        }
+    </script>
+
+</body>
+</html>

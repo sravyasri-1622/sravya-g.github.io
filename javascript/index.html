@@ -1,0 +1,1532 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript Programs | Practical Programs</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            color: #222;
+        }
+
+        header {
+            background: linear-gradient(135deg, #f7971e, #ffd200);
+            color: #222;
+            text-align: center;
+            padding: 35px 20px;
+        }
+
+        header h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 16px;
+        }
+
+        .home {
+            display: inline-block;
+            margin-top: 18px;
+            padding: 10px 20px;
+            background: #222;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        .home:hover {
+            background: #444;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 35px auto;
+        }
+
+        .section-title {
+            margin: 35px 0 15px;
+            padding: 14px 18px;
+            background: #222;
+            color: white;
+            border-radius: 10px;
+            font-size: 22px;
+        }
+
+        .program {
+            background: white;
+            margin-bottom: 12px;
+            padding: 16px 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: 0.3s;
+        }
+
+        .program:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 7px 18px rgba(0, 0, 0, 0.12);
+        }
+
+        .program a {
+            text-decoration: none;
+            color: #222;
+            display: flex;
+            align-items: center;
+        }
+
+        .number {
+            display: inline-block;
+            min-width: 38px;
+            height: 38px;
+            line-height: 38px;
+            text-align: center;
+            background: #f7971e;
+            color: white;
+            border-radius: 50%;
+            margin-right: 12px;
+            font-weight: bold;
+        }
+
+        .title {
+            font-size: 17px;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            margin-top: 40px;
+            background: #222;
+            color: white;
+        }
+
+        @media (max-width: 600px) {
+
+            header h1 {
+                font-size: 25px;
+            }
+
+            .container {
+                width: 94%;
+            }
+
+            .title {
+                font-size: 15px;
+            }
+
+            .section-title {
+                font-size: 19px;
+            }
+
+            .program {
+                padding: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+
+        <h1>JavaScript Programs</h1>
+
+        <p>JavaScript Practical Programs</p>
+
+        <a href="../index.html" class="home">← Back to Home</a>
+
+    </header>
+
+
+    <div class="container">
+
+
+        <!-- JavaScript Core Programs -->
+
+        <h2 class="section-title">JavaScript Core Programs</h2>
+
+
+        <div class="program">
+            <a href="js-01-hello-world.html">
+                <span class="number">1</span>
+                <span class="title">Display Hello World</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-02-arithmetic.html">
+                <span class="number">2</span>
+                <span class="title">Arithmetic Operations</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-03-largest-three.html">
+                <span class="number">3</span>
+                <span class="title">Largest of Three Numbers</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-04-even-odd.html">
+                <span class="number">4</span>
+                <span class="title">Even or Odd</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-05-positive-negative-zero.html">
+                <span class="number">5</span>
+                <span class="title">Positive, Negative or Zero</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-06-factorial.html">
+                <span class="number">6</span>
+                <span class="title">Factorial of a Number</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-07-fibonacci.html">
+                <span class="number">7</span>
+                <span class="title">Fibonacci Series</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-08-prime.html">
+                <span class="number">8</span>
+                <span class="title">Prime Number Check</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-09-palindrome-number.html">
+                <span class="number">9</span>
+                <span class="title">Palindrome Number</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-10-reverse-number.html">
+                <span class="number">10</span>
+                <span class="title">Reverse a Number</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-11-sum-digits.html">
+                <span class="number">11</span>
+                <span class="title">Sum of Digits</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-12-largest-smallest-array.html">
+                <span class="number">12</span>
+                <span class="title">Largest and Smallest Element in Array</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-13-sort-array.html">
+                <span class="number">13</span>
+                <span class="title">Sort an Array</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-14-array-sum-average.html">
+                <span class="number">14</span>
+                <span class="title">Array Sum and Average</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-15-functions.html">
+                <span class="number">15</span>
+                <span class="title">JavaScript Functions</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-16-arrow-functions.html">
+                <span class="number">16</span>
+                <span class="title">Arrow Functions</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-17-strings-methods.html">
+                <span class="number">17</span>
+                <span class="title">Strings and String Methods</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-18-arrays-methods.html">
+                <span class="number">18</span>
+                <span class="title">Arrays and Array Methods</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-19-objects.html">
+                <span class="number">19</span>
+                <span class="title">JavaScript Objects</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-20-date-math.html">
+                <span class="number">20</span>
+                <span class="title">Date and Math Objects</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-21-change-text.html">
+                <span class="number">21</span>
+                <span class="title">Change Text using JavaScript</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-22-background-color.html">
+                <span class="number">22</span>
+                <span class="title">Change Background Color</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-23-button-click.html">
+                <span class="number">23</span>
+                <span class="title">Button Click Event</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-24-show-hide.html">
+                <span class="number">24</span>
+                <span class="title">Show and Hide HTML Element</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-25-change-image.html">
+                <span class="number">25</span>
+                <span class="title">Change Image using JavaScript</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-26-digital-clock.html">
+                <span class="number">26</span>
+                <span class="title">Digital Clock</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-27-calculator.html">
+                <span class="number">27</span>
+                <span class="title">Simple Calculator</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-28-number-guessing-game.html">
+                <span class="number">28</span>
+                <span class="title">Number Guessing Game</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-29-form-validation.html">
+                <span class="number">29</span>
+                <span class="title">Form Validation</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-30-field-validation.html">
+                <span class="number">30</span>
+                <span class="title">Name, Email, Phone and Password Validation</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-31-todo-list.html">
+                <span class="number">31</span>
+                <span class="title">To-Do List</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-32-quiz.html">
+                <span class="number">32</span>
+                <span class="title">Simple Quiz Application</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-33-counter.html">
+                <span class="number">33</span>
+                <span class="title">Counter Application</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-34-stopwatch.html">
+                <span class="number">34</span>
+                <span class="title">Stopwatch</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-35-countdown.html">
+                <span class="number">35</span>
+                <span class="title">Countdown Timer</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-36-es6-features.html">
+                <span class="number">36</span>
+                <span class="title">ES6 let, const, Template Literals and Destructuring</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-37-spread-rest.html">
+                <span class="number">37</span>
+                <span class="title">Spread and Rest Operators</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-38-classes-objects.html">
+                <span class="number">38</span>
+                <span class="title">Classes and Objects</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-39-inheritance.html">
+                <span class="number">39</span>
+                <span class="title">JavaScript Inheritance</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-40-callbacks-promises-async.html">
+                <span class="number">40</span>
+                <span class="title">Callbacks, Promises and Async/Await</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-41-fetch-api.html">
+                <span class="number">41</span>
+                <span class="title">Fetch Data from an API</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-42-api-dynamic.html">
+                <span class="number">42</span>
+                <span class="title">Display API Data Dynamically</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-43-localstorage.html">
+                <span class="number">43</span>
+                <span class="title">localStorage</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-44-login-validation.html">
+                <span class="number">44</span>
+                <span class="title">Responsive Login Form with Validation</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-45-interactive-webpage.html">
+                <span class="number">45</span>
+                <span class="title">Complete Interactive Webpage</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-46-swap-numbers.html">
+                <span class="number">46</span>
+                <span class="title">Swap Two Numbers</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-47-gcd.html">
+                <span class="number">47</span>
+                <span class="title">Greatest Common Divisor (GCD)</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-48-lcm.html">
+                <span class="number">48</span>
+                <span class="title">Least Common Multiple (LCM)</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-49-armstrong.html">
+                <span class="number">49</span>
+                <span class="title">Armstrong Number</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-50-perfect-number.html">
+                <span class="number">50</span>
+                <span class="title">Perfect Number</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-51-multiplication-table.html">
+                <span class="number">51</span>
+                <span class="title">Multiplication Table</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-52-power.html">
+                <span class="number">52</span>
+                <span class="title">Power of a Number</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-53-count-digits.html">
+                <span class="number">53</span>
+                <span class="title">Count Number of Digits</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-54-second-largest.html">
+                <span class="number">54</span>
+                <span class="title">Second Largest Element</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-55-remove-duplicates.html">
+                <span class="number">55</span>
+                <span class="title">Remove Duplicate Elements</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-56-merge-arrays.html">
+                <span class="number">56</span>
+                <span class="title">Merge Two Arrays</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-57-frequency-array.html">
+                <span class="number">57</span>
+                <span class="title">Frequency of Array Elements</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-58-common-elements.html">
+                <span class="number">58</span>
+                <span class="title">Common Elements in Two Arrays</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-59-reverse-string.html">
+                <span class="number">59</span>
+                <span class="title">Reverse a String</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-60-string-palindrome.html">
+                <span class="number">60</span>
+                <span class="title">String Palindrome</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-61-vowels-consonants.html">
+                <span class="number">61</span>
+                <span class="title">Count Vowels and Consonants</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-62-count-words.html">
+                <span class="number">62</span>
+                <span class="title">Count Words in a String</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-63-character-frequency.html">
+                <span class="number">63</span>
+                <span class="title">Character Frequency</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-64-regular-expressions.html">
+                <span class="number">64</span>
+                <span class="title">Regular Expressions</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-65-email-regex.html">
+                <span class="number">65</span>
+                <span class="title">Email Validation using Regular Expression</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-66-array-search.html">
+                <span class="number">66</span>
+                <span class="title">Search an Element in an Array</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-67-array-reduce.html">
+                <span class="number">67</span>
+                <span class="title">Array Reduce Method</span>
+            </a>
+        </div>
+
+
+        <!-- DOM Manipulation -->
+
+        <h2 class="section-title">DOM Manipulation Programs</h2>
+
+
+        <div class="program">
+            <a href="js-68-dom-select-element.html">
+                <span class="number">68</span>
+                <span class="title">Select an HTML Element</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-69-dom-change-content.html">
+                <span class="number">69</span>
+                <span class="title">Change HTML Content</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-70-dom-change-style.html">
+                <span class="number">70</span>
+                <span class="title">Change CSS Style using DOM</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-71-dom-create-element.html">
+                <span class="number">71</span>
+                <span class="title">Create HTML Element</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-72-dom-remove-element.html">
+                <span class="number">72</span>
+                <span class="title">Remove HTML Element</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-73-dom-add-element.html">
+                <span class="number">73</span>
+                <span class="title">Add Element using DOM</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-74-dom-query-selector.html">
+                <span class="number">74</span>
+                <span class="title">querySelector and querySelectorAll</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-75-dom-class-list.html">
+                <span class="number">75</span>
+                <span class="title">Manipulate Classes using classList</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-76-dom-attributes.html">
+                <span class="number">76</span>
+                <span class="title">Change HTML Attributes</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-77-dom-images.html">
+                <span class="number">77</span>
+                <span class="title">Change Image using DOM</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-78-dom-links.html">
+                <span class="number">78</span>
+                <span class="title">Change Link using DOM</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-79-dom-input.html">
+                <span class="number">79</span>
+                <span class="title">Read Input Value</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-80-dom-output.html">
+                <span class="number">80</span>
+                <span class="title">Display Output using DOM</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-81-dom-innerhtml.html">
+                <span class="number">81</span>
+                <span class="title">Use innerHTML</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-82-dom-textcontent.html">
+                <span class="number">82</span>
+                <span class="title">Use textContent</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-83-dom-forms.html">
+                <span class="number">83</span>
+                <span class="title">Access Form Elements</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-84-dom-table.html">
+                <span class="number">84</span>
+                <span class="title">Manipulate Table using DOM</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-85-dom-list.html">
+                <span class="number">85</span>
+                <span class="title">Manipulate List using DOM</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-86-dom-add-remove-class.html">
+                <span class="number">86</span>
+                <span class="title">Add and Remove Classes</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-87-dom-toggle-class.html">
+                <span class="number">87</span>
+                <span class="title">Toggle CSS Class</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-88-dom-parent-child.html">
+                <span class="number">88</span>
+                <span class="title">Access Parent and Child Elements</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-89-dom-siblings.html">
+                <span class="number">89</span>
+                <span class="title">Access Sibling Elements</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-90-dom-create-list.html">
+                <span class="number">90</span>
+                <span class="title">Create a Dynamic List</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-91-dom-delete-list.html">
+                <span class="number">91</span>
+                <span class="title">Delete List Items</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-92-dom-counter.html">
+                <span class="number">92</span>
+                <span class="title">DOM Counter</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-93-dom-calculator.html">
+                <span class="number">93</span>
+                <span class="title">DOM Calculator</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-94-dom-color-picker.html">
+                <span class="number">94</span>
+                <span class="title">DOM Color Changer</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-95-dom-digital-clock.html">
+                <span class="number">95</span>
+                <span class="title">DOM Digital Clock</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-96-dom-image-slider.html">
+                <span class="number">96</span>
+                <span class="title">DOM Image Slider</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-97-dom-tabs.html">
+                <span class="number">97</span>
+                <span class="title">Create Tabs using DOM</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-98-dom-modal.html">
+                <span class="number">98</span>
+                <span class="title">Create Modal using DOM</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-99-dom-dropdown.html">
+                <span class="number">99</span>
+                <span class="title">Dynamic Dropdown</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-100-dom-search.html">
+                <span class="number">100</span>
+                <span class="title">Search Items using DOM</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-101-dom-filter.html">
+                <span class="number">101</span>
+                <span class="title">Filter Items using DOM</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-102-dom-progress.html">
+                <span class="number">102</span>
+                <span class="title">Dynamic Progress Bar</span>
+            </a>
+        </div>
+
+
+        <!-- JavaScript Events -->
+
+        <h2 class="section-title">JavaScript Events</h2>
+
+
+        <div class="program">
+            <a href="js-103-click-event.html">
+                <span class="number">103</span>
+                <span class="title">Click Event</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-104-double-click.html">
+                <span class="number">104</span>
+                <span class="title">Double Click Event</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-105-mouseover.html">
+                <span class="number">105</span>
+                <span class="title">Mouse Over Event</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-106-mouseout.html">
+                <span class="number">106</span>
+                <span class="title">Mouse Out Event</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-107-mousemove.html">
+                <span class="number">107</span>
+                <span class="title">Mouse Move Event</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-108-mousedown.html">
+                <span class="number">108</span>
+                <span class="title">Mouse Down Event</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-109-mouseup.html">
+                <span class="number">109</span>
+                <span class="title">Mouse Up Event</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-110-keydown.html">
+                <span class="number">110</span>
+                <span class="title">Key Down Event</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-111-keyup.html">
+                <span class="number">111</span>
+                <span class="title">Key Up Event</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-112-keypress.html">
+                <span class="number">112</span>
+                <span class="title">Keyboard Event</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-113-focus.html">
+                <span class="number">113</span>
+                <span class="title">Focus Event</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-114-blur.html">
+                <span class="number">114</span>
+                <span class="title">Blur Event</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-115-change.html">
+                <span class="number">115</span>
+                <span class="title">Change Event</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-116-input-event.html">
+                <span class="number">116</span>
+                <span class="title">Input Event</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-117-submit-event.html">
+                <span class="number">117</span>
+                <span class="title">Submit Event</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-118-reset-event.html">
+                <span class="number">118</span>
+                <span class="title">Reset Event</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-119-select-event.html">
+                <span class="number">119</span>
+                <span class="title">Select Event</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-120-contextmenu.html">
+                <span class="number">120</span>
+                <span class="title">Context Menu Event</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-121-load-event.html">
+                <span class="number">121</span>
+                <span class="title">Load Event</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-122-resize-event.html">
+                <span class="number">122</span>
+                <span class="title">Window Resize Event</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-123-scroll-event.html">
+                <span class="number">123</span>
+                <span class="title">Scroll Event</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-124-event-listener.html">
+                <span class="number">124</span>
+                <span class="title">addEventListener()</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-125-remove-event-listener.html">
+                <span class="number">125</span>
+                <span class="title">removeEventListener()</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-126-event-object.html">
+                <span class="number">126</span>
+                <span class="title">JavaScript Event Object</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-127-event-target.html">
+                <span class="number">127</span>
+                <span class="title">Event Target</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-128-event-bubbling.html">
+                <span class="number">128</span>
+                <span class="title">Event Bubbling</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-129-event-capturing.html">
+                <span class="number">129</span>
+                <span class="title">Event Capturing</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-130-prevent-default.html">
+                <span class="number">130</span>
+                <span class="title">preventDefault()</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-131-stop-propagation.html">
+                <span class="number">131</span>
+                <span class="title">stopPropagation()</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-132-keyboard-shortcuts.html">
+                <span class="number">132</span>
+                <span class="title">Keyboard Shortcuts</span>
+            </a>
+        </div>
+
+
+        <!-- Forms and Validation -->
+
+        <h2 class="section-title">Forms and Validation</h2>
+
+
+        <div class="program">
+            <a href="js-133-form-validation.html">
+                <span class="number">133</span>
+                <span class="title">Basic Form Validation</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-134-required-fields.html">
+                <span class="number">134</span>
+                <span class="title">Required Field Validation</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-135-email-validation.html">
+                <span class="number">135</span>
+                <span class="title">Email Validation</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-136-password-validation.html">
+                <span class="number">136</span>
+                <span class="title">Password Validation</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-137-confirm-password.html">
+                <span class="number">137</span>
+                <span class="title">Confirm Password Validation</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-138-phone-validation.html">
+                <span class="number">138</span>
+                <span class="title">Phone Number Validation</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-139-number-validation.html">
+                <span class="number">139</span>
+                <span class="title">Number Validation</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-140-length-validation.html">
+                <span class="number">140</span>
+                <span class="title">Length Validation</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-141-regex-validation.html">
+                <span class="number">141</span>
+                <span class="title">Regular Expression Validation</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-142-registration-form.html">
+                <span class="number">142</span>
+                <span class="title">Registration Form Validation</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-143-login-form.html">
+                <span class="number">143</span>
+                <span class="title">Login Form Validation</span>
+            </a>
+        </div>
+
+
+        <!-- Browser Objects and Features -->
+
+        <h2 class="section-title">Browser Objects and Browser Features</h2>
+
+
+        <div class="program">
+            <a href="js-144-window-object.html">
+                <span class="number">144</span>
+                <span class="title">Window Object</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-145-screen-object.html">
+                <span class="number">145</span>
+                <span class="title">Screen Object</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-146-location-object.html">
+                <span class="number">146</span>
+                <span class="title">Location Object</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-147-history-object.html">
+                <span class="number">147</span>
+                <span class="title">History Object</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-148-navigator-object.html">
+                <span class="number">148</span>
+                <span class="title">Navigator Object</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-149-alert.html">
+                <span class="number">149</span>
+                <span class="title">Alert Box</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-150-confirm.html">
+                <span class="number">150</span>
+                <span class="title">Confirm Box</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-151-prompt.html">
+                <span class="number">151</span>
+                <span class="title">Prompt Box</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-152-open-window.html">
+                <span class="number">152</span>
+                <span class="title">Open New Window</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-153-close-window.html">
+                <span class="number">153</span>
+                <span class="title">Close Window</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-154-set-timeout.html">
+                <span class="number">154</span>
+                <span class="title">setTimeout()</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-155-set-interval.html">
+                <span class="number">155</span>
+                <span class="title">setInterval()</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-156-geolocation.html">
+                <span class="number">156</span>
+                <span class="title">Geolocation</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-157-online-status.html">
+                <span class="number">157</span>
+                <span class="title">Online and Offline Status</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-158-fullscreen.html">
+                <span class="number">158</span>
+                <span class="title">Fullscreen API</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-159-clipboard.html">
+                <span class="number">159</span>
+                <span class="title">Clipboard API</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-160-web-share.html">
+                <span class="number">160</span>
+                <span class="title">Web Share API</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-161-browser-info.html">
+                <span class="number">161</span>
+                <span class="title">Display Browser Information</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-162-window-size.html">
+                <span class="number">162</span>
+                <span class="title">Display Window Size</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-163-page-url.html">
+                <span class="number">163</span>
+                <span class="title">Display Current Page URL</span>
+            </a>
+        </div>
+
+
+        <!-- Web Storage -->
+
+        <h2 class="section-title">Web Storage Programs</h2>
+
+
+        <div class="program">
+            <a href="js-164-localstorage-set.html">
+                <span class="number">164</span>
+                <span class="title">Store Data using localStorage</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-165-localstorage-get.html">
+                <span class="number">165</span>
+                <span class="title">Retrieve Data from localStorage</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-166-localstorage-remove.html">
+                <span class="number">166</span>
+                <span class="title">Remove localStorage Data</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-167-localstorage-clear.html">
+                <span class="number">167</span>
+                <span class="title">Clear localStorage</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-168-sessionstorage-set.html">
+                <span class="number">168</span>
+                <span class="title">Store Data using sessionStorage</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-169-sessionstorage-get.html">
+                <span class="number">169</span>
+                <span class="title">Retrieve sessionStorage Data</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-170-sessionstorage-remove.html">
+                <span class="number">170</span>
+                <span class="title">Remove sessionStorage Data</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-171-sessionstorage-clear.html">
+                <span class="number">171</span>
+                <span class="title">Clear sessionStorage</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-172-storage-form.html">
+                <span class="number">172</span>
+                <span class="title">Store Form Data in Browser</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-173-storage-login.html">
+                <span class="number">173</span>
+                <span class="title">Login using Web Storage</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-174-storage-todo.html">
+                <span class="number">174</span>
+                <span class="title">To-Do List using localStorage</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-175-storage-notes.html">
+                <span class="number">175</span>
+                <span class="title">Notes using localStorage</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-176-storage-counter.html">
+                <span class="number">176</span>
+                <span class="title">Counter using localStorage</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-177-storage-theme.html">
+                <span class="number">177</span>
+                <span class="title">Save Theme Preference</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-178-storage-preferences.html">
+                <span class="number">178</span>
+                <span class="title">Save User Preferences</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-179-storage-json.html">
+                <span class="number">179</span>
+                <span class="title">Store JSON Data</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-180-storage-array.html">
+                <span class="number">180</span>
+                <span class="title">Store Array in localStorage</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-181-storage-object.html">
+                <span class="number">181</span>
+                <span class="title">Store Object in localStorage</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-182-storage-cart.html">
+                <span class="number">182</span>
+                <span class="title">Shopping Cart using localStorage</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-183-storage-search.html">
+                <span class="number">183</span>
+                <span class="title">Search History using localStorage</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-184-storage-username.html">
+                <span class="number">184</span>
+                <span class="title">Save Username using localStorage</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-185-storage-darkmode.html">
+                <span class="number">185</span>
+                <span class="title">Dark Mode using localStorage</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-186-storage-session.html">
+                <span class="number">186</span>
+                <span class="title">Session based Data Storage</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-187-storage-check.html">
+                <span class="number">187</span>
+                <span class="title">Check Stored Data</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-188-storage-update.html">
+                <span class="number">188</span>
+                <span class="title">Update Stored Data</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-189-storage-delete.html">
+                <span class="number">189</span>
+                <span class="title">Delete Stored Data</span>
+            </a>
+        </div>
+
+        <div class="program">
+            <a href="js-190-storage-complete.html">
+                <span class="number">190</span>
+                <span class="title">Complete Web Storage Application</span>
+            </a>
+        </div>
+
+
+    </div>
+
+
+    <footer>
+        <p>JavaScript Practical Assignment | 190 Programs</p>
+    </footer>
+
+</body>
+
+</html>

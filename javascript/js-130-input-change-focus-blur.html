@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Events Validation</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f4f6f8;
+            padding: 40px;
+        }
+
+        .box {
+            max-width: 450px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin-top: 10px;
+            box-sizing: border-box;
+        }
+
+        #msg {
+            margin-top: 15px;
+        }
+
+        a {
+            display: block;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+    <h2>Form Events</h2>
+
+    <input type="text" id="name" placeholder="Enter your name">
+
+    <p id="msg">Click inside the input.</p>
+
+    <a href="index.html">Back to Programs</a>
+</div>
+
+<script>
+let input = document.getElementById("name");
+let msg = document.getElementById("msg");
+
+input.addEventListener("focus", function() {
+    msg.innerHTML = "Input field focused.";
+});
+
+input.addEventListener("blur", function() {
+    msg.innerHTML = "Input field lost focus.";
+});
+
+input.addEventListener("input", function() {
+    msg.innerHTML = "You are typing: " + input.value;
+});
+
+input.addEventListener("change", function() {
+    msg.innerHTML = "Value changed.";
+});
+</script>
+
+</body>
+</html>

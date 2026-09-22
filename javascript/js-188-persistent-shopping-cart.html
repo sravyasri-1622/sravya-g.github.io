@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Persistent Shopping Cart</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            padding: 30px;
+        }
+
+        button {
+            padding: 10px;
+            margin: 5px;
+        }
+
+        li {
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Persistent Shopping Cart</h1>
+
+    <button onclick="addItem('Laptop')">Add Laptop</button>
+    <button onclick="addItem('Phone')">Add Phone</button>
+    <button onclick="addItem('Headphones')">Add Headphones</button>
+
+    <h2>Cart</h2>
+
+    <ul id="cart"></ul>
+
+    <button onclick="clearCart()">Clear Cart</button>
+
+    <br><br>
+    <a href="index.html">← Back to Programs</a>
+
+    <script>
+        var cart = JSON.parse(localStorage.getItem("shoppingCart")) || [];
+
+        function addItem(item) {
+            cart.push(item);
+
+            localStorage.setItem(
+                "shoppingCart",
+                JSON.stringify(cart)
+            );
+
+            displayCart();
+        }
+
+        function displayCart() {
+            var list = document.getElementById("cart");
+
+            list.innerHTML = "";
+
+            for (var i = 0; i < cart.length; i++) {
+                var li = document.createElement("li");
+
+                li.innerHTML = cart[i];
+
+                list.appendChild(li);
+            }
+        }
+
+        function clearCart() {
+            cart = [];
+
+            localStorage.removeItem("shoppingCart");
+
+            displayCart();
+        }
+
+        displayCart();
+    </script>
+
+</body>
+</html>

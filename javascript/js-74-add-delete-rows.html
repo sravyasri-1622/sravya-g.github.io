@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Add and Delete Table Rows</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .box {
+            background: white;
+            max-width: 700px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px #ccc;
+        }
+
+        input,
+        button {
+            padding: 10px;
+            margin: 5px;
+        }
+
+        button {
+            background: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+
+        th {
+            background: #2563eb;
+            color: white;
+        }
+
+        .delete {
+            background: #dc2626;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+
+        <h1>Add and Delete Rows</h1>
+
+        <input type="text" id="name"
+            placeholder="Enter name">
+
+        <input type="text" id="course"
+            placeholder="Enter course">
+
+        <button onclick="addRow()">
+            Add Row
+        </button>
+
+        <table id="studentTable">
+
+            <tr>
+                <th>Name</th>
+                <th>Course</th>
+                <th>Action</th>
+            </tr>
+
+        </table>
+
+        <a href="index.html">Back to Programs</a>
+
+    </div>
+
+    <script>
+
+        function addRow() {
+
+            let name =
+                document.getElementById("name").value;
+
+            let course =
+                document.getElementById("course").value;
+
+            if (name === "" || course === "") {
+
+                alert("Please enter all details.");
+                return;
+
+            }
+
+            let table =
+                document.getElementById("studentTable");
+
+            let row =
+                table.insertRow();
+
+            row.insertCell(0).innerHTML = name;
+
+            row.insertCell(1).innerHTML = course;
+
+            row.insertCell(2).innerHTML =
+                '<button class="delete" onclick="deleteRow(this)">Delete</button>';
+
+            document.getElementById("name").value = "";
+            document.getElementById("course").value = "";
+
+        }
+
+
+        function deleteRow(button) {
+
+            let row = button.parentNode.parentNode;
+
+            row.remove();
+
+        }
+
+    </script>
+
+</body>
+
+</html>

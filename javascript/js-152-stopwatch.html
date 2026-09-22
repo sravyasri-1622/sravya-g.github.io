@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Stopwatch</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            padding: 50px;
+            background: #f2f2f2;
+        }
+
+        .box {
+            background: white;
+            padding: 30px;
+            max-width: 500px;
+            margin: auto;
+            border-radius: 15px;
+        }
+
+        #time {
+            font-size: 45px;
+            margin: 25px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        a {
+            display: block;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+    <h1>Stopwatch</h1>
+
+    <div id="time">0</div>
+
+    <button onclick="start()">Start</button>
+    <button onclick="stop()">Stop</button>
+    <button onclick="reset()">Reset</button>
+
+    <a href="index.html">← Back to Programs</a>
+</div>
+
+<script>
+let seconds = 0;
+let stopwatch;
+
+function start() {
+    stopwatch = setInterval(function() {
+        seconds++;
+        document.getElementById("time").innerHTML = seconds;
+    }, 1000);
+}
+
+function stop() {
+    clearInterval(stopwatch);
+}
+
+function reset() {
+    clearInterval(stopwatch);
+    seconds = 0;
+    document.getElementById("time").innerHTML = seconds;
+}
+</script>
+
+</body>
+</html>

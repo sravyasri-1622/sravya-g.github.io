@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Preference</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            padding: 40px;
+        }
+
+        input, button {
+            padding: 10px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Login Preference</h1>
+
+    <input type="text" id="username" placeholder="Enter username">
+    <br>
+
+    <button onclick="savePreference()">Remember Me</button>
+    <button onclick="loadPreference()">Load Username</button>
+
+    <p id="result"></p>
+
+    <a href="index.html">← Back to Programs</a>
+
+    <script>
+        function savePreference() {
+            var username = document.getElementById("username").value;
+
+            localStorage.setItem("loginUsername", username);
+
+            document.getElementById("result").innerHTML =
+                "Login preference saved.";
+        }
+
+        function loadPreference() {
+            var username = localStorage.getItem("loginUsername");
+
+            document.getElementById("result").innerHTML =
+                username ? "Saved Username: " + username :
+                "No saved username.";
+        }
+    </script>
+
+</body>
+</html>

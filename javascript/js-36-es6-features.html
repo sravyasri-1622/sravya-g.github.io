@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript - ES6 Features</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #f8fafc;
+            padding: 40px 20px;
+        }
+
+        .box {
+            max-width: 650px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px #ccc;
+        }
+
+        .output {
+            background: #eef2ff;
+            padding: 20px;
+            margin-top: 20px;
+            line-height: 1.8;
+        }
+
+        a {
+            display: block;
+            margin: 15px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+
+    <h1>ES6 Features</h1>
+
+    <div class="output" id="output"></div>
+
+    <a href="index.html">← Back to JavaScript Programs</a>
+    <a href="../index.html">← Home</a>
+
+</div>
+
+<script>
+
+let name = "Sravya";
+const course = "BTech";
+
+let message = `Hello ${name}, you are studying ${course}.`;
+
+let student = {
+    name: "Sravya",
+    age: 18
+};
+
+let { name: studentName, age } = student;
+
+document.getElementById("output").innerHTML =
+    "let value: " + name + "<br>" +
+    "const value: " + course + "<br>" +
+    "Template literal: " + message + "<br>" +
+    "Destructuring Name: " + studentName + "<br>" +
+    "Destructuring Age: " + age;
+
+</script>
+
+</body>
+</html>

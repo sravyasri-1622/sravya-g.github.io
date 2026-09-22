@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Event Delegation</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .box {
+            background: white;
+            max-width: 600px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px #ccc;
+        }
+
+        li {
+            list-style: none;
+            padding: 15px;
+            margin: 8px;
+            background: #dbeafe;
+            border-radius: 7px;
+            cursor: pointer;
+        }
+
+        li:hover {
+            background: #bfdbfe;
+        }
+
+        #output {
+            font-weight: bold;
+        }
+
+        a {
+            display: block;
+            margin-top: 25px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+
+        <h1>Event Delegation</h1>
+
+        <ul id="items">
+
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Python</li>
+
+        </ul>
+
+        <p id="output">
+            Click an item.
+        </p>
+
+        <a href="index.html">Back to Programs</a>
+
+    </div>
+
+    <script>
+
+        document.getElementById("items")
+            .addEventListener("click", function (event) {
+
+                if (event.target.tagName === "LI") {
+
+                    document.getElementById("output").innerText =
+                        "You selected: " +
+                        event.target.innerText;
+
+                }
+
+            });
+
+    </script>
+
+</body>
+
+</html>

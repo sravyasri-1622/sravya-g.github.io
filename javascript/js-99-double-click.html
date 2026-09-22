@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Double Click Event</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .box {
+            background: white;
+            max-width: 600px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px #ccc;
+        }
+
+        #clickBox {
+            padding: 60px 20px;
+            background: #ede9fe;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        #message {
+            font-weight: bold;
+        }
+
+        a {
+            display: block;
+            margin-top: 25px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+
+        <h1>Double Click Event</h1>
+
+        <div id="clickBox">
+            Double-click this box
+        </div>
+
+        <p id="message">
+            Waiting for double click...
+        </p>
+
+        <a href="index.html">Back to Programs</a>
+
+    </div>
+
+    <script>
+
+        document.getElementById("clickBox")
+            .addEventListener("dblclick", function () {
+
+                document.getElementById("message").innerText =
+                    "Double-click event detected!";
+
+            });
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Screen Width and Height</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            padding: 50px;
+            background: #f2f2f2;
+        }
+
+        .box {
+            background: white;
+            padding: 30px;
+            max-width: 500px;
+            margin: auto;
+            border-radius: 15px;
+        }
+
+        #size {
+            font-size: 25px;
+            margin: 20px;
+        }
+
+        a {
+            display: block;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+    <h1>Screen Size</h1>
+
+    <div id="size"></div>
+
+    <a href="index.html">← Back to Programs</a>
+</div>
+
+<script>
+document.getElementById("size").innerHTML =
+    "Screen Width: " + screen.width +
+    "<br>Screen Height: " + screen.height;
+</script>
+
+</body>
+</html>

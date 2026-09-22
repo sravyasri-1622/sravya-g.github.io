@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two Column Grid</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f5f7fa;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            padding: 40px;
+        }
+
+        .column {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        @media (max-width: 700px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 style="text-align:center;">Two Column Layout</h1>
+
+    <div class="container">
+
+        <section class="column">
+            <h2>About</h2>
+            <p>
+                This is the first column of the webpage.
+            </p>
+        </section>
+
+        <section class="column">
+            <h2>Services</h2>
+            <p>
+                This is the second column of the webpage.
+            </p>
+        </section>
+
+    </div>
+
+    <div style="text-align:center;">
+        <a href="index.html">← Back to Programs</a>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CRUD with localStorage</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            padding: 30px;
+        }
+
+        input, button {
+            padding: 10px;
+            margin: 5px;
+        }
+
+        table {
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        button {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>CRUD with localStorage</h1>
+
+    <input type="text" id="name" placeholder="Enter name">
+
+    <button onclick="createData()">Add</button>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+
+        <tbody id="dataTable"></tbody>
+    </table>
+
+    <br>
+    <a href="index.html">← Back to Programs</a>
+
+    <script>
+        var data =
+            JSON.parse(localStorage.getItem("crudData")) || [];
+
+        function createData() {
+            var name = document.getElementById("name").value;
+
+            if (name === "") {
+                return;
+            }
+
+            data.push(name);
+
+            saveData();
+
+            document.getElementById("name").value = "";
+
+            displayData();
+        }
+
+        function readData() {
+            displayData();
+        }
+
+        function updateData(index) {
+            var newName = prompt("Enter new name:");
+
+            if (newName !== null && newName !== "") {
+                data[index] = newName;
+
+                saveData();
+                displayData();
+            }
+        }
+
+        function deleteData(index) {
+            data.splice(index, 1);
+
+            saveData();
+            displayData();
+        }
+
+        function saveData() {
+            localStorage.setItem(
+                "crudData",
+                JSON.stringify(data)
+            );
+        }
+
+        function displayData() {
+            var table = document.getElementById("dataTable");
+
+            table.innerHTML = "";
+
+            for (var i = 0; i < data.length; i++) {
+                var row = document.createElement("tr");
+
+                row.innerHTML =
+                    "<td>" + data[i] + "</td>" +
+                    "<td>" +
+                    "<button onclick='updateData(" + i + ")'>Update</button>" +
+                    "<button onclick='deleteData(" + i + ")'>Delete</button>" +
+                    "</td>";
+
+                table.appendChild(row);
+            }
+        }
+
+        readData();
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Drag and Drop</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .box {
+            background: white;
+            max-width: 700px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px #ccc;
+        }
+
+        #item {
+            width: 120px;
+            padding: 20px;
+            margin: 20px auto;
+            background: #2563eb;
+            color: white;
+            border-radius: 8px;
+            cursor: grab;
+        }
+
+        #dropArea {
+            height: 180px;
+            border: 3px dashed #2563eb;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #message {
+            font-weight: bold;
+        }
+
+        a {
+            display: block;
+            margin-top: 25px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+
+        <h1>Drag and Drop</h1>
+
+        <div id="item" draggable="true">
+            Drag Me
+        </div>
+
+        <div id="dropArea">
+            Drop Here
+        </div>
+
+        <p id="message">
+            Drag the box into the area.
+        </p>
+
+        <a href="index.html">Back to Programs</a>
+
+    </div>
+
+    <script>
+
+        let item = document.getElementById("item");
+        let dropArea = document.getElementById("dropArea");
+        let message = document.getElementById("message");
+
+        item.addEventListener("dragstart", function (event) {
+
+            event.dataTransfer.setData(
+                "text",
+                "item"
+            );
+
+        });
+
+        dropArea.addEventListener("dragover", function (event) {
+
+            event.preventDefault();
+
+        });
+
+        dropArea.addEventListener("drop", function (event) {
+
+            event.preventDefault();
+
+            let data =
+                event.dataTransfer.getData("text");
+
+            if (data === "item") {
+
+                dropArea.appendChild(item);
+
+                message.innerText =
+                    "Item dropped successfully!";
+
+            }
+
+        });
+
+    </script>
+
+</body>
+
+</html>

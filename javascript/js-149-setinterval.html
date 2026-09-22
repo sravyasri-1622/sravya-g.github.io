@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>setInterval()</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            padding: 50px;
+            background: #f2f2f2;
+        }
+
+        .box {
+            background: white;
+            padding: 30px;
+            max-width: 500px;
+            margin: auto;
+            border-radius: 15px;
+        }
+
+        #counter {
+            font-size: 40px;
+            margin: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+        }
+
+        a {
+            display: block;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+    <h1>setInterval()</h1>
+
+    <div id="counter">0</div>
+
+    <button onclick="startCounter()">Start</button>
+    <button onclick="stopCounter()">Stop</button>
+
+    <a href="index.html">← Back to Programs</a>
+</div>
+
+<script>
+let count = 0;
+let timer;
+
+function startCounter() {
+    timer = setInterval(function() {
+        count++;
+        document.getElementById("counter").innerHTML = count;
+    }, 1000);
+}
+
+function stopCounter() {
+    clearInterval(timer);
+}
+</script>
+
+</body>
+</html>

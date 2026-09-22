@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Sort Array</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #f4f7fb;
+            text-align: center;
+            padding: 50px;
+        }
+
+        .box {
+            background: white;
+            max-width: 650px;
+            margin: auto;
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px #ccc;
+        }
+
+        input {
+            width: 80%;
+            padding: 12px;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 12px 20px;
+            background: #f7971e;
+            color: white;
+            border: none;
+            border-radius: 7px;
+        }
+
+        #output {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+
+        <h1>Sort an Array</h1>
+
+        <input type="text" id="numbers" placeholder="50, 10, 30, 20, 40">
+
+        <br>
+
+        <button onclick="sortArray()">Sort</button>
+
+        <p id="output"></p>
+
+        <a href="index.html">← Back to JavaScript Programs</a>
+
+    </div>
+
+    <script>
+
+        function sortArray() {
+
+            let input = document.getElementById("numbers").value;
+
+            let numbers = input.split(",").map(Number);
+
+            numbers.sort(function(a, b) {
+                return a - b;
+            });
+
+            document.getElementById("output").innerHTML =
+                "Sorted Array: " + numbers.join(", ");
+        }
+
+    </script>
+
+</body>
+
+</html>

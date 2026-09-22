@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 60 - Portfolio</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #1e293b;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            background: #0f172a;
+            color: white;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 18px;
+        }
+
+        section {
+            padding: 80px 8%;
+            min-height: 60vh;
+        }
+
+        #home {
+            background: linear-gradient(135deg, #dbeafe, #ede9fe);
+            display: flex;
+            align-items: center;
+        }
+
+        #home h1 {
+            font-size: 50px;
+        }
+
+        .skills,
+        .projects {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: #f8fafc;
+            padding: 25px;
+            border-radius: 15px;
+            flex: 1;
+            min-width: 220px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.07);
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: #0f172a;
+            color: white;
+        }
+
+        @media (max-width: 700px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            #home h1 {
+                font-size: 35px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <strong>My Portfolio</strong>
+
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="index.html">CSS Programs</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+    </nav>
+</header>
+
+<section id="home">
+    <div>
+        <h1>Hello, I'm a Student Developer</h1>
+        <p>Welcome to my professional portfolio.</p>
+    </div>
+</section>
+
+<section id="about">
+    <h2>About Me</h2>
+    <p>
+        I am a student interested in web development, programming
+        and modern technologies.
+    </p>
+
+    <div class="skills">
+        <div class="card">
+            <h3>HTML & CSS</h3>
+            <p>Building responsive webpages.</p>
+        </div>
+
+        <div class="card">
+            <h3>Python</h3>
+            <p>Programming and problem solving.</p>
+        </div>
+
+        <div class="card">
+            <h3>C Programming</h3>
+            <p>Data structures and algorithms.</p>
+        </div>
+    </div>
+</section>
+
+<section id="projects">
+    <h2>Projects</h2>
+
+    <div class="projects">
+        <div class="card">
+            <h3>Portfolio Website</h3>
+            <p>A responsive personal portfolio.</p>
+        </div>
+
+        <div class="card">
+            <h3>Student Management</h3>
+            <p>A simple student-focused project.</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    © 2026 My Portfolio
+</footer>
+
+</body>
+</html>

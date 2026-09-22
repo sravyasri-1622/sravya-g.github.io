@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Browser Geolocation</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            padding: 50px;
+            background: #f2f2f2;
+        }
+
+        .box {
+            background: white;
+            padding: 30px;
+            max-width: 600px;
+            margin: auto;
+            border-radius: 15px;
+        }
+
+        button {
+            padding: 12px 20px;
+            cursor: pointer;
+        }
+
+        #output {
+            margin-top: 20px;
+        }
+
+        a {
+            display: block;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+    <h1>Browser Geolocation</h1>
+
+    <button onclick="getLocation()">Get Location</button>
+
+    <p id="output"></p>
+
+    <a href="index.html">← Back to Programs</a>
+</div>
+
+<script>
+function getLocation() {
+
+    if (navigator.geolocation) {
+
+        navigator.geolocation.getCurrentPosition(
+            function(position) {
+                document.getElementById("output").innerHTML =
+                    "Location access granted.";
+            },
+            function() {
+                document.getElementById("output").innerHTML =
+                    "Location permission was not granted.";
+            }
+        );
+
+    } else {
+        document.getElementById("output").innerHTML =
+            "Geolocation is not supported.";
+    }
+}
+</script>
+
+</body>
+</html>

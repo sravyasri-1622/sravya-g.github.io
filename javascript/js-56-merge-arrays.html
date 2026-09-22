@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Merge Arrays</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            padding: 40px;
+            background: #f4f7fb;
+        }
+
+        .box {
+            background: white;
+            padding: 30px;
+            max-width: 550px;
+            margin: auto;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px #ccc;
+        }
+
+        input,
+        button {
+            padding: 10px;
+            margin: 8px;
+        }
+
+        button {
+            background: #16a34a;
+            color: white;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+
+        <h1>Merge Two Arrays</h1>
+
+        <input type="text" id="array1"
+            placeholder="Array 1: 1,2,3">
+
+        <br>
+
+        <input type="text" id="array2"
+            placeholder="Array 2: 4,5,6">
+
+        <br>
+
+        <button onclick="mergeArrays()">Merge</button>
+
+        <p id="result"></p>
+
+        <a href="index.html">Back to Programs</a>
+
+    </div>
+
+    <script>
+
+        function mergeArrays() {
+
+            let array1 = document.getElementById("array1").value
+                .split(",")
+                .map(Number);
+
+            let array2 = document.getElementById("array2").value
+                .split(",")
+                .map(Number);
+
+            let merged = array1.concat(array2);
+
+            document.getElementById("result").innerHTML =
+                "Merged Array: " + merged.join(", ");
+
+        }
+
+    </script>
+
+</body>
+
+</html>

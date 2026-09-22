@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Keyboard Events</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .box {
+            background: white;
+            max-width: 600px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px #ccc;
+        }
+
+        input {
+            width: 80%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+
+        #output {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        a {
+            display: block;
+            margin-top: 25px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+
+        <h1>Keyboard Events</h1>
+
+        <input type="text"
+            id="input"
+            placeholder="Press any key">
+
+        <p id="output">
+            Waiting for keyboard input...
+        </p>
+
+        <a href="index.html">Back to Programs</a>
+
+    </div>
+
+    <script>
+
+        let input = document.getElementById("input");
+        let output = document.getElementById("output");
+
+        input.addEventListener("keydown", function (event) {
+
+            output.innerText =
+                "Key Down: " + event.key;
+
+        });
+
+        input.addEventListener("keyup", function (event) {
+
+            output.innerText =
+                "Key Up: " + event.key;
+
+        });
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 52 - Responsive Footer</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+        }
+
+        header {
+            background: #111827;
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        main {
+            min-height: 55vh;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        footer {
+            background: #111827;
+            color: white;
+            padding: 40px 8%;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .footer-column {
+            flex: 1;
+            min-width: 180px;
+        }
+
+        .footer-column h3 {
+            margin-bottom: 15px;
+        }
+
+        .footer-column a {
+            display: block;
+            color: #cbd5e1;
+            text-decoration: none;
+            margin: 8px 0;
+        }
+
+        .footer-column a:hover {
+            color: white;
+        }
+
+        .bottom {
+            border-top: 1px solid #374151;
+            margin-top: 30px;
+            padding-top: 20px;
+            text-align: center;
+            color: #9ca3af;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Responsive Footer</h1>
+    <p>CSS Practical 52</p>
+</header>
+
+<main>
+    <h2>Responsive Website Content</h2>
+    <p>The footer automatically adjusts according to screen size.</p>
+    <br>
+    <a href="index.html">← CSS Programs</a>
+</main>
+
+<footer>
+
+    <div class="footer-container">
+
+        <div class="footer-column">
+            <h3>About</h3>
+            <p>Student CSS Practical Website</p>
+        </div>
+
+        <div class="footer-column">
+            <h3>Quick Links</h3>
+            <a href="../index.html">Home</a>
+            <a href="index.html">CSS Programs</a>
+        </div>
+
+        <div class="footer-column">
+            <h3>Contact</h3>
+            <p>Email: student@example.com</p>
+            <p>India</p>
+        </div>
+
+    </div>
+
+    <div class="bottom">
+        © 2026 CSS Practical Assignment
+    </div>
+
+</footer>
+
+</body>
+</html>

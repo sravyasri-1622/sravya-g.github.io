@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Countdown Timer</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            padding: 50px;
+            background: #f2f2f2;
+        }
+
+        .box {
+            background: white;
+            padding: 30px;
+            max-width: 500px;
+            margin: auto;
+            border-radius: 15px;
+        }
+
+        #timer {
+            font-size: 45px;
+            margin: 25px;
+        }
+
+        button {
+            padding: 10px 20px;
+        }
+
+        a {
+            display: block;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+    <h1>Countdown Timer</h1>
+
+    <div id="timer">10</div>
+
+    <button onclick="startCountdown()">Start</button>
+
+    <a href="index.html">← Back to Programs</a>
+</div>
+
+<script>
+let time = 10;
+let countdown;
+
+function startCountdown() {
+    time = 10;
+
+    clearInterval(countdown);
+
+    countdown = setInterval(function() {
+
+        document.getElementById("timer").innerHTML = time;
+
+        time--;
+
+        if (time < 0) {
+            clearInterval(countdown);
+            document.getElementById("timer").innerHTML =
+                "Time's Up!";
+        }
+
+    }, 1000);
+}
+</script>
+
+</body>
+</html>

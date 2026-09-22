@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 58 - Travel Website</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            position: absolute;
+            width: 100%;
+            z-index: 2;
+            padding: 22px 8%;
+            display: flex;
+            justify-content: space-between;
+            color: white;
+        }
+
+        header a {
+            color: white;
+            text-decoration: none;
+            margin-left: 18px;
+        }
+
+        .hero {
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 30px;
+            background:
+                linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                url("../assets/images/web.jpg") center/cover;
+        }
+
+        .hero h1 {
+            font-size: 55px;
+        }
+
+        .destinations {
+            padding: 60px 8%;
+            text-align: center;
+        }
+
+        .cards {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+        }
+
+        .card {
+            width: 280px;
+            padding: 30px;
+            background: #f8fafc;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+        }
+
+        @media (max-width: 650px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h2>Wanderly</h2>
+
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="index.html">CSS Programs</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div>
+        <h1>Explore the World</h1>
+        <p>Discover beautiful places and unforgettable experiences.</p>
+    </div>
+</section>
+
+<section class="destinations">
+
+    <h2>Popular Destinations</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Goa</h3>
+            <p>Relax on beautiful beaches and enjoy coastal experiences.</p>
+        </div>
+
+        <div class="card">
+            <h3>Kerala</h3>
+            <p>Experience peaceful backwaters and natural beauty.</p>
+        </div>
+
+        <div class="card">
+            <h3>Manali</h3>
+            <p>Explore mountains, valleys and adventurous landscapes.</p>
+        </div>
+
+    </div>
+
+</section>
+
+</body>
+</html>

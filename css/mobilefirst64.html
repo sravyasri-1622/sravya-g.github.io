@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 64 - Mobile First</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f8fafc;
+        }
+
+        .container {
+            width: 100%;
+            padding: 20px;
+        }
+
+        header {
+            background: #111827;
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-top: 25px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                max-width: 1100px;
+                margin: auto;
+            }
+
+            .content {
+                flex-direction: row;
+            }
+
+            .card {
+                flex: 1;
+            }
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Mobile-First Design</h1>
+    <p>
+        <a href="../index.html">Home</a> |
+        <a href="index.html">CSS Programs</a>
+    </p>
+</header>
+
+<div class="container">
+
+    <div class="content">
+
+        <div class="card">
+            <h2>Responsive</h2>
+            <p>The design starts with mobile screens.</p>
+        </div>
+
+        <div class="card">
+            <h2>Flexible</h2>
+            <p>The layout expands for larger screens.</p>
+        </div>
+
+        <div class="card">
+            <h2>Accessible</h2>
+            <p>The content remains easy to read.</p>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

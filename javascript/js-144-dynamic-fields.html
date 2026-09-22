@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dynamic Form Fields</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f4f6f8;
+            padding: 40px;
+        }
+
+        .box {
+            max-width: 500px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+        }
+
+        select, input, button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 10px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background: #222;
+            color: white;
+            border: none;
+        }
+
+        a {
+            display: block;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+
+    <h2>Dynamic Form Fields</h2>
+
+    <select id="type" onchange="showField()">
+        <option value="">Select Type</option>
+        <option value="student">Student</option>
+        <option value="employee">Employee</option>
+    </select>
+
+    <div id="field"></div>
+
+    <button onclick="submitForm()">Submit</button>
+
+    <p id="msg"></p>
+
+    <a href="index.html">Back to Programs</a>
+
+</div>
+
+<script>
+function showField() {
+    let type = document.getElementById("type").value;
+    let field = document.getElementById("field");
+
+    if (type === "student") {
+        field.innerHTML =
+            '<input type="text" id="details" placeholder="Enter Course">';
+    } else if (type === "employee") {
+        field.innerHTML =
+            '<input type="text" id="details" placeholder="Enter Job Role">';
+    } else {
+        field.innerHTML = "";
+    }
+}
+
+function submitForm() {
+    let type = document.getElementById("type").value;
+    let msg = document.getElementById("msg");
+
+    if (type === "") {
+        msg.innerHTML = "Please select a type.";
+        msg.style.color = "red";
+        return;
+    }
+
+    let details = document.getElementById("details").value;
+
+    if (details === "") {
+        msg.innerHTML = "Please enter the required information.";
+        msg.style.color = "red";
+    } else {
+        msg.innerHTML = "Form submitted successfully!";
+        msg.style.color = "green";
+    }
+}
+</script>
+
+</body>
+</html>

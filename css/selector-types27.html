@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selector Types</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            padding: 30px;
+            background: #f5f7fa;
+        }
+
+        h1 {
+            color: #243b53;
+        }
+
+        .box {
+            padding: 20px;
+            background: white;
+            margin: 15px 0;
+            border-radius: 10px;
+        }
+
+        #special {
+            color: red;
+        }
+
+        input[type="text"] {
+            border: 2px solid blue;
+            padding: 10px;
+        }
+
+        h1, p {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Selector Types</h1>
+
+    <div class="box">
+        <p>Universal selector</p>
+        <p class="box">Class selector</p>
+        <p id="special">ID selector</p>
+
+        <input type="text" placeholder="Attribute selector">
+    </div>
+
+    <a href="index.html">← Back to Programs</a>
+
+</body>
+</html>

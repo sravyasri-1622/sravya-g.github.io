@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Email Regex Validation</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f4f6f8;
+            padding: 40px;
+        }
+
+        .box {
+            max-width: 450px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+        }
+
+        input, button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 10px;
+        }
+
+        button {
+            background: #222;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        #msg {
+            margin-top: 15px;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+    <h2>Email Regex Validation</h2>
+
+    <input type="text" id="email" placeholder="Enter email">
+
+    <button onclick="validateEmail()">Validate</button>
+
+    <p id="msg"></p>
+
+    <a href="index.html">Back to Programs</a>
+</div>
+
+<script>
+function validateEmail() {
+    let email = document.getElementById("email").value;
+    let pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (pattern.test(email)) {
+        document.getElementById("msg").innerHTML = "Valid Email";
+        document.getElementById("msg").style.color = "green";
+    } else {
+        document.getElementById("msg").innerHTML = "Invalid Email";
+        document.getElementById("msg").style.color = "red";
+    }
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Job Application Form</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f4f6f8;
+            padding: 30px;
+        }
+
+        .box {
+            max-width: 500px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+        }
+
+        input, select, textarea, button {
+            width: 100%;
+            padding: 11px;
+            margin-top: 10px;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            height: 100px;
+        }
+
+        button {
+            background: #222;
+            color: white;
+            border: none;
+        }
+
+        a {
+            display: block;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+    <h2>Job Application Form</h2>
+
+    <input type="text" id="name" placeholder="Full Name">
+    <input type="email" id="email" placeholder="Email">
+    <input type="text" id="phone" placeholder="Phone Number">
+
+    <select id="job">
+        <option value="">Select Job Role</option>
+        <option>Web Developer</option>
+        <option>Python Developer</option>
+        <option>Data Analyst</option>
+    </select>
+
+    <textarea id="message" placeholder="Why should we hire you?"></textarea>
+
+    <button onclick="apply()">Apply</button>
+
+    <p id="msg"></p>
+
+    <a href="index.html">Back to Programs</a>
+</div>
+
+<script>
+function apply() {
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let phone = document.getElementById("phone").value;
+    let job = document.getElementById("job").value;
+    let message = document.getElementById("message").value;
+    let msg = document.getElementById("msg");
+
+    if (name === "" || email === "" || phone === "" ||
+        job === "" || message === "") {
+
+        msg.innerHTML = "Please fill all fields.";
+        msg.style.color = "red";
+
+    } else if (phone.length !== 10) {
+
+        msg.innerHTML = "Enter a valid 10-digit phone number.";
+        msg.style.color = "red";
+
+    } else {
+
+        msg.innerHTML = "Job application submitted successfully!";
+        msg.style.color = "green";
+    }
+}
+</script>
+
+</body>
+</html>

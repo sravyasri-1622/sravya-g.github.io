@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Arithmetic Operations | JavaScript</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            padding: 40px;
+        }
+
+        .box {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #f7971e;
+        }
+
+        input,
+        button {
+            padding: 10px;
+            margin: 5px;
+        }
+
+        button {
+            background: #f7971e;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        #output {
+            margin-top: 20px;
+            line-height: 2;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+
+        <h1>Arithmetic Operations</h1>
+
+        <p>Enter two numbers:</p>
+
+        <input type="number" id="num1" placeholder="First number">
+
+        <input type="number" id="num2" placeholder="Second number">
+
+        <br>
+
+        <button onclick="calculate()">Calculate</button>
+
+        <div id="output"></div>
+
+        <a href="index.html">← Back to JavaScript Programs</a>
+
+    </div>
+
+    <script>
+
+        function calculate() {
+
+            let a = Number(document.getElementById("num1").value);
+            let b = Number(document.getElementById("num2").value);
+
+            let sum = a + b;
+            let difference = a - b;
+            let product = a * b;
+            let division = b !== 0 ? a / b : "Cannot divide by zero";
+
+            document.getElementById("output").innerHTML =
+                "Addition: " + sum + "<br>" +
+                "Subtraction: " + difference + "<br>" +
+                "Multiplication: " + product + "<br>" +
+                "Division: " + division;
+        }
+
+    </script>
+
+</body>
+
+</html>

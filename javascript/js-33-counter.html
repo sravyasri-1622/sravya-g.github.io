@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript - Counter</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            background: #f1f5f9;
+            padding: 60px 20px;
+        }
+
+        .counter {
+            max-width: 400px;
+            margin: auto;
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+        }
+
+        #count {
+            font-size: 60px;
+            font-weight: bold;
+            margin: 30px;
+        }
+
+        button {
+            padding: 12px 20px;
+            margin: 5px;
+            border: none;
+            border-radius: 8px;
+            background: #2563eb;
+            color: white;
+        }
+
+        a {
+            display: block;
+            margin: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="counter">
+
+    <h1>Counter</h1>
+
+    <div id="count">0</div>
+
+    <button onclick="decrease()">−</button>
+    <button onclick="increase()">+</button>
+
+    <a href="index.html">← Back to JavaScript Programs</a>
+    <a href="../index.html">← Home</a>
+
+</div>
+
+<script>
+
+let count = 0;
+
+function increase() {
+    count++;
+    document.getElementById("count").innerHTML = count;
+}
+
+function decrease() {
+    count--;
+    document.getElementById("count").innerHTML = count;
+}
+
+</script>
+
+</body>
+</html>

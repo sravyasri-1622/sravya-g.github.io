@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Remove Duplicates</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            padding: 40px;
+            background: #f4f7fb;
+        }
+
+        .box {
+            background: white;
+            padding: 30px;
+            max-width: 550px;
+            margin: auto;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px #ccc;
+        }
+
+        input,
+        button {
+            padding: 10px;
+            margin: 8px;
+        }
+
+        button {
+            background: #7c3aed;
+            color: white;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+
+        <h1>Remove Duplicate Elements</h1>
+
+        <input type="text" id="array"
+            placeholder="1,2,2,3,4,4">
+
+        <button onclick="removeDuplicates()">
+            Remove
+        </button>
+
+        <p id="result"></p>
+
+        <a href="index.html">Back to Programs</a>
+
+    </div>
+
+    <script>
+
+        function removeDuplicates() {
+
+            let array = document.getElementById("array").value
+                .split(",")
+                .map(Number);
+
+            let result = [...new Set(array)];
+
+            document.getElementById("result").innerHTML =
+                "Array without duplicates: " + result.join(", ");
+
+        }
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Accordion Using JavaScript</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            padding: 40px;
+        }
+
+        .box {
+            background: white;
+            max-width: 650px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px #ccc;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .question {
+            width: 100%;
+            padding: 15px;
+            text-align: left;
+            border: none;
+            background: #2563eb;
+            color: white;
+            margin-top: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 6px;
+        }
+
+        .answer {
+            display: none;
+            padding: 15px;
+            background: #eff6ff;
+            border-radius: 0 0 6px 6px;
+        }
+
+        a {
+            display: block;
+            text-align: center;
+            margin-top: 25px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+
+        <h1>JavaScript Accordion</h1>
+
+        <button class="question" onclick="toggleAnswer(0)">
+            What is HTML?
+        </button>
+
+        <div class="answer">
+            HTML is used to create the structure of webpages.
+        </div>
+
+        <button class="question" onclick="toggleAnswer(1)">
+            What is CSS?
+        </button>
+
+        <div class="answer">
+            CSS is used to style and design webpages.
+        </div>
+
+        <button class="question" onclick="toggleAnswer(2)">
+            What is JavaScript?
+        </button>
+
+        <div class="answer">
+            JavaScript is used to add interactivity to webpages.
+        </div>
+
+        <a href="index.html">Back to Programs</a>
+
+    </div>
+
+    <script>
+
+        function toggleAnswer(index) {
+
+            let answers =
+                document.getElementsByClassName("answer");
+
+            if (answers[index].style.display === "block") {
+
+                answers[index].style.display = "none";
+
+            } else {
+
+                answers[index].style.display = "block";
+
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>

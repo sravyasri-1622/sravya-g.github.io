@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSS Programs | HTML CSS JS Practicals</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            color: #222;
+        }
+
+        header {
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            color: white;
+            text-align: center;
+            padding: 35px 20px;
+        }
+
+        header h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 16px;
+            opacity: 0.95;
+        }
+
+        .home {
+            display: inline-block;
+            margin-top: 18px;
+            padding: 10px 20px;
+            background: white;
+            color: #2575fc;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        .home:hover {
+            background: #eeeeee;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 35px auto;
+        }
+
+        .program {
+            background: white;
+            margin-bottom: 15px;
+            padding: 18px 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: 0.3s;
+        }
+
+        .program:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 7px 18px rgba(0, 0, 0, 0.12);
+        }
+
+        .program a {
+            text-decoration: none;
+            color: #222;
+            display: block;
+        }
+
+        .number {
+            display: inline-block;
+            width: 38px;
+            height: 38px;
+            line-height: 38px;
+            text-align: center;
+            background: #2575fc;
+            color: white;
+            border-radius: 50%;
+            margin-right: 12px;
+            font-weight: bold;
+        }
+
+        .title {
+            font-size: 17px;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            margin-top: 40px;
+            background: #222;
+            color: white;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 25px;
+            }
+
+            .container {
+                width: 94%;
+            }
+
+            .program {
+                padding: 15px;
+            }
+
+            .title {
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+
+        <h1>CSS Programs</h1>
+
+        <p>CSS Practical Programs - 75 Experiments</p>
+
+        <a href="../index.html" class="home">← Back to Home</a>
+
+    </header>
+
+
+    <div class="container">
+
+        <!-- CSS 01 -->
+        <div class="program">
+            <a href="css-01-inline-internal-external.html">
+                <span class="number">1</span>
+                <span class="title">Inline, Internal and External CSS</span>
+            </a>
+        </div>
+
+        <!-- CSS 02 -->
+        <div class="program">
+            <a href="css-02-selectors.html">
+                <span class="number">2</span>
+                <span class="title">Different CSS Selectors</span>
+            </a>
+        </div>
+
+        <!-- CSS 03 -->
+        <div class="program">
+            <a href="css-03-colors-background-borders.html">
+                <span class="number">3</span>
+                <span class="title">CSS Colors, Backgrounds and Borders</span>
+            </a>
+        </div>
+
+        <!-- CSS 04 -->
+        <div class="program">
+            <a href="fonts-text4.html">
+                <span class="number">4</span>
+                <span class="title">Font Properties and Text Formatting</span>
+            </a>
+        </div>
+
+        <!-- CSS 05 -->
+        <div class="program">
+            <a href="boxmodel5.html">
+                <span class="number">5</span>
+                <span class="title">CSS Box Model</span>
+            </a>
+        </div>
+
+        <!-- CSS 06 -->
+        <div class="program">
+            <a href="width-height6.html">
+                <span class="number">6</span>
+                <span class="title">Width, Height and Sizing Properties</span>
+            </a>
+        </div>
+
+        <!-- CSS 07 -->
+        <div class="program">
+            <a href="positioning7.html">
+                <span class="number">7</span>
+                <span class="title">CSS Positioning</span>
+            </a>
+        </div>
+
+        <!-- CSS 08 -->
+        <div class="program">
+            <a href="floatclear8.html">
+                <span class="number">8</span>
+                <span class="title">Float and Clear Properties</span>
+            </a>
+        </div>
+
+        <!-- CSS 09 -->
+        <div class="program">
+            <a href="navbar9.html">
+                <span class="number">9</span>
+                <span class="title">Styled Navigation Bar</span>
+            </a>
+        </div>
+
+        <!-- CSS 10 -->
+        <div class="program">
+            <a href="pseudo-classes10.html">
+                <span class="number">10</span>
+                <span class="title">CSS Pseudo-classes</span>
+            </a>
+        </div>
+
+        <!-- CSS 11 -->
+        <div class="program">
+            <a href="pseudo-elements11.html">
+                <span class="number">11</span>
+                <span class="title">CSS Pseudo-elements</span>
+            </a>
+        </div>
+
+        <!-- CSS 12 -->
+        <div class="program">
+            <a href="lists-table12.html">
+                <span class="number">12</span>
+                <span class="title">CSS Lists and Tables</span>
+            </a>
+        </div>
+
+        <!-- CSS 13 -->
+        <div class="program">
+            <a href="registrationform13.html">
+                <span class="number">13</span>
+                <span class="title">Styled Registration Form</span>
+            </a>
+        </div>
+
+        <!-- CSS 14 -->
+        <div class="program">
+            <a href="flexbox14.html">
+                <span class="number">14</span>
+                <span class="title">CSS Flexbox</span>
+            </a>
+        </div>
+
+        <!-- CSS 15 -->
+        <div class="program">
+            <a href="grid15.html">
+                <span class="number">15</span>
+                <span class="title">CSS Grid Layout</span>
+            </a>
+        </div>
+
+        <!-- CSS 16 -->
+        <div class="program">
+            <a href="media-queries16.html">
+                <span class="number">16</span>
+                <span class="title">CSS Media Queries</span>
+            </a>
+        </div>
+
+        <!-- CSS 17 -->
+        <div class="program">
+            <a href="transitions17.html">
+                <span class="number">17</span>
+                <span class="title">CSS Transitions and Transformations</span>
+            </a>
+        </div>
+
+        <!-- CSS 18 -->
+        <div class="program">
+            <a href="animations18.html">
+                <span class="number">18</span>
+                <span class="title">CSS Animations</span>
+            </a>
+        </div>
+
+        <!-- CSS 19 -->
+        <div class="program">
+            <a href="responsive-navbar19.html">
+                <span class="number">19</span>
+                <span class="title">Responsive Navigation Menu</span>
+            </a>
+        </div>
+
+        <!-- CSS 20 -->
+        <div class="program">
+            <a href="portfolio20.html">
+                <span class="number">20</span>
+                <span class="title">Personal Portfolio Webpage</span>
+            </a>
+        </div>
+
+        <!-- CSS 21 -->
+        <div class="program">
+            <a href="student-profile21.html">
+                <span class="number">21</span>
+                <span class="title">College / Student Profile Page</span>
+            </a>
+        </div>
+
+        <!-- CSS 22 -->
+        <div class="program">
+            <a href="login-page22.html">
+                <span class="number">22</span>
+                <span class="title">Login Page</span>
+            </a>
+        </div>
+
+        <!-- CSS 23 -->
+        <div class="program">
+            <a href="product-cards23.html">
+                <span class="number">23</span>
+                <span class="title">Product Card Layout</span>
+            </a>
+        </div>
+
+        <!-- CSS 24 -->
+        <div class="program">
+            <a href="photogallery24.html">
+                <span class="number">24</span>
+                <span class="title">Responsive Photo Gallery</span>
+            </a>
+        </div>
+
+        <!-- CSS 25 -->
+        <div class="program">
+            <a href="complete-homepage25.html">
+                <span class="number">25</span>
+                <span class="title">Complete Website Homepage</span>
+            </a>
+        </div>
+
+        <!-- CSS 26 -->
+        <div class="program">
+            <a href="inheritance26.html">
+                <span class="number">26</span>
+                <span class="title">CSS Inheritance and Specificity</span>
+            </a>
+        </div>
+
+        <!-- CSS 27 -->
+        <div class="program">
+            <a href="selector-types27.html">
+                <span class="number">27</span>
+                <span class="title">Universal, Element, Class, ID, Attribute and Grouping Selectors</span>
+            </a>
+        </div>
+
+        <!-- CSS 28 -->
+        <div class="program">
+            <a href="combinators28.html">
+                <span class="number">28</span>
+                <span class="title">CSS Combinator Selectors</span>
+            </a>
+        </div>
+
+        <!-- CSS 29 -->
+        <div class="program">
+            <a href="css-variables29.html">
+                <span class="number">29</span>
+                <span class="title">CSS Variables</span>
+            </a>
+        </div>
+
+        <!-- CSS 30 -->
+        <div class="program">
+            <a href="background-image30.html">
+                <span class="number">30</span>
+                <span class="title">Background Images and Positioning</span>
+            </a>
+        </div>
+
+        <!-- CSS 31 -->
+        <div class="program">
+            <a href="gradients31.html">
+                <span class="number">31</span>
+                <span class="title">Linear and Radial Gradients</span>
+            </a>
+        </div>
+
+        <!-- CSS 32 -->
+        <div class="program">
+            <a href="shadows32.html">
+                <span class="number">32</span>
+                <span class="title">Box Shadow and Text Shadow</span>
+            </a>
+        </div>
+
+        <!-- CSS 33 -->
+        <div class="program">
+            <a href="border-radius33.html">
+                <span class="number">33</span>
+                <span class="title">Border Radius and Shapes</span>
+            </a>
+        </div>
+
+        <!-- CSS 34 -->
+        <div class="program">
+            <a href="opacity34.html">
+                <span class="number">34</span>
+                <span class="title">Opacity and Transparency</span>
+            </a>
+        </div>
+
+        <!-- CSS 35 -->
+        <div class="program">
+            <a href="overflow35.html">
+                <span class="number">35</span>
+                <span class="title">CSS Overflow Properties</span>
+            </a>
+        </div>
+
+        <!-- CSS 36 -->
+        <div class="program">
+            <a href="z-index36.html">
+                <span class="number">36</span>
+                <span class="title">Z-index and Stacking Order</span>
+            </a>
+        </div>
+
+        <!-- CSS 37 -->
+        <div class="program">
+            <a href="display37.html">
+                <span class="number">37</span>
+                <span class="title">CSS Display Properties</span>
+            </a>
+        </div>
+
+        <!-- CSS 38 -->
+        <div class="program">
+            <a href="visibility38.html">
+                <span class="number">38</span>
+                <span class="title">CSS Visibility and Hiding Elements</span>
+            </a>
+        </div>
+
+        <!-- CSS 39 -->
+        <div class="program">
+            <a href="dropdown39.html">
+                <span class="number">39</span>
+                <span class="title">Dropdown Menu</span>
+            </a>
+        </div>
+
+        <!-- CSS 40 -->
+        <div class="program">
+            <a href="image-hover40.html">
+                <span class="number">40</span>
+                <span class="title">Image Hover Effect</span>
+            </a>
+        </div>
+
+        <!-- CSS 41 -->
+        <div class="program">
+            <a href="tooltip41.html">
+                <span class="number">41</span>
+                <span class="title">CSS Tooltip</span>
+            </a>
+        </div>
+
+        <!-- CSS 42 -->
+        <div class="program">
+            <a href="button-hover42.html">
+                <span class="number">42</span>
+                <span class="title">CSS-only Button Hover Animation</span>
+            </a>
+        </div>
+
+        <!-- CSS 43 -->
+        <div class="program">
+            <a href="filters43.html">
+                <span class="number">43</span>
+                <span class="title">CSS Filters</span>
+            </a>
+        </div>
+
+        <!-- CSS 44 -->
+        <div class="program">
+            <a href="object-fit44.html">
+                <span class="number">44</span>
+                <span class="title">Object-fit and Object-position</span>
+            </a>
+        </div>
+
+        <!-- CSS 45 -->
+        <div class="program">
+            <a href="responsive-image-gallery45.html">
+                <span class="number">45</span>
+                <span class="title">Responsive Image Gallery</span>
+            </a>
+        </div>
+
+        <!-- CSS 46 -->
+        <div class="program">
+            <a href="flexbox-cardlayout46.html">
+                <span class="number">46</span>
+                <span class="title">Card-based Layout using Flexbox</span>
+            </a>
+        </div>
+
+        <!-- CSS 47 -->
+        <div class="program">
+            <a href="griddashboard47.html">
+                <span class="number">47</span>
+                <span class="title">Dashboard Layout using CSS Grid</span>
+            </a>
+        </div>
+
+        <!-- CSS 48 -->
+        <div class="program">
+            <a href="twocolumngrid48.html">
+                <span class="number">48</span>
+                <span class="title">Two-column Layout using CSS Grid</span>
+            </a>
+        </div>
+
+        <!-- CSS 49 -->
+        <div class="program">
+            <a href="threecolumnflexbox49.html">
+                <span class="number">49</span>
+                <span class="title">Three-column Layout using Flexbox</span>
+            </a>
+        </div>
+
+        <!-- CSS 50 -->
+        <div class="program">
+            <a href="sticky-header50.html">
+                <span class="number">50</span>
+                <span class="title">Sticky Header</span>
+            </a>
+        </div>
+
+        <!-- CSS 51 -->
+        <div class="program">
+            <a href="fixed-sidebar51.html">
+                <span class="number">51</span>
+                <span class="title">Fixed Sidebar</span>
+            </a>
+        </div>
+
+        <!-- CSS 52 -->
+        <div class="program">
+            <a href="responsive-footer52.html">
+                <span class="number">52</span>
+                <span class="title">Responsive Footer</span>
+            </a>
+        </div>
+
+        <!-- CSS 53 -->
+        <div class="program">
+            <a href="responsive-login-signup53.html">
+                <span class="number">53</span>
+                <span class="title">Responsive Login and Signup Page</span>
+            </a>
+        </div>
+
+        <!-- CSS 54 -->
+        <div class="program">
+            <a href="responsivecontactform54.html">
+                <span class="number">54</span>
+                <span class="title">Responsive Contact Form</span>
+            </a>
+        </div>
+
+        <!-- CSS 55 -->
+        <div class="program">
+            <a href="college-homepage55.html">
+                <span class="number">55</span>
+                <span class="title">Responsive College Website Homepage</span>
+            </a>
+        </div>
+
+        <!-- CSS 56 -->
+        <div class="program">
+            <a href="restaurant-page56.html">
+                <span class="number">56</span>
+                <span class="title">Restaurant Webpage</span>
+            </a>
+        </div>
+
+        <!-- CSS 57 -->
+        <div class="program">
+            <a href="online-shopping57.html">
+                <span class="number">57</span>
+                <span class="title">Online Shopping Webpage</span>
+            </a>
+        </div>
+
+        <!-- CSS 58 -->
+        <div class="program">
+            <a href="travel-homepage58.html">
+                <span class="number">58</span>
+                <span class="title">Travel Website Homepage</span>
+            </a>
+        </div>
+
+        <!-- CSS 59 -->
+        <div class="program">
+            <a href="newsbloggrid59.html">
+                <span class="number">59</span>
+                <span class="title">News / Blog Layout using CSS Grid</span>
+            </a>
+        </div>
+
+        <!-- CSS 60 -->
+        <div class="program">
+            <a href="multisectionportfolio60.html">
+                <span class="number">60</span>
+                <span class="title">Portfolio Website with Multiple Sections</span>
+            </a>
+        </div>
+
+        <!-- CSS 61 -->
+        <div class="program">
+            <a href="gridtemplateareas61.html">
+                <span class="number">61</span>
+                <span class="title">CSS Grid Template Areas</span>
+            </a>
+        </div>
+
+        <!-- CSS 62 -->
+        <div class="program">
+            <a href="flexboxalignmentorder62.html">
+                <span class="number">62</span>
+                <span class="title">Flexbox Alignment and Ordering</span>
+            </a>
+        </div>
+
+        <!-- CSS 63 -->
+        <div class="program">
+            <a href="responsivegrid63.html">
+                <span class="number">63</span>
+                <span class="title">Responsive CSS Grid with Media Queries</span>
+            </a>
+        </div>
+
+        <!-- CSS 64 -->
+        <div class="program">
+            <a href="mobilefirst64.html">
+                <span class="number">64</span>
+                <span class="title">Mobile-first Responsive Webpage</span>
+            </a>
+        </div>
+
+        <!-- CSS 65 -->
+        <div class="program">
+            <a href="transactions65.html">
+                <span class="number">65</span>
+                <span class="title">CSS Transitions</span>
+            </a>
+        </div>
+
+        <!-- CSS 66 -->
+        <div class="program">
+            <a href="2d-3d%20transformations66.html">
+                <span class="number">66</span>
+                <span class="title">2D and 3D CSS Transformations</span>
+            </a>
+        </div>
+
+        <!-- CSS 67 -->
+        <div class="program">
+            <a href="keyframeanimation67.html">
+                <span class="number">67</span>
+                <span class="title">CSS Keyframe Animations</span>
+            </a>
+        </div>
+
+        <!-- CSS 68 -->
+        <div class="program">
+            <a href="loadingspinner68.html">
+                <span class="number">68</span>
+                <span class="title">Loading Spinner Animation</span>
+            </a>
+        </div>
+
+        <!-- CSS 69 -->
+        <div class="program">
+            <a href="slidinganimation69.html">
+                <span class="number">69</span>
+                <span class="title">Sliding Image / Card Animation</span>
+            </a>
+        </div>
+
+        <!-- CSS 70 -->
+        <div class="program">
+            <a href="cssmodal70.html">
+                <span class="number">70</span>
+                <span class="title">CSS-only Modal / Popup</span>
+            </a>
+        </div>
+
+        <!-- CSS 71 -->
+        <div class="program">
+            <a href="darkmode71.html">
+                <span class="number">71</span>
+                <span class="title">Dark Mode using CSS Variables</span>
+            </a>
+        </div>
+
+        <!-- CSS 72 -->
+        <div class="program">
+            <a href="responsivetypography72.html">
+                <span class="number">72</span>
+                <span class="title">Responsive Typography</span>
+            </a>
+        </div>
+
+        <!-- CSS 73 -->
+        <div class="program">
+            <a href="clamp%20min-max73.html">
+                <span class="number">73</span>
+                <span class="title">clamp(), min() and max() CSS Functions</span>
+            </a>
+        </div>
+
+        <!-- CSS 74 -->
+        <div class="program">
+            <a href="calc74.html">
+                <span class="number">74</span>
+                <span class="title">CSS calc() Function</span>
+            </a>
+        </div>
+
+        <!-- CSS 75 -->
+        <div class="program">
+            <a href="complete-responsive-website75.html">
+                <span class="number">75</span>
+                <span class="title">Complete Responsive Website</span>
+            </a>
+        </div>
+
+    </div>
+
+
+    <footer>
+        <p>CSS Practical Assignment | 75 Programs</p>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Validation</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            padding: 50px;
+        }
+
+        input {
+            padding: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2>Age Validation</h2>
+
+<input type="number" id="age" placeholder="Enter age">
+<button onclick="checkAge()">Check</button>
+
+<p id="result"></p>
+
+<a href="index.html">← Back to Programs</a>
+
+<script>
+function checkAge() {
+
+    let age = Number(document.getElementById("age").value);
+    let result = document.getElementById("result");
+
+    if (age >= 18 && age <= 100) {
+        result.textContent = "Valid age.";
+    } else {
+        result.textContent = "Enter an age between 18 and 100.";
+    }
+}
+</script>
+
+</body>
+</html>

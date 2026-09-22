@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Feedback Form Validation</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f4f6f8;
+            padding: 40px;
+        }
+
+        .box {
+            max-width: 500px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+        }
+
+        input, select, textarea, button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 10px;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            height: 100px;
+        }
+
+        button {
+            background: #222;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        a {
+            display: block;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+    <h2>Feedback Form</h2>
+
+    <input type="text" id="name" placeholder="Your Name">
+
+    <select id="rating">
+        <option value="">Select Rating</option>
+        <option>Excellent</option>
+        <option>Good</option>
+        <option>Average</option>
+        <option>Poor</option>
+    </select>
+
+    <textarea id="feedback" placeholder="Enter your feedback"></textarea>
+
+    <button onclick="submitFeedback()">Submit</button>
+
+    <p id="msg"></p>
+
+    <a href="index.html">Back to Programs</a>
+</div>
+
+<script>
+function submitFeedback() {
+    let name = document.getElementById("name").value;
+    let rating = document.getElementById("rating").value;
+    let feedback = document.getElementById("feedback").value;
+    let msg = document.getElementById("msg");
+
+    if (name === "" || rating === "" || feedback === "") {
+        msg.innerHTML = "Please fill all fields.";
+        msg.style.color = "red";
+    } else {
+        msg.innerHTML = "Feedback submitted successfully!";
+        msg.style.color = "green";
+    }
+}
+</script>
+
+</body>
+</html>

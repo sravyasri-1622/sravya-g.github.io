@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Marks Database</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            padding: 30px;
+        }
+
+        input, button {
+            padding: 10px;
+            margin: 5px;
+        }
+
+        table {
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Student Marks Database</h1>
+
+    <input type="text" id="name" placeholder="Student Name">
+    <input type="number" id="marks" placeholder="Marks">
+
+    <br>
+
+    <button onclick="addStudent()">Add Student</button>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Marks</th>
+            </tr>
+        </thead>
+
+        <tbody id="studentTable"></tbody>
+    </table>
+
+    <br>
+    <a href="index.html">← Back to Programs</a>
+
+    <script>
+        var students =
+            JSON.parse(localStorage.getItem("students")) || [];
+
+        function addStudent() {
+            var name = document.getElementById("name").value;
+            var marks = document.getElementById("marks").value;
+
+            var student = {
+                name: name,
+                marks: marks
+            };
+
+            students.push(student);
+
+            localStorage.setItem(
+                "students",
+                JSON.stringify(students)
+            );
+
+            document.getElementById("name").value = "";
+            document.getElementById("marks").value = "";
+
+            displayStudents();
+        }
+
+        function displayStudents() {
+            var table = document.getElementById("studentTable");
+
+            table.innerHTML = "";
+
+            for (var i = 0; i < students.length; i++) {
+                var row = document.createElement("tr");
+
+                row.innerHTML =
+                    "<td>" + students[i].name + "</td>" +
+                    "<td>" + students[i].marks + "</td>";
+
+                table.appendChild(row);
+            }
+        }
+
+        displayStudents();
+    </script>
+
+</body>
+</html>

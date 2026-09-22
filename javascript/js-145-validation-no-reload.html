@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Validation Without Page Reload</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f4f6f8;
+            padding: 40px;
+        }
+
+        .box {
+            max-width: 500px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+        }
+
+        input, button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 10px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background: #222;
+            color: white;
+            border: none;
+        }
+
+        #msg {
+            margin-top: 15px;
+        }
+
+        a {
+            display: block;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+
+    <h2>Form Validation</h2>
+
+    <form id="myForm">
+
+        <input type="text" id="name" placeholder="Name">
+
+        <input type="email" id="email" placeholder="Email">
+
+        <button type="submit">Submit</button>
+
+    </form>
+
+    <p id="msg"></p>
+
+    <a href="index.html">Back to Programs</a>
+
+</div>
+
+<script>
+document.getElementById("myForm").addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let msg = document.getElementById("msg");
+
+    if (name === "" || email === "") {
+        msg.innerHTML = "Please fill all fields.";
+        msg.style.color = "red";
+    } else {
+        msg.innerHTML = "Form submitted successfully without page reload!";
+        msg.style.color = "green";
+    }
+
+});
+</script>
+
+</body>
+</html>

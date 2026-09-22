@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Armstrong Number</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            padding: 40px;
+            background: #f4f7fb;
+        }
+
+        .box {
+            background: white;
+            padding: 30px;
+            max-width: 500px;
+            margin: auto;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px #ccc;
+        }
+
+        input,
+        button {
+            padding: 10px;
+            margin: 8px;
+        }
+
+        button {
+            background: #2563eb;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+
+        <h1>Armstrong Number</h1>
+
+        <p>Enter a number:</p>
+
+        <input type="number" id="number">
+
+        <button onclick="checkArmstrong()">Check</button>
+
+        <p id="result"></p>
+
+        <a href="index.html">Back to Programs</a>
+
+    </div>
+
+    <script>
+
+        function checkArmstrong() {
+
+            let number = Number(document.getElementById("number").value);
+            let original = number;
+            let sum = 0;
+            let digits = String(number).length;
+
+            while (number > 0) {
+
+                let digit = number % 10;
+                sum = sum + Math.pow(digit, digits);
+                number = Math.floor(number / 10);
+
+            }
+
+            if (sum === original) {
+
+                document.getElementById("result").innerHTML =
+                    original + " is an Armstrong number.";
+
+            } else {
+
+                document.getElementById("result").innerHTML =
+                    original + " is not an Armstrong number.";
+
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>

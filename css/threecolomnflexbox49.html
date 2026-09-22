@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three Column Flexbox</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f5f7fa;
+        }
+
+        .container {
+            display: flex;
+            gap: 20px;
+            padding: 40px;
+        }
+
+        .column {
+            flex: 1;
+            padding: 30px;
+            background: white;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .column h2 {
+            color: #2563eb;
+        }
+
+        @media (max-width: 700px) {
+            .container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 style="text-align:center;">
+        Three Column Flexbox Layout
+    </h1>
+
+    <div class="container">
+
+        <div class="column">
+            <h2>HTML</h2>
+            <p>Structure</p>
+        </div>
+
+        <div class="column">
+            <h2>CSS</h2>
+            <p>Styling</p>
+        </div>
+
+        <div class="column">
+            <h2>JavaScript</h2>
+            <p>Interaction</p>
+        </div>
+
+    </div>
+
+    <div style="text-align:center;">
+        <a href="index.html">← Back to Programs</a>
+    </div>
+
+</body>
+</html>

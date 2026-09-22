@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Modal Popup</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .box {
+            background: white;
+            max-width: 600px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px #ccc;
+        }
+
+        button {
+            padding: 12px 25px;
+            background: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-box {
+            background: white;
+            width: 80%;
+            max-width: 450px;
+            margin: 15% auto;
+            padding: 30px;
+            border-radius: 12px;
+        }
+
+        .close {
+            background: #dc2626;
+        }
+
+        a {
+            display: block;
+            margin-top: 25px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+
+        <h1>Modal Popup</h1>
+
+        <p>Click the button to open a popup.</p>
+
+        <button onclick="openModal()">
+            Open Modal
+        </button>
+
+        <div id="modal" class="modal">
+
+            <div class="modal-box">
+
+                <h2>Hello!</h2>
+
+                <p>
+                    This is a modal popup created using JavaScript.
+                </p>
+
+                <button class="close" onclick="closeModal()">
+                    Close
+                </button>
+
+            </div>
+
+        </div>
+
+        <a href="index.html">Back to Programs</a>
+
+    </div>
+
+    <script>
+
+        function openModal() {
+
+            document.getElementById("modal")
+                .style.display = "block";
+
+        }
+
+        function closeModal() {
+
+            document.getElementById("modal")
+                .style.display = "none";
+
+        }
+
+    </script>
+
+</body>
+
+</html>

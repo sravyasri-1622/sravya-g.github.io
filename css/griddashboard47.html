@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Dashboard</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f5f7fa;
+        }
+
+        .dashboard {
+            display: grid;
+            grid-template-columns: 220px 1fr;
+            min-height: 100vh;
+        }
+
+        .sidebar {
+            background: #172033;
+            color: white;
+            padding: 25px;
+        }
+
+        .sidebar h2 {
+            margin-bottom: 30px;
+        }
+
+        .sidebar p {
+            padding: 12px 0;
+        }
+
+        .main {
+            padding: 30px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        @media (max-width: 800px) {
+            .dashboard {
+                grid-template-columns: 1fr;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <aside class="sidebar">
+            <h2>Dashboard</h2>
+            <p>Home</p>
+            <p>Analytics</p>
+            <p>Students</p>
+            <p>Settings</p>
+        </aside>
+
+        <main class="main">
+
+            <h1>Dashboard</h1>
+
+            <div class="cards">
+
+                <div class="card">
+                    <h2>1,250</h2>
+                    <p>Total Students</p>
+                </div>
+
+                <div class="card">
+                    <h2>85%</h2>
+                    <p>Attendance</p>
+                </div>
+
+                <div class="card">
+                    <h2>42</h2>
+                    <p>Projects</p>
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+</body>
+</html>

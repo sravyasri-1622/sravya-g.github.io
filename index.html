@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HTML CSS JS Practicals</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            color: #1f2937;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #2563eb;
+            color: white;
+            text-align: center;
+            padding: 45px 20px;
+        }
+
+        header h1 {
+            font-size: 34px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 17px;
+        }
+
+        main {
+            max-width: 1100px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        main > h2 {
+            text-align: center;
+            font-size: 30px;
+            margin-bottom: 35px;
+        }
+
+        .program-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .program-card {
+            background: white;
+            padding: 30px;
+            border-radius: 18px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            transition: 0.3s;
+        }
+
+        .program-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .program-card h3 {
+            font-size: 24px;
+            margin-bottom: 12px;
+        }
+
+        .program-card p {
+            color: #64748b;
+            margin-bottom: 20px;
+        }
+
+        .program-card a {
+            display: inline-block;
+            text-decoration: none;
+            background: #2563eb;
+            color: white;
+            padding: 11px 20px;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .program-card a:hover {
+            background: #1d4ed8;
+        }
+
+        footer {
+            background: #111827;
+            color: white;
+            text-align: center;
+            padding: 25px 20px;
+            margin-top: 50px;
+        }
+
+        @media (max-width: 800px) {
+
+            .program-container {
+                grid-template-columns: 1fr;
+            }
+
+            header h1 {
+                font-size: 27px;
+            }
+
+            main > h2 {
+                font-size: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+
+        <h1>HTML, CSS & JavaScript Practicals</h1>
+
+        <p>
+            Web Programming Practical Assignment
+        </p>
+
+    </header>
+
+
+    <!-- Main Content -->
+    <main>
+
+        <h2>Practical Programs</h2>
+
+
+        <div class="program-container">
+
+            <!-- HTML Programs -->
+            <section class="program-card">
+
+                <h3>HTML Programs</h3>
+
+                <p>
+                    15 HTML practical programs covering
+                    basic HTML concepts and elements.
+                </p>
+
+                <a href="html/index.html">
+                    View HTML Programs
+                </a>
+
+            </section>
+
+
+            <!-- CSS Programs -->
+            <section class="program-card">
+
+                <h3>CSS Programs</h3>
+
+                <p>
+                    75 CSS practical programs covering
+                    styling, layouts, animations and responsiveness.
+                </p>
+
+                <a href="css/index.html">
+                    View CSS Programs
+                </a>
+
+            </section>
+
+
+            <!-- JavaScript Programs -->
+            <section class="program-card">
+
+                <h3>JavaScript Programs</h3>
+
+                <p>
+                    JavaScript practical programs covering
+                    basics, DOM, events, APIs and advanced concepts.
+                </p>
+
+                <a href="javascript/index.html">
+                    View JavaScript Programs
+                </a>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            &copy; 2026 HTML, CSS & JavaScript Practicals
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

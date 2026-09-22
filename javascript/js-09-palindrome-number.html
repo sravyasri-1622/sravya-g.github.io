@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Palindrome Number</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #f4f7fb;
+            text-align: center;
+            padding: 50px;
+        }
+
+        .box {
+            background: white;
+            max-width: 500px;
+            margin: auto;
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px #ccc;
+        }
+
+        input {
+            padding: 12px;
+        }
+
+        button {
+            padding: 12px 20px;
+            background: #f7971e;
+            color: white;
+            border: none;
+            border-radius: 7px;
+        }
+
+        #output {
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+
+        <h1>Palindrome Number</h1>
+
+        <input type="number" id="number" placeholder="Enter a number">
+
+        <button onclick="checkPalindrome()">Check</button>
+
+        <p id="output"></p>
+
+        <a href="index.html">← Back to JavaScript Programs</a>
+
+    </div>
+
+    <script>
+
+        function checkPalindrome() {
+
+            let number = document.getElementById("number").value;
+
+            let reverse = number.split("").reverse().join("");
+
+            if (number === reverse) {
+                document.getElementById("output").innerHTML =
+                    number + " is a Palindrome";
+            }
+            else {
+                document.getElementById("output").innerHTML =
+                    number + " is not a Palindrome";
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>

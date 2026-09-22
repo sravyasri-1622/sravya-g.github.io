@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Hover Effect</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: #f5f7fa;
+        }
+
+        .image-box {
+            width: 400px;
+            max-width: 90%;
+            margin: 40px auto;
+            overflow: hidden;
+            border-radius: 15px;
+        }
+
+        .image-box img {
+            width: 100%;
+            display: block;
+            transition: transform 0.5s;
+        }
+
+        .image-box:hover img {
+            transform: scale(1.15);
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Image Hover Effect</h1>
+
+    <div class="image-box">
+        <img src="../assets/images/web.jpg" alt="Web Development">
+    </div>
+
+    <p>Move your mouse over the image.</p>
+
+    <a href="index.html">← Back to Programs</a>
+
+</body>
+</html>

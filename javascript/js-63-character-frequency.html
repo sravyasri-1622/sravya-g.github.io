@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Character Frequency</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            padding: 40px;
+            background: #f4f7fb;
+        }
+
+        .box {
+            background: white;
+            padding: 30px;
+            max-width: 550px;
+            margin: auto;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px #ccc;
+        }
+
+        input,
+        button {
+            padding: 10px;
+            margin: 8px;
+        }
+
+        button {
+            background: #dc2626;
+            color: white;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+
+        <h1>Character Frequency</h1>
+
+        <input type="text" id="text"
+            placeholder="Enter a string">
+
+        <button onclick="findFrequency()">
+            Find Frequency
+        </button>
+
+        <p id="result"></p>
+
+        <a href="index.html">Back to Programs</a>
+
+    </div>
+
+    <script>
+
+        function findFrequency() {
+
+            let text = document.getElementById("text").value;
+            let frequency = {};
+
+            for (let i = 0; i < text.length; i++) {
+
+                let ch = text[i];
+
+                if (ch === " ") {
+                    continue;
+                }
+
+                if (frequency[ch]) {
+                    frequency[ch]++;
+                } else {
+                    frequency[ch] = 1;
+                }
+
+            }
+
+            let output = "";
+
+            for (let ch in frequency) {
+
+                output += ch + " : " +
+                    frequency[ch] + "<br>";
+
+            }
+
+            document.getElementById("result").innerHTML = output;
+
+        }
+
+    </script>
+
+</body>
+
+</html>

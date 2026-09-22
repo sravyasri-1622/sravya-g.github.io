@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript - Async Concepts</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #f8fafc;
+            padding: 40px 20px;
+        }
+
+        .box {
+            max-width: 650px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+        }
+
+        #output {
+            background: #eef2ff;
+            padding: 20px;
+            line-height: 2;
+        }
+
+        a {
+            display: block;
+            margin: 15px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+
+    <h1>Callbacks, Promises & Async/Await</h1>
+
+    <div id="output">Running...</div>
+
+    <a href="index.html">← Back to JavaScript Programs</a>
+    <a href="../index.html">← Home</a>
+
+</div>
+
+<script>
+
+function callbackExample(callback) {
+    callback("Callback executed successfully.");
+}
+
+function promiseExample() {
+
+    return new Promise(function(resolve) {
+
+        setTimeout(function() {
+            resolve("Promise resolved successfully.");
+        }, 1000);
+
+    });
+}
+
+async function asyncExample() {
+
+    let result = await promiseExample();
+
+    document.getElementById("output").innerHTML =
+        "Callback: " +
+        "<br>" + result +
+        "<br><br>Promise: " +
+        "<br>Promise resolved successfully." +
+        "<br><br>Async/Await: " +
+        "<br>" + result;
+}
+
+callbackExample(function(message) {
+    console.log(message);
+});
+
+asyncExample();
+
+</script>
+
+</body>
+</html>

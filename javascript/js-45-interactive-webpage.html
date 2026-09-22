@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript - Interactive Webpage</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            margin: 0;
+            background: #f8fafc;
+        }
+
+        header {
+            background: #2563eb;
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px #ccc;
+        }
+
+        button {
+            padding: 12px 20px;
+            margin: 8px;
+            border: none;
+            border-radius: 8px;
+            background: #2563eb;
+            color: white;
+            cursor: pointer;
+        }
+
+        #message {
+            font-size: 20px;
+            margin: 20px;
+        }
+
+        a {
+            display: block;
+            margin: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+
+    <h1>Interactive Webpage</h1>
+
+    <p>HTML + CSS + JavaScript</p>
+
+</header>
+
+<div class="container">
+
+    <div class="card">
+
+        <h2 id="title">Welcome!</h2>
+
+        <div id="message">
+            Click a button to interact with the page.
+        </div>
+
+        <button onclick="changeText()">Change Text</button>
+
+        <button onclick="changeColor()">Change Background</button>
+
+        <button onclick="showDate()">Show Date</button>
+
+    </div>
+
+    <a href="index.html">← Back to JavaScript Programs</a>
+    <a href="../index.html">← Home</a>
+
+</div>
+
+<script>
+
+function changeText() {
+
+    document.getElementById("title").innerHTML =
+        "JavaScript is Interactive!";
+
+    document.getElementById("message").innerHTML =
+        "The text was changed using JavaScript.";
+}
+
+function changeColor() {
+
+    document.body.style.backgroundColor = "#dbeafe";
+}
+
+function showDate() {
+
+    document.getElementById("message").innerHTML =
+        new Date().toLocaleString();
+}
+
+</script>
+
+</body>
+</html>

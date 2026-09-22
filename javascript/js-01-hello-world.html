@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hello World | JavaScript</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            text-align: center;
+            padding: 60px;
+        }
+
+        .box {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #f7971e;
+        }
+
+        button {
+            padding: 12px 25px;
+            border: none;
+            background: #f7971e;
+            color: white;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        #output {
+            margin-top: 20px;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 25px;
+            text-decoration: none;
+            color: #2575fc;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+
+        <h1>Hello World</h1>
+
+        <p>Click the button to display Hello World.</p>
+
+        <button onclick="showMessage()">Click Me</button>
+
+        <div id="output"></div>
+
+        <a href="index.html">← Back to JavaScript Programs</a>
+
+    </div>
+
+    <script>
+
+        function showMessage() {
+            document.getElementById("output").innerHTML = "Hello World!";
+        }
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown Validation</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            padding: 50px;
+        }
+
+        select {
+            padding: 10px;
+            width: 220px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2>Select Your Department</h2>
+
+<select id="department">
+    <option value="">-- Select Department --</option>
+    <option value="CSE">Computer Science</option>
+    <option value="ECE">Electronics</option>
+    <option value="EEE">Electrical</option>
+</select>
+
+<br>
+
+<button onclick="checkDepartment()">Submit</button>
+
+<p id="result"></p>
+
+<a href="index.html">← Back to Programs</a>
+
+<script>
+function checkDepartment() {
+
+    let department = document.getElementById("department").value;
+    let result = document.getElementById("result");
+
+    if (department === "") {
+        result.textContent = "Please select a department.";
+    } else {
+        result.textContent = "Selected department: " + department;
+    }
+}
+</script>
+
+</body>
+</html>

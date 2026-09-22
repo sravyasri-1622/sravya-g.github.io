@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 65 - Transitions</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f1f5f9;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        nav a {
+            color: #2563eb;
+            text-decoration: none;
+            margin: 15px;
+        }
+
+        .box {
+            width: 200px;
+            padding: 40px 20px;
+            margin: 60px auto;
+            background: #2563eb;
+            color: white;
+            border-radius: 15px;
+
+            transition:
+                transform 0.4s ease,
+                border-radius 0.4s ease,
+                box-shadow 0.4s ease;
+        }
+
+        .box:hover {
+            transform: scale(1.1);
+            border-radius: 40px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+
+<body>
+
+<nav>
+    <a href="../index.html">Home</a>
+    <a href="index.html">CSS Programs</a>
+</nav>
+
+<h1>CSS Transition</h1>
+
+<div class="box">
+    Hover Me
+</div>
+
+</body>
+</html>

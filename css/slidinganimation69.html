@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 69 - Sliding Card</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f1f5f9;
+            text-align: center;
+            padding: 40px;
+        }
+
+        nav a {
+            color: #2563eb;
+            text-decoration: none;
+            margin: 15px;
+        }
+
+        .card {
+            width: 280px;
+            margin: 70px auto;
+            padding: 30px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+
+            animation: slideIn 1.2s ease-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(-300px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<nav>
+    <a href="../index.html">Home</a>
+    <a href="index.html">CSS Programs</a>
+</nav>
+
+<h1>Sliding Card Animation</h1>
+
+<div class="card">
+    <h2>Welcome!</h2>
+    <p>This card slides into the webpage using CSS animation.</p>
+</div>
+
+</body>
+</html>

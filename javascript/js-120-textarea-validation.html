@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Textarea Validation</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            padding: 40px;
+        }
+
+        textarea {
+            width: 300px;
+            height: 120px;
+            padding: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2>Feedback</h2>
+
+<textarea id="feedback" placeholder="Enter your feedback"></textarea>
+
+<br><br>
+
+<button onclick="checkFeedback()">Submit</button>
+
+<p id="result"></p>
+
+<a href="index.html">← Back to Programs</a>
+
+<script>
+function checkFeedback() {
+
+    let feedback = document.getElementById("feedback").value.trim();
+    let result = document.getElementById("result");
+
+    if (feedback === "") {
+        result.textContent = "Please enter your feedback.";
+    } else {
+        result.textContent = "Feedback submitted successfully!";
+    }
+}
+</script>
+
+</body>
+</html>

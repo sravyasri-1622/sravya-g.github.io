@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Date and Math Objects</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #f4f7fb;
+            text-align: center;
+            padding: 50px;
+        }
+
+        .box {
+            background: white;
+            max-width: 650px;
+            margin: auto;
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px #ccc;
+        }
+
+        button {
+            padding: 12px 20px;
+            background: #f7971e;
+            color: white;
+            border: none;
+            border-radius: 7px;
+        }
+
+        #output {
+            margin-top: 20px;
+            line-height: 2;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+
+        <h1>Date and Math Objects</h1>
+
+        <button onclick="showDetails()">Show Details</button>
+
+        <div id="output"></div>
+
+        <a href="index.html">← Back to JavaScript Programs</a>
+
+    </div>
+
+    <script>
+
+        function showDetails() {
+
+            let today = new Date();
+
+            let randomNumber = Math.random();
+            let squareRoot = Math.sqrt(64);
+
+            document.getElementById("output").innerHTML =
+                "Current Date: " + today + "<br>" +
+                "Random Number: " + randomNumber + "<br>" +
+                "Square Root of 64: " + squareRoot;
+        }
+
+    </script>
+
+</body>
+
+</html>

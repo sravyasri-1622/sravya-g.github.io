@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript - Inheritance</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #eff6ff;
+            padding: 40px 20px;
+        }
+
+        .box {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+        }
+
+        #output {
+            padding: 20px;
+            background: #eef2ff;
+            line-height: 1.8;
+        }
+
+        a {
+            display: block;
+            margin: 15px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+
+    <h1>Inheritance in JavaScript</h1>
+
+    <div id="output"></div>
+
+    <a href="index.html">← Back to JavaScript Programs</a>
+    <a href="../index.html">← Home</a>
+
+</div>
+
+<script>
+
+class Person {
+
+    constructor(name) {
+        this.name = name;
+    }
+
+    showName() {
+        return "Name: " + this.name;
+    }
+}
+
+class Student extends Person {
+
+    constructor(name, course) {
+        super(name);
+        this.course = course;
+    }
+
+    showDetails() {
+        return this.showName() +
+               "<br>Course: " + this.course;
+    }
+}
+
+let student = new Student("Sravya", "BTech");
+
+document.getElementById("output").innerHTML =
+    student.showDetails();
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Store Username</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            padding: 40px;
+        }
+
+        input, button {
+            padding: 10px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Store Username using localStorage</h1>
+
+    <input type="text" id="username" placeholder="Enter username">
+    <button onclick="saveUsername()">Save</button>
+
+    <p id="message"></p>
+
+    <a href="index.html">← Back to Programs</a>
+
+    <script>
+        function saveUsername() {
+            var username = document.getElementById("username").value;
+
+            localStorage.setItem("username", username);
+
+            document.getElementById("message").innerHTML =
+                "Username saved successfully!";
+        }
+    </script>
+
+</body>
+</html>

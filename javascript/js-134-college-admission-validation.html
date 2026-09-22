@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>College Admission Form</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f4f6f8;
+            padding: 30px;
+        }
+
+        .box {
+            max-width: 500px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+        }
+
+        input, select, button {
+            width: 100%;
+            padding: 11px;
+            margin-top: 10px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background: #222;
+            color: white;
+            border: none;
+        }
+
+        a {
+            display: block;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+    <h2>College Admission Form</h2>
+
+    <input type="text" id="name" placeholder="Student Name">
+    <input type="number" id="age" placeholder="Age">
+
+    <select id="course">
+        <option value="">Select Course</option>
+        <option>B.Tech</option>
+        <option>B.Sc</option>
+        <option>B.Com</option>
+    </select>
+
+    <input type="email" id="email" placeholder="Email">
+
+    <button onclick="submitForm()">Submit</button>
+
+    <p id="msg"></p>
+
+    <a href="index.html">Back to Programs</a>
+</div>
+
+<script>
+function submitForm() {
+    let name = document.getElementById("name").value;
+    let age = document.getElementById("age").value;
+    let course = document.getElementById("course").value;
+    let email = document.getElementById("email").value;
+    let msg = document.getElementById("msg");
+
+    if (name === "" || age === "" || course === "" || email === "") {
+        msg.innerHTML = "Please fill all fields.";
+        msg.style.color = "red";
+    } else if (age < 17) {
+        msg.innerHTML = "Age must be 17 or above.";
+        msg.style.color = "red";
+    } else {
+        msg.innerHTML = "Admission form submitted successfully!";
+        msg.style.color = "green";
+    }
+}
+</script>
+
+</body>
+</html>

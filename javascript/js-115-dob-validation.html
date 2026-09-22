@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date of Birth Validation</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            padding: 50px;
+        }
+
+        input {
+            padding: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2>Date of Birth Validation</h2>
+
+<input type="date" id="dob">
+<button onclick="checkDOB()">Check</button>
+
+<p id="result"></p>
+
+<a href="index.html">← Back to Programs</a>
+
+<script>
+function checkDOB() {
+
+    let dob = document.getElementById("dob").value;
+    let result = document.getElementById("result");
+
+    if (dob === "") {
+        result.textContent = "Please select your date of birth.";
+        return;
+    }
+
+    let selectedDate = new Date(dob);
+    let today = new Date();
+
+    if (selectedDate < today) {
+        result.textContent = "Valid date of birth.";
+    } else {
+        result.textContent = "Date of birth cannot be a future date.";
+    }
+}
+</script>
+
+</body>
+</html>

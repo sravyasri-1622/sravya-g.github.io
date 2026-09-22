@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Name Validation</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            padding: 50px;
+        }
+
+        input {
+            padding: 10px;
+            width: 250px;
+        }
+
+        button {
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2>Name Validation</h2>
+
+<input type="text" id="name" placeholder="Enter your name">
+<button onclick="validateName()">Check</button>
+
+<p id="result"></p>
+
+<a href="index.html">← Back to Programs</a>
+
+<script>
+function validateName() {
+
+    let name = document.getElementById("name").value;
+    let result = document.getElementById("result");
+
+    if (/^[A-Za-z ]+$/.test(name)) {
+        result.textContent = "Valid name.";
+    } else {
+        result.textContent = "Name should contain only alphabets.";
+    }
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Add Edit Delete To-Do</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .box {
+            background: white;
+            max-width: 650px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px #ccc;
+        }
+
+        input {
+            padding: 12px;
+            width: 65%;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+
+        button {
+            padding: 9px 15px;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            margin: 3px;
+        }
+
+        .add {
+            background: #2563eb;
+        }
+
+        .edit {
+            background: #16a34a;
+        }
+
+        .delete {
+            background: #dc2626;
+        }
+
+        li {
+            list-style: none;
+            padding: 10px;
+            margin: 8px;
+            background: #f1f5f9;
+            border-radius: 6px;
+        }
+
+        a {
+            display: block;
+            margin-top: 25px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+
+        <h1>To-Do List</h1>
+
+        <input type="text"
+            id="task"
+            placeholder="Enter a task">
+
+        <button class="add" onclick="addTask()">
+            Add Task
+        </button>
+
+        <ul id="taskList"></ul>
+
+        <a href="index.html">Back to Programs</a>
+
+    </div>
+
+    <script>
+
+        function addTask() {
+
+            let input =
+                document.getElementById("task");
+
+            let text = input.value;
+
+            if (text === "") {
+
+                alert("Enter a task.");
+                return;
+
+            }
+
+            let item =
+                document.createElement("li");
+
+            item.innerHTML =
+                text +
+                ' <button class="edit" onclick="editTask(this)">Edit</button>' +
+                ' <button class="delete" onclick="deleteTask(this)">Delete</button>';
+
+            document.getElementById("taskList")
+                .appendChild(item);
+
+            input.value = "";
+
+        }
+
+
+        function editTask(button) {
+
+            let item = button.parentNode;
+
+            let oldText =
+                item.firstChild.textContent.trim();
+
+            let newText =
+                prompt("Edit task:", oldText);
+
+            if (newText !== null && newText !== "") {
+
+                item.firstChild.textContent =
+                    newText + " ";
+
+            }
+
+        }
+
+
+        function deleteTask(button) {
+
+            button.parentNode.remove();
+
+        }
+
+    </script>
+
+</body>
+
+</html>

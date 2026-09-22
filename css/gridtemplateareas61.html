@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 61 - Grid Template Areas</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f1f5f9;
+        }
+
+        .layout {
+            min-height: 100vh;
+            display: grid;
+            grid-template-areas:
+                "header header"
+                "sidebar main"
+                "footer footer";
+
+            grid-template-columns: 230px 1fr;
+            grid-template-rows: auto 1fr auto;
+        }
+
+        header {
+            grid-area: header;
+            background: #111827;
+            color: white;
+            padding: 25px;
+        }
+
+        aside {
+            grid-area: sidebar;
+            background: #1e293b;
+            color: white;
+            padding: 25px;
+        }
+
+        main {
+            grid-area: main;
+            padding: 40px;
+        }
+
+        footer {
+            grid-area: footer;
+            background: #111827;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        @media (max-width: 700px) {
+            .layout {
+                grid-template-areas:
+                    "header"
+                    "sidebar"
+                    "main"
+                    "footer";
+
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="layout">
+
+    <header>
+        <h1>Grid Template Areas</h1>
+        <a href="../index.html">Home</a> |
+        <a href="index.html">CSS Programs</a>
+    </header>
+
+    <aside>
+        <h3>Sidebar</h3>
+        <p>Dashboard</p>
+        <p>Profile</p>
+        <p>Settings</p>
+    </aside>
+
+    <main>
+        <div class="card">
+            <h2>Main Content</h2>
+            <p>
+                CSS Grid template areas allow us to create a clear
+                visual structure for webpage layouts.
+            </p>
+        </div>
+    </main>
+
+    <footer>
+        © 2026 CSS Grid Practical
+    </footer>
+
+</div>
+
+</body>
+</html>

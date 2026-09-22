@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Array Sum and Average</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #f4f7fb;
+            text-align: center;
+            padding: 50px;
+        }
+
+        .box {
+            background: white;
+            max-width: 650px;
+            margin: auto;
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px #ccc;
+        }
+
+        input {
+            width: 80%;
+            padding: 12px;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 12px 20px;
+            background: #f7971e;
+            color: white;
+            border: none;
+            border-radius: 7px;
+        }
+
+        #output {
+            margin-top: 20px;
+            font-weight: bold;
+            line-height: 2;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+
+        <h1>Array Sum and Average</h1>
+
+        <input type="text" id="numbers" placeholder="10, 20, 30, 40">
+
+        <br>
+
+        <button onclick="calculate()">Calculate</button>
+
+        <div id="output"></div>
+
+        <a href="index.html">← Back to JavaScript Programs</a>
+
+    </div>
+
+    <script>
+
+        function calculate() {
+
+            let input = document.getElementById("numbers").value;
+
+            let numbers = input.split(",").map(Number);
+
+            let sum = 0;
+
+            for (let number of numbers) {
+                sum += number;
+            }
+
+            let average = sum / numbers.length;
+
+            document.getElementById("output").innerHTML =
+                "Sum = " + sum + "<br>" +
+                "Average = " + average;
+        }
+
+    </script>
+
+</body>
+
+</html>

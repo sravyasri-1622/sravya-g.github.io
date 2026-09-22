@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Store Object using JSON</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            padding: 40px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Store JavaScript Object</h1>
+
+    <button onclick="saveObject()">Save Object</button>
+    <button onclick="displayObject()">Display Object</button>
+
+    <p id="result"></p>
+
+    <a href="index.html">← Back to Programs</a>
+
+    <script>
+        function saveObject() {
+            var student = {
+                name: "Sravya",
+                course: "BTech",
+                year: 1
+            };
+
+            localStorage.setItem("student", JSON.stringify(student));
+
+            document.getElementById("result").innerHTML =
+                "Student object saved.";
+        }
+
+        function displayObject() {
+            var data = localStorage.getItem("student");
+            var student = JSON.parse(data);
+
+            document.getElementById("result").innerHTML =
+                "Name: " + student.name +
+                "<br>Course: " + student.course +
+                "<br>Year: " + student.year;
+        }
+    </script>
+
+</body>
+</html>

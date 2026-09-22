@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 59 - News Blog</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f1f5f9;
+        }
+
+        header {
+            background: #0f172a;
+            color: white;
+            padding: 25px 8%;
+        }
+
+        header a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 25px;
+        }
+
+        article,
+        aside {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.07);
+        }
+
+        article {
+            margin-bottom: 20px;
+        }
+
+        aside h3 {
+            margin-top: 0;
+        }
+
+        @media (max-width: 750px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Daily News</h1>
+
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="index.html">CSS Programs</a>
+    </nav>
+</header>
+
+<div class="container">
+
+    <main>
+
+        <article>
+            <h2>Technology Trends in 2026</h2>
+            <p>
+                Modern technology continues to influence education,
+                business and everyday life.
+            </p>
+        </article>
+
+        <article>
+            <h2>Future of Web Development</h2>
+            <p>
+                Responsive and accessible websites are becoming
+                increasingly important.
+            </p>
+        </article>
+
+        <article>
+            <h2>Learning New Skills</h2>
+            <p>
+                Practical projects help students develop real-world
+                technical skills.
+            </p>
+        </article>
+
+    </main>
+
+    <aside>
+        <h3>Latest Updates</h3>
+        <p>Technology</p>
+        <p>Education</p>
+        <p>Innovation</p>
+        <p>Student Projects</p>
+    </aside>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Form Events</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .box {
+            background: white;
+            max-width: 500px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px #ccc;
+        }
+
+        input {
+            width: 80%;
+            padding: 12px;
+            margin: 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+
+        button {
+            padding: 12px 25px;
+            background: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        #message {
+            font-weight: bold;
+        }
+
+        a {
+            display: block;
+            margin-top: 25px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+
+        <h1>Form Events</h1>
+
+        <form id="myForm">
+
+            <input type="text"
+                id="name"
+                placeholder="Enter your name"
+                required>
+
+            <br>
+
+            <input type="email"
+                id="email"
+                placeholder="Enter your email"
+                required>
+
+            <br>
+
+            <button type="submit">
+                Submit
+            </button>
+
+        </form>
+
+        <p id="message"></p>
+
+        <a href="index.html">Back to Programs</a>
+
+    </div>
+
+    <script>
+
+        let form = document.getElementById("myForm");
+        let nameInput = document.getElementById("name");
+        let message = document.getElementById("message");
+
+        nameInput.addEventListener("focus", function () {
+
+            message.innerText = "Name field is focused.";
+
+        });
+
+        nameInput.addEventListener("blur", function () {
+
+            message.innerText = "Name field lost focus.";
+
+        });
+
+        form.addEventListener("submit", function (event) {
+
+            event.preventDefault();
+
+            message.innerText =
+                "Form submitted successfully!";
+
+        });
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Redirect Webpage</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            padding: 50px;
+            background: #f2f2f2;
+        }
+
+        .box {
+            background: white;
+            padding: 30px;
+            max-width: 500px;
+            margin: auto;
+            border-radius: 15px;
+        }
+
+        button {
+            padding: 12px 25px;
+            cursor: pointer;
+        }
+
+        a {
+            display: block;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+    <h1>Redirect Webpage</h1>
+
+    <p>Click the button to open another webpage.</p>
+
+    <button onclick="redirectPage()">Go to Example</button>
+
+    <a href="index.html">← Back to Programs</a>
+</div>
+
+<script>
+function redirectPage() {
+    window.location.href = "https://www.example.com";
+}
+</script>
+
+</body>
+</html>

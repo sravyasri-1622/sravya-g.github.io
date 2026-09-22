@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Preview</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f4f6f8;
+            padding: 40px;
+        }
+
+        .box {
+            max-width: 500px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+        }
+
+        input, button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 10px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background: #222;
+            color: white;
+            border: none;
+        }
+
+        #preview {
+            margin-top: 20px;
+            padding: 15px;
+            background: #f1f1f1;
+        }
+
+        a {
+            display: block;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+
+    <h2>Form Preview</h2>
+
+    <input type="text" id="name" placeholder="Name">
+    <input type="email" id="email" placeholder="Email">
+    <input type="text" id="course" placeholder="Course">
+
+    <button onclick="showPreview()">Preview</button>
+
+    <div id="preview"></div>
+
+    <a href="index.html">Back to Programs</a>
+
+</div>
+
+<script>
+function showPreview() {
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let course = document.getElementById("course").value;
+
+    document.getElementById("preview").innerHTML =
+        "<h3>Entered Information</h3>" +
+        "<p>Name: " + name + "</p>" +
+        "<p>Email: " + email + "</p>" +
+        "<p>Course: " + course + "</p>";
+}
+</script>
+
+</body>
+</html>

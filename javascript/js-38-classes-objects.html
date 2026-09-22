@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript - Classes and Objects</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #f8fafc;
+            padding: 40px 20px;
+        }
+
+        .box {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+        }
+
+        #output {
+            background: #eef2ff;
+            padding: 20px;
+            line-height: 1.8;
+        }
+
+        a {
+            display: block;
+            margin: 15px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+
+    <h1>Classes and Objects</h1>
+
+    <div id="output"></div>
+
+    <a href="index.html">← Back to JavaScript Programs</a>
+    <a href="../index.html">← Home</a>
+
+</div>
+
+<script>
+
+class Student {
+
+    constructor(name, course) {
+        this.name = name;
+        this.course = course;
+    }
+
+    display() {
+        return "Name: " + this.name +
+               "<br>Course: " + this.course;
+    }
+}
+
+let student = new Student("Sravya", "BTech");
+
+document.getElementById("output").innerHTML =
+    student.display();
+
+</script>
+
+</body>
+</html>

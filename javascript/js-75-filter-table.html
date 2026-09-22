@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Filter Table</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .box {
+            background: white;
+            max-width: 750px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px #ccc;
+        }
+
+        input {
+            width: 80%;
+            padding: 12px;
+            margin: 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            padding: 12px;
+            border: 1px solid #ccc;
+        }
+
+        th {
+            background: #2563eb;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background: #f8fafc;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+
+        <h1>Search / Filter Table</h1>
+
+        <input type="text"
+            id="search"
+            placeholder="Search student..."
+            onkeyup="filterTable()">
+
+        <table id="studentTable">
+
+            <tr>
+                <th>Name</th>
+                <th>Course</th>
+                <th>Marks</th>
+            </tr>
+
+            <tr>
+                <td>Sravya</td>
+                <td>CSE</td>
+                <td>85</td>
+            </tr>
+
+            <tr>
+                <td>Prasanna</td>
+                <td>CSE</td>
+                <td>90</td>
+            </tr>
+
+            <tr>
+                <td>Deekshitha</td>
+                <td>IT</td>
+                <td>88</td>
+            </tr>
+
+            <tr>
+                <td>Thrishika</td>
+                <td>ECE</td>
+                <td>92</td>
+            </tr>
+
+        </table>
+
+        <a href="index.html">Back to Programs</a>
+
+    </div>
+
+    <script>
+
+        function filterTable() {
+
+            let input =
+                document.getElementById("search");
+
+            let filter =
+                input.value.toLowerCase();
+
+            let table =
+                document.getElementById("studentTable");
+
+            let rows =
+                table.getElementsByTagName("tr");
+
+            for (let i = 1; i < rows.length; i++) {
+
+                let text =
+                    rows[i].innerText.toLowerCase();
+
+                if (text.includes(filter)) {
+
+                    rows[i].style.display = "";
+
+                } else {
+
+                    rows[i].style.display = "none";
+
+                }
+
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>

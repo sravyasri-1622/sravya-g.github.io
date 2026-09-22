@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shopping Order Calculator</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f4f6f8;
+            padding: 40px;
+        }
+
+        .box {
+            max-width: 450px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+        }
+
+        input, select, button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 10px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background: #222;
+            color: white;
+            border: none;
+        }
+
+        a {
+            display: block;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+
+    <h2>Shopping Order</h2>
+
+    <select id="product">
+        <option value="500">T-Shirt - ₹500</option>
+        <option value="1000">Shoes - ₹1000</option>
+        <option value="700">Bag - ₹700</option>
+    </select>
+
+    <input type="number" id="quantity" placeholder="Quantity">
+
+    <button onclick="calculateTotal()">Calculate Total</button>
+
+    <h3 id="result"></h3>
+
+    <a href="index.html">Back to Programs</a>
+
+</div>
+
+<script>
+function calculateTotal() {
+    let price = Number(document.getElementById("product").value);
+    let quantity = Number(document.getElementById("quantity").value);
+
+    let total = price * quantity;
+
+    document.getElementById("result").innerHTML =
+        "Total Price: ₹" + total;
+}
+</script>
+
+</body>
+</html>

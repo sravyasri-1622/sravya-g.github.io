@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Browser Information</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            padding: 50px;
+            background: #f2f2f2;
+        }
+
+        .box {
+            background: white;
+            padding: 30px;
+            max-width: 700px;
+            margin: auto;
+            border-radius: 15px;
+        }
+
+        a {
+            display: block;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+    <h1>Browser Information</h1>
+
+    <p id="info"></p>
+
+    <a href="index.html">← Back to Programs</a>
+</div>
+
+<script>
+document.getElementById("info").innerHTML =
+    "Browser: " + navigator.userAgent +
+    "<br><br>Platform: " + navigator.platform +
+    "<br><br>Language: " + navigator.language;
+</script>
+
+</body>
+</html>

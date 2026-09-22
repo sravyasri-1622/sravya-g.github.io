@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Alert Confirm Prompt</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            padding: 50px;
+            background: #f5f5f5;
+        }
+
+        .box {
+            background: white;
+            padding: 30px;
+            max-width: 500px;
+            margin: auto;
+            border-radius: 15px;
+        }
+
+        button {
+            padding: 12px 20px;
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        a {
+            display: block;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+    <h1>Alert, Confirm and Prompt</h1>
+
+    <button onclick="showAlert()">Alert</button>
+    <button onclick="showConfirm()">Confirm</button>
+    <button onclick="showPrompt()">Prompt</button>
+
+    <p id="result"></p>
+
+    <a href="index.html">← Back to Programs</a>
+</div>
+
+<script>
+function showAlert() {
+    alert("Welcome to JavaScript!");
+}
+
+function showConfirm() {
+    let answer = confirm("Do you like JavaScript?");
+
+    if (answer) {
+        document.getElementById("result").innerHTML = "You clicked OK.";
+    } else {
+        document.getElementById("result").innerHTML = "You clicked Cancel.";
+    }
+}
+
+function showPrompt() {
+    let name = prompt("Enter your name:");
+
+    if (name) {
+        document.getElementById("result").innerHTML =
+            "Hello, " + name + "!";
+    }
+}
+</script>
+
+</body>
+</html>

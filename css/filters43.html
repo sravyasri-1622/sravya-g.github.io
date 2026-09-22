@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Filters</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        .gallery {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .gallery img {
+            width: 200px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .blur {
+            filter: blur(4px);
+        }
+
+        .grayscale {
+            filter: grayscale(100%);
+        }
+
+        .brightness {
+            filter: brightness(1.5);
+        }
+
+        .contrast {
+            filter: contrast(180%);
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Filters</h1>
+
+    <div class="gallery">
+
+        <img src="../assets/images/web.jpg" class="blur" alt="Blur">
+
+        <img src="../assets/images/web.jpg" class="grayscale" alt="Grayscale">
+
+        <img src="../assets/images/web.jpg" class="brightness" alt="Brightness">
+
+        <img src="../assets/images/web.jpg" class="contrast" alt="Contrast">
+
+    </div>
+
+    <br>
+
+    <a href="index.html">← Back to Programs</a>
+
+</body>
+</html>

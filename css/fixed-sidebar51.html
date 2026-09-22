@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 51 - Fixed Sidebar</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            color: #1f2937;
+        }
+
+        .sidebar {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 240px;
+            height: 100vh;
+            background: #111827;
+            color: white;
+            padding: 30px 20px;
+        }
+
+        .sidebar h2 {
+            margin-bottom: 30px;
+        }
+
+        .sidebar a {
+            display: block;
+            color: #d1d5db;
+            text-decoration: none;
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 8px;
+        }
+
+        .sidebar a:hover {
+            background: #374151;
+            color: white;
+        }
+
+        .content {
+            margin-left: 240px;
+            padding: 40px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            margin-bottom: 25px;
+        }
+
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+
+        .top-nav a {
+            text-decoration: none;
+            color: #2563eb;
+            font-weight: bold;
+        }
+
+        @media (max-width: 700px) {
+            .sidebar {
+                width: 180px;
+            }
+
+            .content {
+                margin-left: 180px;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <aside class="sidebar">
+        <h2>CSS Lab</h2>
+
+        <a href="#home">Home</a>
+        <a href="#dashboard">Dashboard</a>
+        <a href="#profile">Profile</a>
+        <a href="../index.html">Main Home</a>
+        <a href="index.html">CSS Programs</a>
+    </aside>
+
+    <main class="content">
+
+        <div class="top-nav">
+            <strong>CSS 51</strong>
+            <a href="index.html">← CSS Programs</a>
+        </div>
+
+        <section class="card" id="home">
+            <h1>Fixed Sidebar</h1>
+            <p>
+                This webpage demonstrates a sidebar that remains fixed
+                while the main content can be scrolled.
+            </p>
+        </section>
+
+        <section class="card" id="dashboard">
+            <h2>Dashboard</h2>
+            <p>
+                The sidebar stays in the same position even when the page
+                content becomes longer.
+            </p>
+        </section>
+
+        <section class="card" id="profile">
+            <h2>Profile</h2>
+            <p>
+                Fixed positioning is useful for dashboards, admin panels
+                and navigation systems.
+            </p>
+        </section>
+
+        <section class="card">
+            <h2>More Content</h2>
+            <p>
+                CSS position: fixed removes the element from the normal
+                document flow and keeps it attached to the viewport.
+            </p>
+        </section>
+
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Styled Registration Form</title>
+
+    <style>
+        body {
+            font-family: Arial;
+        }
+
+        form {
+            width: 350px;
+            margin: auto;
+            padding: 25px;
+            border: 2px solid blue;
+            border-radius: 10px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: blue;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Student Registration</h1>
+
+    <form>
+
+        <label>Name</label>
+        <input type="text">
+
+        <label>Email</label>
+        <input type="email">
+
+        <label>Course</label>
+        <select>
+            <option>CSE</option>
+            <option>ECE</option>
+            <option>AI</option>
+        </select>
+
+        <input type="submit" value="Register">
+
+    </form>
+
+    <br>
+    <a href="index.html">← Back to Programs</a>
+
+</body>
+</html>

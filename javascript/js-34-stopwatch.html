@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript - Stopwatch</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            background: #111827;
+            color: white;
+            padding: 60px 20px;
+        }
+
+        .watch {
+            max-width: 500px;
+            margin: auto;
+            background: #1f2937;
+            padding: 40px;
+            border-radius: 20px;
+        }
+
+        #time {
+            font-size: 50px;
+            margin: 30px;
+        }
+
+        button {
+            padding: 12px 20px;
+            margin: 5px;
+            border: none;
+            border-radius: 8px;
+        }
+
+        a {
+            display: block;
+            margin: 15px;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="watch">
+
+    <h1>Stopwatch</h1>
+
+    <div id="time">00:00:00</div>
+
+    <button onclick="startWatch()">Start</button>
+    <button onclick="stopWatch()">Stop</button>
+    <button onclick="resetWatch()">Reset</button>
+
+    <a href="index.html">← Back to JavaScript Programs</a>
+    <a href="../index.html">← Home</a>
+
+</div>
+
+<script>
+
+let seconds = 0;
+let timer;
+
+function startWatch() {
+
+    if (timer) {
+        return;
+    }
+
+    timer = setInterval(function() {
+
+        seconds++;
+
+        let hrs = Math.floor(seconds / 3600);
+        let mins = Math.floor((seconds % 3600) / 60);
+        let secs = seconds % 60;
+
+        document.getElementById("time").innerHTML =
+            String(hrs).padStart(2, "0") + ":" +
+            String(mins).padStart(2, "0") + ":" +
+            String(secs).padStart(2, "0");
+
+    }, 1000);
+}
+
+function stopWatch() {
+    clearInterval(timer);
+    timer = null;
+}
+
+function resetWatch() {
+    stopWatch();
+    seconds = 0;
+    document.getElementById("time").innerHTML = "00:00:00";
+}
+
+</script>
+
+</body>
+</html>

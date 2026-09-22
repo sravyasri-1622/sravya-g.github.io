@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Retrieve localStorage Data</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            padding: 40px;
+        }
+
+        button {
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Retrieve Data from localStorage</h1>
+
+    <button onclick="displayData()">Display Username</button>
+
+    <h3 id="result"></h3>
+
+    <a href="index.html">← Back to Programs</a>
+
+    <script>
+        function displayData() {
+            var username = localStorage.getItem("username");
+
+            if (username) {
+                document.getElementById("result").innerHTML =
+                    "Stored Username: " + username;
+            } else {
+                document.getElementById("result").innerHTML =
+                    "No username found.";
+            }
+        }
+    </script>
+
+</body>
+</html>

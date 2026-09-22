@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DOM Methods Demonstration</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .box {
+            background: white;
+            max-width: 700px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px #ccc;
+        }
+
+        .item {
+            padding: 12px;
+            margin: 8px;
+            background: #e0f2fe;
+            border-radius: 6px;
+        }
+
+        button {
+            padding: 10px 16px;
+            margin: 5px;
+            border: none;
+            border-radius: 6px;
+            background: #2563eb;
+            color: white;
+            cursor: pointer;
+        }
+
+        a {
+            display: block;
+            margin-top: 25px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+
+        <h1>DOM Methods Demonstration</h1>
+
+        <div id="container">
+
+            <p class="item">
+                First Element
+            </p>
+
+        </div>
+
+        <button onclick="addElement()">
+            Add Element
+        </button>
+
+        <button onclick="removeElement()">
+            Remove Element
+        </button>
+
+        <button onclick="replaceElement()">
+            Replace Element
+        </button>
+
+        <a href="index.html">Back to Programs</a>
+
+    </div>
+
+    <script>
+
+        function addElement() {
+
+            let element =
+                document.createElement("p");
+
+            element.className = "item";
+
+            element.innerText =
+                "Element added using createElement() and appendChild().";
+
+            document.getElementById("container")
+                .appendChild(element);
+
+        }
+
+
+        function removeElement() {
+
+            let container =
+                document.getElementById("container");
+
+            if (container.lastElementChild) {
+
+                container.removeChild(
+                    container.lastElementChild
+                );
+
+            }
+
+        }
+
+
+        function replaceElement() {
+
+            let container =
+                document.getElementById("container");
+
+            let oldElement =
+                container.firstElementChild;
+
+            let newElement =
+                document.createElement("p");
+
+            newElement.className = "item";
+
+            newElement.innerText =
+                "Element replaced using replaceChild().";
+
+            container.replaceChild(
+                newElement,
+                oldElement
+            );
+
+        }
+
+    </script>
+
+</body>
+
+</html>

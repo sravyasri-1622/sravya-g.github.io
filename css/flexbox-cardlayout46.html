@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Cards</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f5f7fa;
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            padding: 40px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            width: 250px;
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+
+        .card h2 {
+            color: #2563eb;
+        }
+
+        .card button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            background: #2563eb;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Flexbox Card Layout</h1>
+
+    <div class="container">
+
+        <div class="card">
+            <h2>HTML</h2>
+            <p>Learn webpage structure.</p>
+            <button>Explore</button>
+        </div>
+
+        <div class="card">
+            <h2>CSS</h2>
+            <p>Learn webpage styling.</p>
+            <button>Explore</button>
+        </div>
+
+        <div class="card">
+            <h2>JavaScript</h2>
+            <p>Learn webpage interaction.</p>
+            <button>Explore</button>
+        </div>
+
+    </div>
+
+    <a href="index.html">← Back to Programs</a>
+
+</body>
+</html>

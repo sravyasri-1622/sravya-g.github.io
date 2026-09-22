@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript - Countdown Timer</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            background: #eff6ff;
+            padding: 60px 20px;
+        }
+
+        .timer {
+            max-width: 500px;
+            margin: auto;
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 5px 20px #ccc;
+        }
+
+        #countdown {
+            font-size: 50px;
+            font-weight: bold;
+            margin: 30px;
+        }
+
+        button {
+            padding: 12px 25px;
+            background: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 8px;
+        }
+
+        a {
+            display: block;
+            margin: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="timer">
+
+    <h1>Countdown Timer</h1>
+
+    <div id="countdown">10</div>
+
+    <button onclick="startCountdown()">Start</button>
+
+    <a href="index.html">← Back to JavaScript Programs</a>
+    <a href="../index.html">← Home</a>
+
+</div>
+
+<script>
+
+let count = 10;
+let timer;
+
+function startCountdown() {
+
+    clearInterval(timer);
+
+    count = 10;
+
+    timer = setInterval(function() {
+
+        document.getElementById("countdown").innerHTML = count;
+
+        count--;
+
+        if (count < 0) {
+            clearInterval(timer);
+            document.getElementById("countdown").innerHTML =
+                "Time's Up!";
+        }
+
+    }, 1000);
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prevent Form Submission</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            padding: 40px;
+            text-align: center;
+        }
+
+        input {
+            padding: 10px;
+            margin: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2>Form Validation</h2>
+
+<form id="myForm">
+
+    <input type="text" id="name" placeholder="Enter name">
+
+    <button type="submit">Submit</button>
+
+</form>
+
+<p id="result"></p>
+
+<a href="index.html">← Back to Programs</a>
+
+<script>
+document.getElementById("myForm").addEventListener("submit", function(event) {
+
+    let name = document.getElementById("name").value;
+    let result = document.getElementById("result");
+
+    if (name === "") {
+
+        event.preventDefault();
+
+        result.textContent = "Submission stopped. Name is required.";
+
+    } else {
+
+        event.preventDefault();
+
+        result.textContent = "Form submitted successfully!";
+    }
+});
+</script>
+
+</body>
+</html>

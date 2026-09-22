@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Store Array using JSON</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            padding: 40px;
+        }
+
+        button {
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Store Array using JSON</h1>
+
+    <button onclick="saveArray()">Save Array</button>
+    <button onclick="displayArray()">Display Array</button>
+
+    <p id="result"></p>
+
+    <a href="index.html">← Back to Programs</a>
+
+    <script>
+        function saveArray() {
+            var subjects = ["HTML", "CSS", "JavaScript"];
+
+            localStorage.setItem("subjects", JSON.stringify(subjects));
+
+            document.getElementById("result").innerHTML =
+                "Array saved successfully.";
+        }
+
+        function displayArray() {
+            var data = localStorage.getItem("subjects");
+            var subjects = JSON.parse(data);
+
+            document.getElementById("result").innerHTML =
+                subjects.join(", ");
+        }
+    </script>
+
+</body>
+</html>

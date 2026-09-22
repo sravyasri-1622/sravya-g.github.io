@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript - Spread and Rest</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #eef2ff;
+            padding: 40px 20px;
+        }
+
+        .box {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+        }
+
+        #output {
+            background: #f1f5f9;
+            padding: 20px;
+            line-height: 2;
+        }
+
+        a {
+            display: block;
+            margin: 15px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+
+    <h1>Spread and Rest Operators</h1>
+
+    <div id="output"></div>
+
+    <a href="index.html">← Back to JavaScript Programs</a>
+    <a href="../index.html">← Home</a>
+
+</div>
+
+<script>
+
+let numbers = [10, 20, 30];
+
+let newNumbers = [...numbers, 40, 50];
+
+function addNumbers(...values) {
+
+    let total = 0;
+
+    for (let value of values) {
+        total += value;
+    }
+
+    return total;
+}
+
+document.getElementById("output").innerHTML =
+    "Original Array: " + numbers.join(", ") + "<br>" +
+    "Spread Array: " + newNumbers.join(", ") + "<br>" +
+    "Rest Operator Sum: " + addNumbers(10, 20, 30, 40);
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Change Multiple Elements</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .box {
+            background: white;
+            max-width: 600px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px #ccc;
+        }
+
+        .item {
+            padding: 12px;
+            margin: 8px;
+            background: #e5e7eb;
+            border-radius: 8px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background: #16a34a;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+
+        <h1>Change Multiple Elements</h1>
+
+        <p class="item">First element</p>
+        <p class="item">Second element</p>
+        <p class="item">Third element</p>
+
+        <button onclick="changeElements()">
+            Change All
+        </button>
+
+        <br>
+
+        <a href="index.html">Back to Programs</a>
+
+    </div>
+
+    <script>
+
+        function changeElements() {
+
+            let elements =
+                document.getElementsByClassName("item");
+
+            for (let i = 0; i < elements.length; i++) {
+
+                elements[i].style.backgroundColor = "#dcfce7";
+                elements[i].style.color = "#166534";
+                elements[i].style.fontWeight = "bold";
+
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dependent Dropdown</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .box {
+            background: white;
+            max-width: 550px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px #ccc;
+        }
+
+        select {
+            padding: 12px;
+            width: 80%;
+            margin: 10px;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+
+        <h1>Country → State → City</h1>
+
+        <select id="country"
+            onchange="loadStates()">
+
+            <option value="">Select Country</option>
+            <option value="india">India</option>
+            <option value="usa">USA</option>
+
+        </select>
+
+        <select id="state"
+            onchange="loadCities()">
+
+            <option value="">Select State</option>
+
+        </select>
+
+        <select id="city">
+
+            <option value="">Select City</option>
+
+        </select>
+
+        <br>
+
+        <a href="index.html">Back to Programs</a>
+
+    </div>
+
+    <script>
+
+        let data = {
+
+            india: {
+
+                andhra: ["Vijayawada", "Guntur", "Ongole"],
+                tamilnadu: ["Chennai", "Coimbatore", "Madurai"]
+
+            },
+
+            usa: {
+
+                california: ["Los Angeles", "San Francisco"],
+                texas: ["Houston", "Dallas"]
+
+            }
+
+        };
+
+
+        function loadStates() {
+
+            let country =
+                document.getElementById("country").value;
+
+            let state =
+                document.getElementById("state");
+
+            state.innerHTML =
+                '<option value="">Select State</option>';
+
+            document.getElementById("city").innerHTML =
+                '<option value="">Select City</option>';
+
+            if (country === "") {
+                return;
+            }
+
+            for (let name in data[country]) {
+
+                let option =
+                    document.createElement("option");
+
+                option.value = name;
+                option.text =
+                    name.charAt(0).toUpperCase() +
+                    name.slice(1);
+
+                state.appendChild(option);
+
+            }
+
+        }
+
+
+        function loadCities() {
+
+            let country =
+                document.getElementById("country").value;
+
+            let state =
+                document.getElementById("state").value;
+
+            let city =
+                document.getElementById("city");
+
+            city.innerHTML =
+                '<option value="">Select City</option>';
+
+            if (state === "") {
+                return;
+            }
+
+            for (let i = 0;
+                i < data[country][state].length;
+                i++) {
+
+                let option =
+                    document.createElement("option");
+
+                option.text =
+                    data[country][state][i];
+
+                city.appendChild(option);
+
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>

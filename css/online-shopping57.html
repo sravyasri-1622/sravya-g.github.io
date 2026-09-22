@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 56 - Restaurant</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #fff7ed;
+        }
+
+        header {
+            background: #431407;
+            color: white;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 18px;
+        }
+
+        .hero {
+            min-height: 450px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            background:
+                linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+                url("../assets/images/web.jpg") center/cover;
+            padding: 30px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+        }
+
+        .menu {
+            padding: 60px 8%;
+            text-align: center;
+        }
+
+        .items {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .item {
+            width: 250px;
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+        }
+
+        .price {
+            font-weight: bold;
+            font-size: 20px;
+            color: #c2410c;
+        }
+
+        @media (max-width: 650px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .hero h1 {
+                font-size: 34px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h2>Urban Bites</h2>
+
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="index.html">CSS Programs</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div>
+        <h1>Delicious Food</h1>
+        <p>Fresh ingredients. Great taste. Beautiful moments.</p>
+    </div>
+</section>
+
+<section class="menu">
+
+    <h2>Our Menu</h2>
+
+    <div class="items">
+
+        <div class="item">
+            <h3>Classic Burger</h3>
+            <p>Fresh vegetables and crispy patty.</p>
+            <div class="price">₹199</div>
+        </div>
+
+        <div class="item">
+            <h3>Veg Pizza</h3>
+            <p>Cheesy pizza with fresh toppings.</p>
+            <div class="price">₹249</div>
+        </div>
+
+        <div class="item">
+            <h3>Pasta</h3>
+            <p>Creamy pasta prepared with herbs.</p>
+            <div class="price">₹229</div>
+        </div>
+
+    </div>
+
+</section>
+
+</body>
+</html>

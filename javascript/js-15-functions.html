@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>JavaScript Functions</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #f4f7fb;
+            text-align: center;
+            padding: 50px;
+        }
+
+        .box {
+            background: white;
+            max-width: 600px;
+            margin: auto;
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px #ccc;
+        }
+
+        button {
+            padding: 12px 20px;
+            background: #f7971e;
+            color: white;
+            border: none;
+            border-radius: 7px;
+            cursor: pointer;
+        }
+
+        #output {
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+
+        <h1>JavaScript Functions</h1>
+
+        <p>This program demonstrates a simple function.</p>
+
+        <button onclick="displayMessage()">Run Function</button>
+
+        <p id="output"></p>
+
+        <a href="index.html">← Back to JavaScript Programs</a>
+
+    </div>
+
+    <script>
+
+        function displayMessage() {
+
+            let name = "Sravya";
+
+            document.getElementById("output").innerHTML =
+                "Hello " + name + "! This message is returned by a function.";
+        }
+
+    </script>
+
+</body>
+
+</html>

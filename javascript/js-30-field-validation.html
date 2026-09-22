@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript - Field Validation</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #eef2ff;
+            padding: 30px 20px;
+        }
+
+        .box {
+            max-width: 500px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0 15px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #4f46e5;
+            color: white;
+            border: none;
+            border-radius: 8px;
+        }
+
+        #result {
+            margin-top: 20px;
+            line-height: 1.8;
+        }
+
+        a {
+            display: block;
+            margin: 15px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+
+    <h1>Validate User Details</h1>
+
+    <input type="text" id="name" placeholder="Name">
+
+    <input type="email" id="email" placeholder="Email">
+
+    <input type="text" id="phone" placeholder="10 digit phone number">
+
+    <input type="password" id="password" placeholder="Password">
+
+    <button onclick="validate()">Validate</button>
+
+    <div id="result"></div>
+
+    <a href="index.html">← Back to JavaScript Programs</a>
+    <a href="../index.html">← Home</a>
+
+</div>
+
+<script>
+
+function validate() {
+
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let phone = document.getElementById("phone").value;
+    let password = document.getElementById("password").value;
+
+    let result = "";
+
+    if (name === "") {
+        result += "❌ Enter your name.<br>";
+    } else {
+        result += "✅ Name is valid.<br>";
+    }
+
+    if (email.includes("@")) {
+        result += "✅ Email is valid.<br>";
+    } else {
+        result += "❌ Enter a valid email.<br>";
+    }
+
+    if (phone.length === 10) {
+        result += "✅ Phone number is valid.<br>";
+    } else {
+        result += "❌ Phone number must contain 10 digits.<br>";
+    }
+
+    if (password.length >= 6) {
+        result += "✅ Password is valid.<br>";
+    } else {
+        result += "❌ Password must contain at least 6 characters.<br>";
+    }
+
+    document.getElementById("result").innerHTML = result;
+}
+
+</script>
+
+</body>
+</html>

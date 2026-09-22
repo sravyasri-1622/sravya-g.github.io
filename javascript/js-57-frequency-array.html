@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Array Frequency</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            padding: 40px;
+            background: #f4f7fb;
+        }
+
+        .box {
+            background: white;
+            padding: 30px;
+            max-width: 550px;
+            margin: auto;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px #ccc;
+        }
+
+        input,
+        button {
+            padding: 10px;
+            margin: 8px;
+        }
+
+        button {
+            background: #2563eb;
+            color: white;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+
+        <h1>Frequency of Array Elements</h1>
+
+        <input type="text" id="array"
+            placeholder="1,2,2,3,3,3">
+
+        <button onclick="findFrequency()">
+            Find Frequency
+        </button>
+
+        <p id="result"></p>
+
+        <a href="index.html">Back to Programs</a>
+
+    </div>
+
+    <script>
+
+        function findFrequency() {
+
+            let array = document.getElementById("array").value
+                .split(",")
+                .map(Number);
+
+            let frequency = {};
+
+            for (let i = 0; i < array.length; i++) {
+
+                let value = array[i];
+
+                if (frequency[value]) {
+                    frequency[value]++;
+                } else {
+                    frequency[value] = 1;
+                }
+
+            }
+
+            let output = "";
+
+            for (let value in frequency) {
+
+                output += value + " : " +
+                    frequency[value] + "<br>";
+
+            }
+
+            document.getElementById("result").innerHTML = output;
+
+        }
+
+    </script>
+
+</body>
+
+</html>

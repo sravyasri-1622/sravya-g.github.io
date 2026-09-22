@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mouse Events</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .box {
+            background: white;
+            max-width: 600px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px #ccc;
+        }
+
+        #mouseBox {
+            padding: 60px 20px;
+            background: #dbeafe;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        #message {
+            font-weight: bold;
+        }
+
+        a {
+            display: block;
+            margin-top: 25px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+
+        <h1>Mouse Events</h1>
+
+        <div id="mouseBox">
+            Move, enter, leave or click the mouse here.
+        </div>
+
+        <p id="message">
+            Waiting for mouse event...
+        </p>
+
+        <a href="index.html">Back to Programs</a>
+
+    </div>
+
+    <script>
+
+        let box = document.getElementById("mouseBox");
+        let message = document.getElementById("message");
+
+        box.addEventListener("click", function () {
+            message.innerText = "Mouse Clicked!";
+        });
+
+        box.addEventListener("mouseenter", function () {
+            message.innerText = "Mouse Entered!";
+        });
+
+        box.addEventListener("mouseleave", function () {
+            message.innerText = "Mouse Left!";
+        });
+
+        box.addEventListener("mousemove", function () {
+            message.innerText = "Mouse is Moving!";
+        });
+
+    </script>
+
+</body>
+
+</html>

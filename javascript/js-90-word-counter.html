@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Word Counter</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .box {
+            background: white;
+            max-width: 600px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px #ccc;
+        }
+
+        textarea {
+            width: 90%;
+            height: 150px;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+
+        #count {
+            font-weight: bold;
+        }
+
+        a {
+            display: block;
+            margin-top: 25px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+
+        <h1>Live Word Counter</h1>
+
+        <textarea id="text"
+            oninput="countWords()"
+            placeholder="Type your text here..."></textarea>
+
+        <p id="count">
+            Words: 0
+        </p>
+
+        <a href="index.html">Back to Programs</a>
+
+    </div>
+
+    <script>
+
+        function countWords() {
+
+            let text =
+                document.getElementById("text").value.trim();
+
+            if (text === "") {
+
+                document.getElementById("count").innerText =
+                    "Words: 0";
+
+                return;
+
+            }
+
+            let words = text.split(/\s+/);
+
+            document.getElementById("count").innerText =
+                "Words: " + words.length;
+
+        }
+
+    </script>
+
+</body>
+
+</html>

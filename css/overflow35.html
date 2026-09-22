@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Overflow</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 30px;
+            background: #f5f7fa;
+        }
+
+        .box {
+            width: 300px;
+            height: 100px;
+            padding: 15px;
+            margin: 20px;
+            background: white;
+            border: 2px solid #2563eb;
+        }
+
+        .scroll {
+            overflow: auto;
+        }
+
+        .hidden {
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Overflow</h1>
+
+    <div class="box scroll">
+        <h3>Overflow Auto</h3>
+        <p>
+            This box demonstrates overflow auto.
+            When the content is larger than the box,
+            a scrollbar appears.
+        </p>
+    </div>
+
+    <div class="box hidden">
+        <h3>Overflow Hidden</h3>
+        <p>
+            Extra content is hidden when it goes outside the box.
+        </p>
+    </div>
+
+    <a href="index.html">← Back to Programs</a>
+
+</body>
+</html>

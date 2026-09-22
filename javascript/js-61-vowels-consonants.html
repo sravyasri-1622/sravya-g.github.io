@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Vowels and Consonants</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            padding: 40px;
+            background: #f4f7fb;
+        }
+
+        .box {
+            background: white;
+            padding: 30px;
+            max-width: 550px;
+            margin: auto;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px #ccc;
+        }
+
+        input,
+        button {
+            padding: 10px;
+            margin: 8px;
+        }
+
+        button {
+            background: #16a34a;
+            color: white;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+
+        <h1>Count Vowels and Consonants</h1>
+
+        <input type="text" id="text"
+            placeholder="Enter a string">
+
+        <button onclick="countLetters()">Count</button>
+
+        <p id="result"></p>
+
+        <a href="index.html">Back to Programs</a>
+
+    </div>
+
+    <script>
+
+        function countLetters() {
+
+            let text = document.getElementById("text").value
+                .toLowerCase();
+
+            let vowels = 0;
+            let consonants = 0;
+
+            for (let i = 0; i < text.length; i++) {
+
+                let ch = text[i];
+
+                if (ch >= "a" && ch <= "z") {
+
+                    if ("aeiou".includes(ch)) {
+                        vowels++;
+                    } else {
+                        consonants++;
+                    }
+
+                }
+
+            }
+
+            document.getElementById("result").innerHTML =
+                "Vowels: " + vowels +
+                "<br>Consonants: " + consonants;
+
+        }
+
+    </script>
+
+</body>
+
+</html>

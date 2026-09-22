@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Multiplication Table</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            padding: 40px;
+            background: #f4f7fb;
+        }
+
+        .box {
+            background: white;
+            padding: 30px;
+            max-width: 500px;
+            margin: auto;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px #ccc;
+        }
+
+        input,
+        button {
+            padding: 10px;
+            margin: 8px;
+        }
+
+        button {
+            background: #2563eb;
+            color: white;
+            border: none;
+        }
+
+        #result {
+            line-height: 1.8;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+
+        <h1>Multiplication Table</h1>
+
+        <input type="number" id="number">
+
+        <button onclick="generateTable()">Generate</button>
+
+        <div id="result"></div>
+
+        <a href="index.html">Back to Programs</a>
+
+    </div>
+
+    <script>
+
+        function generateTable() {
+
+            let number = Number(document.getElementById("number").value);
+            let output = "";
+
+            for (let i = 1; i <= 10; i++) {
+
+                output += number + " × " + i +
+                    " = " + (number * i) + "<br>";
+
+            }
+
+            document.getElementById("result").innerHTML = output;
+
+        }
+
+    </script>
+
+</body>
+
+</html>

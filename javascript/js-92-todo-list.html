@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>To-Do List</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .box {
+            background: white;
+            max-width: 600px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px #ccc;
+        }
+
+        input {
+            padding: 12px;
+            width: 65%;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+
+        button {
+            padding: 12px 18px;
+            background: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        li {
+            list-style: none;
+            background: #eff6ff;
+            padding: 12px;
+            margin: 8px;
+            border-radius: 6px;
+            text-align: left;
+        }
+
+        a {
+            display: block;
+            margin-top: 25px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+
+        <h1>To-Do List</h1>
+
+        <input type="text"
+            id="task"
+            placeholder="Enter a task">
+
+        <button onclick="addTask()">
+            Add
+        </button>
+
+        <ul id="taskList"></ul>
+
+        <a href="index.html">Back to Programs</a>
+
+    </div>
+
+    <script>
+
+        function addTask() {
+
+            let task =
+                document.getElementById("task").value;
+
+            if (task === "") {
+
+                alert("Please enter a task.");
+                return;
+
+            }
+
+            let item =
+                document.createElement("li");
+
+            item.innerText = task;
+
+            document.getElementById("taskList")
+                .appendChild(item);
+
+            document.getElementById("task").value = "";
+
+        }
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 73 - CSS Functions</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #eef2ff;
+            padding: 30px;
+        }
+
+        nav a {
+            color: #2563eb;
+            text-decoration: none;
+            margin-right: 20px;
+        }
+
+        .container {
+            width: min(90%, 900px);
+            margin: 60px auto;
+        }
+
+        .card {
+            background: white;
+            padding: max(25px, 5vw);
+            border-radius: 18px;
+        }
+
+        h1 {
+            font-size: clamp(30px, 6vw, 70px);
+        }
+
+        p {
+            font-size: clamp(16px, 2vw, 22px);
+        }
+    </style>
+</head>
+
+<body>
+
+<nav>
+    <a href="../index.html">Home</a>
+    <a href="index.html">CSS Programs</a>
+</nav>
+
+<div class="container">
+
+    <div class="card">
+
+        <h1>CSS Functions</h1>
+
+        <p>
+            This page demonstrates clamp(), min(), and max()
+            CSS functions for responsive sizing.
+        </p>
+
+    </div>
+
+</div>
+
+</body>
+</html>

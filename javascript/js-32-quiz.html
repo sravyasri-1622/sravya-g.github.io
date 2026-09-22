@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript - Quiz</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #eef2ff;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .quiz {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            background: #e0e7ff;
+        }
+
+        #result {
+            font-size: 20px;
+            font-weight: bold;
+            margin: 20px;
+        }
+
+        a {
+            display: block;
+            margin: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="quiz">
+
+    <h1>JavaScript Quiz</h1>
+
+    <h2>Which keyword is used to declare a variable?</h2>
+
+    <button onclick="checkAnswer('var')">var</button>
+    <button onclick="checkAnswer('print')">print</button>
+    <button onclick="checkAnswer('input')">input</button>
+    <button onclick="checkAnswer('display')">display</button>
+
+    <div id="result"></div>
+
+    <a href="index.html">← Back to JavaScript Programs</a>
+    <a href="../index.html">← Home</a>
+
+</div>
+
+<script>
+
+function checkAnswer(answer) {
+
+    if (answer === "var") {
+        document.getElementById("result").innerHTML =
+            "✅ Correct Answer!";
+    } else {
+        document.getElementById("result").innerHTML =
+            "❌ Wrong Answer!";
+    }
+}
+
+</script>
+
+</body>
+</html>

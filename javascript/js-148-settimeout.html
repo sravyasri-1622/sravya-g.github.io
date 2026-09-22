@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>setTimeout()</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            padding: 50px;
+            background: #f2f2f2;
+        }
+
+        .box {
+            background: white;
+            padding: 30px;
+            max-width: 500px;
+            margin: auto;
+            border-radius: 15px;
+        }
+
+        button {
+            padding: 12px 20px;
+            cursor: pointer;
+        }
+
+        #message {
+            margin-top: 20px;
+            font-size: 20px;
+        }
+
+        a {
+            display: block;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+    <h1>setTimeout()</h1>
+
+    <button onclick="startTimer()">Start</button>
+
+    <p id="message">Message will appear after 3 seconds.</p>
+
+    <a href="index.html">← Back to Programs</a>
+</div>
+
+<script>
+function startTimer() {
+    document.getElementById("message").innerHTML =
+        "Waiting...";
+
+    setTimeout(function() {
+        document.getElementById("message").innerHTML =
+            "Hello! 3 seconds completed.";
+    }, 3000);
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown Menu</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+
+        nav {
+            background: #172033;
+            padding: 15px 30px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-right: 25px;
+        }
+
+        .dropdown {
+            display: inline-block;
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 25px;
+            left: 0;
+            background: white;
+            min-width: 160px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            border-radius: 8px;
+        }
+
+        .dropdown-content a {
+            display: block;
+            color: #222;
+            padding: 12px;
+            margin: 0;
+        }
+
+        .dropdown-content a:hover {
+            background: #eef2ff;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+
+        <a href="#">Home</a>
+
+        <div class="dropdown">
+
+            <a href="#">Courses ▾</a>
+
+            <div class="dropdown-content">
+                <a href="#">HTML</a>
+                <a href="#">CSS</a>
+                <a href="#">JavaScript</a>
+            </div>
+
+        </div>
+
+        <a href="#">Contact</a>
+
+    </nav>
+
+    <h1 style="text-align:center;">
+        CSS Dropdown Menu
+    </h1>
+
+    <p style="text-align:center;">
+        Hover over Courses to see the dropdown.
+    </p>
+
+    <br>
+
+    <a href="index.html">← Back to Programs</a>
+
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Keyboard Controlled Object</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .box {
+            background: white;
+            max-width: 700px;
+            margin: auto;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px #ccc;
+        }
+
+        #gameArea {
+            position: relative;
+            width: 100%;
+            height: 350px;
+            background: #dbeafe;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        #player {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background: #2563eb;
+            border-radius: 8px;
+            left: 20px;
+            top: 20px;
+        }
+
+        a {
+            display: block;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+
+        <h1>Keyboard Controlled Object</h1>
+
+        <p>
+            Use Arrow Keys to move the box.
+        </p>
+
+        <div id="gameArea">
+
+            <div id="player"></div>
+
+        </div>
+
+        <a href="index.html">Back to Programs</a>
+
+    </div>
+
+    <script>
+
+        let player =
+            document.getElementById("player");
+
+        let x = 20;
+        let y = 20;
+        let speed = 10;
+
+        document.addEventListener("keydown", function (event) {
+
+            if (event.key === "ArrowRight") {
+                x += speed;
+            }
+
+            if (event.key === "ArrowLeft") {
+                x -= speed;
+            }
+
+            if (event.key === "ArrowDown") {
+                y += speed;
+            }
+
+            if (event.key === "ArrowUp") {
+                y -= speed;
+            }
+
+            if (x < 0) {
+                x = 0;
+            }
+
+            if (y < 0) {
+                y = 0;
+            }
+
+            if (x > 620) {
+                x = 620;
+            }
+
+            if (y > 300) {
+                y = 300;
+            }
+
+            player.style.left = x + "px";
+            player.style.top = y + "px";
+
+        });
+
+    </script>
+
+</body>
+
+</html>

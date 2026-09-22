@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript - LCM</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #f8fafc;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .box {
+            max-width: 450px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px #ccc;
+        }
+
+        input {
+            padding: 12px;
+            margin: 10px;
+        }
+
+        button {
+            padding: 12px 25px;
+            background: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 8px;
+        }
+
+        #result {
+            margin: 20px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        a {
+            display: block;
+            margin: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+
+    <h1>LCM Calculator</h1>
+
+    <input type="number" id="num1" placeholder="First number">
+
+    <input type="number" id="num2" placeholder="Second number">
+
+    <button onclick="findLCM()">Find LCM</button>
+
+    <div id="result"></div>
+
+    <a href="index.html">← Back to JavaScript Programs</a>
+    <a href="../index.html">← Home</a>
+
+</div>
+
+<script>
+
+function findGCD(a, b) {
+
+    while (b !== 0) {
+
+        let temp = b;
+        b = a % b;
+        a = temp;
+    }
+
+    return Math.abs(a);
+}
+
+function findLCM() {
+
+    let a = Number(document.getElementById("num1").value);
+    let b = Number(document.getElementById("num2").value);
+
+    if (a === 0 || b === 0) {
+
+        document.getElementById("result").innerHTML =
+            "LCM = 0";
+
+        return;
+    }
+
+    let gcd = findGCD(a, b);
+
+    let lcm = Math.abs((a * b) / gcd);
+
+    document.getElementById("result").innerHTML =
+        "LCM = " + lcm;
+}
+
+</script>
+
+</body>
+</html>

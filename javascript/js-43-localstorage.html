@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript - Local Storage</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #eef2ff;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .box {
+            max-width: 500px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+        }
+
+        input {
+            padding: 12px;
+            width: 80%;
+        }
+
+        button {
+            padding: 12px 20px;
+            margin: 10px;
+            background: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 8px;
+        }
+
+        #output {
+            margin: 20px;
+            font-weight: bold;
+        }
+
+        a {
+            display: block;
+            margin: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+
+    <h1>Local Storage</h1>
+
+    <input type="text" id="username" placeholder="Enter your name">
+
+    <br>
+
+    <button onclick="saveData()">Save</button>
+
+    <button onclick="getData()">Retrieve</button>
+
+    <div id="output"></div>
+
+    <a href="index.html">← Back to JavaScript Programs</a>
+    <a href="../index.html">← Home</a>
+
+</div>
+
+<script>
+
+function saveData() {
+
+    let name = document.getElementById("username").value;
+
+    localStorage.setItem("username", name);
+
+    document.getElementById("output").innerHTML =
+        "Data saved successfully!";
+}
+
+function getData() {
+
+    let name = localStorage.getItem("username");
+
+    document.getElementById("output").innerHTML =
+        "Stored Name: " + name;
+}
+
+</script>
+
+</body>
+</html>

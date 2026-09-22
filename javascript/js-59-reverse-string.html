@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Reverse String</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            padding: 40px;
+            background: #f4f7fb;
+        }
+
+        .box {
+            background: white;
+            padding: 30px;
+            max-width: 500px;
+            margin: auto;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px #ccc;
+        }
+
+        input,
+        button {
+            padding: 10px;
+            margin: 8px;
+        }
+
+        button {
+            background: #2563eb;
+            color: white;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+
+        <h1>Reverse a String</h1>
+
+        <input type="text" id="text"
+            placeholder="Enter a string">
+
+        <button onclick="reverseString()">Reverse</button>
+
+        <p id="result"></p>
+
+        <a href="index.html">Back to Programs</a>
+
+    </div>
+
+    <script>
+
+        function reverseString() {
+
+            let text = document.getElementById("text").value;
+
+            let reversed = text.split("").reverse().join("");
+
+            document.getElementById("result").innerHTML =
+                "Reversed String: " + reversed;
+
+        }
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shopping Cart</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            padding: 30px;
+        }
+
+        button {
+            padding: 10px;
+            margin: 5px;
+        }
+
+        li {
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Shopping Cart</h1>
+
+    <button onclick="addProduct('Laptop')">Add Laptop</button>
+    <button onclick="addProduct('Headphones')">Add Headphones</button>
+    <button onclick="addProduct('Mouse')">Add Mouse</button>
+
+    <h2>Cart Items</h2>
+
+    <ul id="cart"></ul>
+
+    <br>
+    <a href="index.html">← Back to Programs</a>
+
+    <script>
+        var cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+        function addProduct(product) {
+            cart.push(product);
+
+            localStorage.setItem("cart", JSON.stringify(cart));
+
+            displayCart();
+        }
+
+        function displayCart() {
+            var list = document.getElementById("cart");
+
+            list.innerHTML = "";
+
+            for (var i = 0; i < cart.length; i++) {
+                var li = document.createElement("li");
+
+                li.innerHTML = cart[i];
+
+                list.appendChild(li);
+            }
+        }
+
+        displayCart();
+    </script>
+
+</body>
+</html>

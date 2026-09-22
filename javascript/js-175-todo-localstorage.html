@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Todo List using localStorage</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            padding: 30px;
+        }
+
+        input, button {
+            padding: 10px;
+            margin: 5px;
+        }
+
+        li {
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Todo List</h1>
+
+    <input type="text" id="task" placeholder="Enter task">
+    <button onclick="addTask()">Add Task</button>
+
+    <ul id="todoList"></ul>
+
+    <br>
+    <a href="index.html">← Back to Programs</a>
+
+    <script>
+        var tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+
+        function addTask() {
+            var task = document.getElementById("task").value;
+
+            if (task === "") {
+                return;
+            }
+
+            tasks.push(task);
+
+            localStorage.setItem("tasks", JSON.stringify(tasks));
+
+            document.getElementById("task").value = "";
+
+            displayTasks();
+        }
+
+        function displayTasks() {
+            var list = document.getElementById("todoList");
+
+            list.innerHTML = "";
+
+            for (var i = 0; i < tasks.length; i++) {
+                var li = document.createElement("li");
+
+                li.innerHTML = tasks[i];
+
+                list.appendChild(li);
+            }
+        }
+
+        displayTasks();
+    </script>
+
+</body>
+</html>

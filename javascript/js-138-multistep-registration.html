@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Multi-Step Registration</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f4f6f8;
+            padding: 40px;
+        }
+
+        .box {
+            max-width: 500px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+        }
+
+        input, button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 10px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background: #222;
+            color: white;
+            border: none;
+        }
+
+        .step {
+            display: none;
+        }
+
+        .active {
+            display: block;
+        }
+
+        a {
+            display: block;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+
+    <h2>Registration</h2>
+
+    <div id="step1" class="step active">
+        <h3>Step 1: Personal Details</h3>
+
+        <input type="text" id="name" placeholder="Name">
+        <input type="number" id="age" placeholder="Age">
+
+        <button onclick="nextStep()">Next</button>
+    </div>
+
+    <div id="step2" class="step">
+        <h3>Step 2: Contact Details</h3>
+
+        <input type="email" id="email" placeholder="Email">
+        <input type="text" id="phone" placeholder="Phone">
+
+        <button onclick="submitForm()">Submit</button>
+    </div>
+
+    <p id="msg"></p>
+
+    <a href="index.html">Back to Programs</a>
+
+</div>
+
+<script>
+function nextStep() {
+    let name = document.getElementById("name").value;
+    let age = document.getElementById("age").value;
+
+    if (name === "" || age === "") {
+        document.getElementById("msg").innerHTML =
+            "Please fill all fields.";
+        document.getElementById("msg").style.color = "red";
+        return;
+    }
+
+    document.getElementById("step1").classList.remove("active");
+    document.getElementById("step2").classList.add("active");
+    document.getElementById("msg").innerHTML = "";
+}
+
+function submitForm() {
+    let email = document.getElementById("email").value;
+    let phone = document.getElementById("phone").value;
+    let msg = document.getElementById("msg");
+
+    if (email === "" || phone === "") {
+        msg.innerHTML = "Please fill all fields.";
+        msg.style.color = "red";
+    } else {
+        msg.innerHTML = "Registration completed!";
+        msg.style.color = "green";
+    }
+}
+</script>
+
+</body>
+</html>

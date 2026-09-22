@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Tooltip</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 60px;
+        }
+
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            background: #2563eb;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .tooltip-text {
+            visibility: hidden;
+            width: 180px;
+            background: #172033;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            border-radius: 6px;
+
+            position: absolute;
+            bottom: 130%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .tooltip:hover .tooltip-text {
+            visibility: visible;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Tooltip</h1>
+
+    <div class="tooltip">
+        Hover Me
+
+        <span class="tooltip-text">
+            This is a tooltip message.
+        </span>
+    </div>
+
+    <br><br>
+
+    <a href="index.html">← Back to Programs</a>
+
+</body>
+</html>

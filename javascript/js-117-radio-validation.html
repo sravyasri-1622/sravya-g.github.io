@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radio Button Validation</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            padding: 50px;
+        }
+
+        button {
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2>Course Selection</h2>
+
+<label>
+    <input type="radio" name="course" value="CSE"> CSE
+</label>
+
+<label>
+    <input type="radio" name="course" value="ECE"> ECE
+</label>
+
+<label>
+    <input type="radio" name="course" value="EEE"> EEE
+</label>
+
+<br><br>
+
+<button onclick="checkCourse()">Submit</button>
+
+<p id="result"></p>
+
+<a href="index.html">← Back to Programs</a>
+
+<script>
+function checkCourse() {
+
+    let course = document.querySelector('input[name="course"]:checked');
+    let result = document.getElementById("result");
+
+    if (course) {
+        result.textContent = "Selected course: " + course.value;
+    } else {
+        result.textContent = "Please select a course.";
+    }
+}
+</script>
+
+</body>
+</html>

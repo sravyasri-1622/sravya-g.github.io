@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Session Form Data</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            padding: 40px;
+        }
+
+        input, button {
+            padding: 10px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Temporary Form Data</h1>
+
+    <input type="text" id="name" placeholder="Enter name">
+    <input type="email" id="email" placeholder="Enter email">
+
+    <br>
+
+    <button onclick="saveForm()">Save</button>
+    <button onclick="loadForm()">Load</button>
+
+    <p id="result"></p>
+
+    <br>
+    <a href="index.html">← Back to Programs</a>
+
+    <script>
+        function saveForm() {
+            sessionStorage.setItem(
+                "name",
+                document.getElementById("name").value
+            );
+
+            sessionStorage.setItem(
+                "email",
+                document.getElementById("email").value
+            );
+
+            document.getElementById("result").innerHTML =
+                "Form data saved for this session.";
+        }
+
+        function loadForm() {
+            document.getElementById("name").value =
+                sessionStorage.getItem("name") || "";
+
+            document.getElementById("email").value =
+                sessionStorage.getItem("email") || "";
+
+            document.getElementById("result").innerHTML =
+                "Form data loaded.";
+        }
+    </script>
+
+</body>
+</html>

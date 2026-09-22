@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regular Expression Validation</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            padding: 40px;
+        }
+
+        input {
+            display: block;
+            margin: 10px auto;
+            padding: 10px;
+            width: 280px;
+        }
+
+        button {
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2>Regular Expression Validation</h2>
+
+<input type="text" id="name" placeholder="Enter name">
+<input type="text" id="phone" placeholder="Enter 10-digit phone">
+
+<button onclick="validate()">Validate</button>
+
+<p id="result"></p>
+
+<a href="index.html">← Back to Programs</a>
+
+<script>
+function validate() {
+
+    let name = document.getElementById("name").value;
+    let phone = document.getElementById("phone").value;
+    let result = document.getElementById("result");
+
+    let namePattern = /^[A-Za-z ]+$/;
+    let phonePattern = /^[0-9]{10}$/;
+
+    if (!namePattern.test(name)) {
+        result.textContent = "Name should contain only alphabets.";
+        return;
+    }
+
+    if (!phonePattern.test(phone)) {
+        result.textContent = "Phone number must contain 10 digits.";
+        return;
+    }
+
+    result.textContent = "All inputs are valid!";
+}
+</script>
+
+</body>
+</html>

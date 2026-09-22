@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 55 - College Website</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #1e293b;
+        }
+
+        header {
+            background: #0f172a;
+            color: white;
+            padding: 25px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 18px;
+        }
+
+        .hero {
+            padding: 100px 8%;
+            background: linear-gradient(120deg, #2563eb, #7c3aed);
+            color: white;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 45px;
+        }
+
+        .section {
+            padding: 60px 8%;
+            text-align: center;
+        }
+
+        .cards {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .card {
+            width: 280px;
+            padding: 30px;
+            background: #f8fafc;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+        }
+
+        footer {
+            background: #0f172a;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        @media (max-width: 700px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 5px;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h2>ABC University</h2>
+
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="index.html">CSS Programs</a>
+        <a href="#about">About</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>Welcome to ABC University</h1>
+    <p>Learn. Innovate. Succeed.</p>
+</section>
+
+<section class="section" id="about">
+    <h2>Our Programs</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Computer Science</h3>
+            <p>Modern computing and software development education.</p>
+        </div>
+
+        <div class="card">
+            <h3>Artificial Intelligence</h3>
+            <p>Explore intelligent systems and machine learning.</p>
+        </div>
+
+        <div class="card">
+            <h3>Data Science</h3>
+            <p>Learn data analysis and decision-making techniques.</p>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    © 2026 ABC University
+</footer>
+
+</body>
+</html>

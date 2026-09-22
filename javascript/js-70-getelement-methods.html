@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>getElement Methods</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .box {
+            background: white;
+            max-width: 600px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px #ccc;
+        }
+
+        .student {
+            padding: 10px;
+            margin: 5px;
+            background: #e0f2fe;
+            border-radius: 6px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+
+        <h1>getElementById()</h1>
+
+        <p id="heading">
+            Original Heading
+        </p>
+
+        <div class="student">Student 1</div>
+        <div class="student">Student 2</div>
+        <div class="student">Student 3</div>
+
+        <button onclick="changeElements()">
+            Change Elements
+        </button>
+
+        <br>
+
+        <a href="index.html">Back to Programs</a>
+
+    </div>
+
+    <script>
+
+        function changeElements() {
+
+            let heading =
+                document.getElementById("heading");
+
+            heading.innerHTML =
+                "Heading Changed Successfully";
+
+            let students =
+                document.getElementsByClassName("student");
+
+            for (let i = 0; i < students.length; i++) {
+
+                students[i].style.backgroundColor =
+                    "#dcfce7";
+
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>

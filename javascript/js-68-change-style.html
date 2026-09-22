@@ -1,0 +1,85 @@
+-<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Change CSS Style</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .box {
+            background: white;
+            max-width: 550px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px #ccc;
+        }
+
+        #text {
+            font-size: 22px;
+            padding: 15px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background: #7c3aed;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+
+        <h1>Change CSS Style</h1>
+
+        <p id="text">
+            This text will change its style.
+        </p>
+
+        <button onclick="changeStyle()">
+            Change Style
+        </button>
+
+        <br>
+
+        <a href="index.html">Back to Programs</a>
+
+    </div>
+
+    <script>
+
+        function changeStyle() {
+
+            let text = document.getElementById("text");
+
+            text.style.color = "#2563eb";
+            text.style.fontSize = "30px";
+            text.style.fontWeight = "bold";
+            text.style.backgroundColor = "#dbeafe";
+
+        }
+
+    </script>
+
+</body>
+
+</html>

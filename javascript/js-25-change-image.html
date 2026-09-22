@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript - Change Image</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            background: #f4f7fb;
+            padding: 40px;
+        }
+
+        .box {
+            background: white;
+            max-width: 500px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px #ccc;
+        }
+
+        img {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin: 20px;
+        }
+
+        button {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            background: #2563eb;
+            color: white;
+            cursor: pointer;
+        }
+
+        a {
+            display: block;
+            margin: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+
+    <h1>Change Image</h1>
+
+    <p>Click the button to change the image.</p>
+
+    <img id="myImage" src="../assets/images/web.jpg" alt="Web Development">
+
+    <br>
+
+    <button onclick="changeImage()">Change Image</button>
+
+    <a href="index.html">← Back to JavaScript Programs</a>
+    <a href="../index.html">← Home</a>
+
+</div>
+
+<script>
+
+function changeImage() {
+
+    let image = document.getElementById("myImage");
+
+    if (image.src.includes("web.jpg")) {
+        image.src = "https://picsum.photos/300/200?random=2";
+    } else {
+        image.src = "../assets/images/web.jpg";
+    }
+}
+
+</script>
+
+</body>
+</html>

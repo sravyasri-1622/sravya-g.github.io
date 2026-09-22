@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Salary Calculator</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f4f6f8;
+            padding: 40px;
+        }
+
+        .box {
+            max-width: 450px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+        }
+
+        input, button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 10px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background: #222;
+            color: white;
+            border: none;
+        }
+
+        a {
+            display: block;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+
+    <h2>Employee Salary Calculator</h2>
+
+    <input type="text" id="name" placeholder="Employee Name">
+    <input type="number" id="basic" placeholder="Basic Salary">
+
+    <button onclick="calculateSalary()">Calculate</button>
+
+    <div id="result"></div>
+
+    <a href="index.html">Back to Programs</a>
+
+</div>
+
+<script>
+function calculateSalary() {
+    let name = document.getElementById("name").value;
+    let basic = Number(document.getElementById("basic").value);
+
+    let hra = basic * 0.20;
+    let da = basic * 0.10;
+    let gross = basic + hra + da;
+
+    document.getElementById("result").innerHTML =
+        "<p>Employee: " + name + "</p>" +
+        "<p>Basic Salary: ₹" + basic + "</p>" +
+        "<p>HRA: ₹" + hra + "</p>" +
+        "<p>DA: ₹" + da + "</p>" +
+        "<p>Gross Salary: ₹" + gross + "</p>";
+}
+</script>
+
+</body>
+</html>

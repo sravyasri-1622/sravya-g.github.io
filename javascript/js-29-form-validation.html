@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript - Form Validation</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #f3f4f6;
+            padding: 40px 20px;
+        }
+
+        .form-box {
+            max-width: 500px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px #ccc;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0 15px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 8px;
+        }
+
+        #message {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        a {
+            display: block;
+            margin: 15px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="form-box">
+
+    <h1>Form Validation</h1>
+
+    <form onsubmit="return validateForm()">
+
+        <label>Name</label>
+        <input type="text" id="name">
+
+        <label>Email</label>
+        <input type="email" id="email">
+
+        <button type="submit">Submit</button>
+
+    </form>
+
+    <div id="message"></div>
+
+    <a href="index.html">← Back to JavaScript Programs</a>
+    <a href="../index.html">← Home</a>
+
+</div>
+
+<script>
+
+function validateForm() {
+
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+
+    if (name === "" || email === "") {
+        document.getElementById("message").innerHTML =
+            "Please fill all fields.";
+        return false;
+    }
+
+    document.getElementById("message").innerHTML =
+        "Form submitted successfully!";
+
+    return false;
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript - Guessing Game</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            background: #eef2ff;
+            padding: 50px 20px;
+        }
+
+        .game {
+            max-width: 450px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px #ccc;
+        }
+
+        input {
+            padding: 12px;
+            width: 70%;
+        }
+
+        button {
+            padding: 12px 20px;
+            margin: 10px;
+            background: #4f46e5;
+            color: white;
+            border: none;
+            border-radius: 8px;
+        }
+
+        #message {
+            font-weight: bold;
+            margin: 20px;
+        }
+
+        a {
+            display: block;
+            margin: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="game">
+
+    <h1>Number Guessing Game</h1>
+
+    <p>Guess a number between 1 and 10.</p>
+
+    <input type="number" id="guess" min="1" max="10">
+
+    <button onclick="checkGuess()">Guess</button>
+
+    <div id="message"></div>
+
+    <a href="index.html">← Back to JavaScript Programs</a>
+    <a href="../index.html">← Home</a>
+
+</div>
+
+<script>
+
+let secretNumber = Math.floor(Math.random() * 10) + 1;
+
+function checkGuess() {
+
+    let guess = Number(document.getElementById("guess").value);
+    let message = document.getElementById("message");
+
+    if (guess === secretNumber) {
+        message.innerHTML = "🎉 Correct! You guessed the number.";
+    }
+    else if (guess < secretNumber) {
+        message.innerHTML = "Try a higher number.";
+    }
+    else {
+        message.innerHTML = "Try a lower number.";
+    }
+}
+
+</script>
+
+</body>
+</html>

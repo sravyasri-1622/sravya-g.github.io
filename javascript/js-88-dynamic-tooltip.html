@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dynamic Tooltip</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            text-align: center;
+            padding: 50px;
+        }
+
+        .box {
+            background: white;
+            max-width: 600px;
+            margin: auto;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px #ccc;
+        }
+
+        .tooltip-item {
+            display: inline-block;
+            padding: 15px 25px;
+            background: #2563eb;
+            color: white;
+            border-radius: 8px;
+            cursor: pointer;
+            margin: 30px;
+        }
+
+        #tooltip {
+            display: none;
+            position: absolute;
+            background: #111827;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 6px;
+        }
+
+        a {
+            display: block;
+            margin-top: 25px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+
+        <h1>Dynamic Tooltip</h1>
+
+        <div class="tooltip-item"
+            onmouseover="showTooltip(event)"
+            onmouseout="hideTooltip()">
+
+            Hover Over Me
+
+        </div>
+
+        <div id="tooltip">
+            This tooltip was created using JavaScript.
+        </div>
+
+        <a href="index.html">Back to Programs</a>
+
+    </div>
+
+    <script>
+
+        function showTooltip(event) {
+
+            let tooltip =
+                document.getElementById("tooltip");
+
+            tooltip.style.display = "block";
+
+            tooltip.style.left =
+                event.pageX + 10 + "px";
+
+            tooltip.style.top =
+                event.pageY + 10 + "px";
+
+        }
+
+        function hideTooltip() {
+
+            document.getElementById("tooltip")
+                .style.display = "none";
+
+        }
+
+    </script>
+
+</body>
+
+</html>

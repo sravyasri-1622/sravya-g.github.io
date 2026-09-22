@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Offline Update</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            padding: 50px;
+            background: #f2f2f2;
+        }
+
+        .box {
+            background: white;
+            padding: 30px;
+            max-width: 600px;
+            margin: auto;
+            border-radius: 15px;
+        }
+
+        #status {
+            font-size: 25px;
+            margin: 25px;
+        }
+
+        a {
+            display: block;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+    <h1>Online / Offline Status</h1>
+
+    <div id="status"></div>
+
+    <p>
+        The message updates automatically when the browser
+        goes online or offline.
+    </p>
+
+    <a href="index.html">← Back to Programs</a>
+</div>
+
+<script>
+function updateStatus() {
+
+    if (navigator.onLine) {
+        document.getElementById("status").innerHTML =
+            "You are Online";
+    } else {
+        document.getElementById("status").innerHTML =
+            "You are Offline";
+    }
+}
+
+window.addEventListener("online", updateStatus);
+window.addEventListener("offline", updateStatus);
+
+updateStatus();
+</script>
+
+</body>
+</html>

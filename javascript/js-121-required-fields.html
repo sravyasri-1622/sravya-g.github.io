@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Required Field Validation</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #f4f4f4;
+            padding: 30px;
+        }
+
+        .box {
+            max-width: 400px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0 15px;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+
+    <h2>Required Fields</h2>
+
+    <form onsubmit="return validateForm()">
+
+        <input type="text" id="name" placeholder="Name">
+
+        <input type="email" id="email" placeholder="Email">
+
+        <input type="text" id="city" placeholder="City">
+
+        <button type="submit">Submit</button>
+
+    </form>
+
+    <p id="result"></p>
+
+    <a href="index.html">← Back to Programs</a>
+
+</div>
+
+<script>
+function validateForm() {
+
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let city = document.getElementById("city").value;
+    let result = document.getElementById("result");
+
+    if (name === "" || email === "" || city === "") {
+        result.textContent = "All fields are required.";
+        return false;
+    }
+
+    result.textContent = "Form submitted successfully!";
+    return false;
+}
+</script>
+
+</body>
+</html>

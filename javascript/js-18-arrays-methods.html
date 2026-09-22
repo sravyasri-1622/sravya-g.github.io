@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Array Methods</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #f4f7fb;
+            text-align: center;
+            padding: 50px;
+        }
+
+        .box {
+            background: white;
+            max-width: 700px;
+            margin: auto;
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px #ccc;
+        }
+
+        button {
+            padding: 12px 20px;
+            background: #f7971e;
+            color: white;
+            border: none;
+            border-radius: 7px;
+        }
+
+        #output {
+            margin-top: 20px;
+            text-align: left;
+            line-height: 2;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+
+        <h1>Array Methods</h1>
+
+        <p>Array: 10, 20, 30, 40</p>
+
+        <button onclick="showMethods()">Show Methods</button>
+
+        <div id="output"></div>
+
+        <a href="index.html">← Back to JavaScript Programs</a>
+
+    </div>
+
+    <script>
+
+        function showMethods() {
+
+            let numbers = [10, 20, 30, 40];
+
+            numbers.push(50);
+
+            document.getElementById("output").innerHTML =
+                "After push(): " + numbers + "<br>" +
+                "Length: " + numbers.length + "<br>" +
+                "First Element: " + numbers[0] + "<br>" +
+                "Last Element: " + numbers[numbers.length - 1];
+        }
+
+    </script>
+
+</body>
+
+</html>

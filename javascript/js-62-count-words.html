@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Count Words</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            padding: 40px;
+            background: #f4f7fb;
+        }
+
+        .box {
+            background: white;
+            padding: 30px;
+            max-width: 550px;
+            margin: auto;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px #ccc;
+        }
+
+        textarea {
+            width: 90%;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background: #2563eb;
+            color: white;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+
+        <h1>Count Number of Words</h1>
+
+        <textarea id="text" rows="5"
+            placeholder="Enter your sentence"></textarea>
+
+        <br>
+
+        <button onclick="countWords()">Count Words</button>
+
+        <p id="result"></p>
+
+        <a href="index.html">Back to Programs</a>
+
+    </div>
+
+    <script>
+
+        function countWords() {
+
+            let text = document.getElementById("text").value.trim();
+
+            if (text === "") {
+
+                document.getElementById("result").innerHTML =
+                    "Number of words = 0";
+
+                return;
+            }
+
+            let words = text.split(/\s+/);
+
+            document.getElementById("result").innerHTML =
+                "Number of words = " + words.length;
+
+        }
+
+    </script>
+
+</body>
+
+</html>

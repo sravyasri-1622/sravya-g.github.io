@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Multi Page Form</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            padding: 40px;
+        }
+
+        input, button {
+            padding: 10px;
+            margin: 5px;
+        }
+
+        #page2 {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Multi-Page Form</h1>
+
+    <div id="page1">
+        <h2>Page 1</h2>
+
+        <input type="text" id="name" placeholder="Enter name">
+        <br>
+
+        <button onclick="nextPage()">Next</button>
+    </div>
+
+    <div id="page2">
+        <h2>Page 2</h2>
+
+        <input type="text" id="course" placeholder="Enter course">
+        <br>
+
+        <button onclick="submitForm()">Submit</button>
+    </div>
+
+    <p id="result"></p>
+
+    <br>
+    <a href="index.html">← Back to Programs</a>
+
+    <script>
+        function nextPage() {
+            var name = document.getElementById("name").value;
+
+            sessionStorage.setItem("studentName", name);
+
+            document.getElementById("page1").style.display = "none";
+            document.getElementById("page2").style.display = "block";
+        }
+
+        function submitForm() {
+            var course = document.getElementById("course").value;
+            var name = sessionStorage.getItem("studentName");
+
+            sessionStorage.setItem("studentCourse", course);
+
+            document.getElementById("result").innerHTML =
+                "Name: " + name +
+                "<br>Course: " + course +
+                "<br>Form submitted successfully.";
+        }
+    </script>
+
+</body>
+</html>

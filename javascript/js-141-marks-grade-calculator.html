@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Marks Calculator</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f4f6f8;
+            padding: 40px;
+        }
+
+        .box {
+            max-width: 450px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+        }
+
+        input, button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 10px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background: #222;
+            color: white;
+            border: none;
+        }
+
+        a {
+            display: block;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+
+    <h2>Marks Calculator</h2>
+
+    <input type="number" id="m1" placeholder="Subject 1">
+    <input type="number" id="m2" placeholder="Subject 2">
+    <input type="number" id="m3" placeholder="Subject 3">
+
+    <button onclick="calculate()">Calculate</button>
+
+    <div id="result"></div>
+
+    <a href="index.html">Back to Programs</a>
+
+</div>
+
+<script>
+function calculate() {
+    let m1 = Number(document.getElementById("m1").value);
+    let m2 = Number(document.getElementById("m2").value);
+    let m3 = Number(document.getElementById("m3").value);
+
+    let total = m1 + m2 + m3;
+    let average = total / 3;
+    let grade;
+
+    if (average >= 90) {
+        grade = "A";
+    } else if (average >= 75) {
+        grade = "B";
+    } else if (average >= 60) {
+        grade = "C";
+    } else if (average >= 40) {
+        grade = "D";
+    } else {
+        grade = "F";
+    }
+
+    document.getElementById("result").innerHTML =
+        "<p>Total: " + total + "</p>" +
+        "<p>Average: " + average.toFixed(2) + "</p>" +
+        "<p>Grade: " + grade + "</p>";
+}
+</script>
+
+</body>
+</html>

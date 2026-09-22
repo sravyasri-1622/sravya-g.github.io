@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Current Coordinates</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            padding: 50px;
+            background: #f2f2f2;
+        }
+
+        .box {
+            background: white;
+            padding: 30px;
+            max-width: 600px;
+            margin: auto;
+            border-radius: 15px;
+        }
+
+        button {
+            padding: 12px 20px;
+            cursor: pointer;
+        }
+
+        #coordinates {
+            margin-top: 20px;
+            font-size: 20px;
+        }
+
+        a {
+            display: block;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+    <h1>Current Geographical Coordinates</h1>
+
+    <button onclick="getCoordinates()">Get Coordinates</button>
+
+    <div id="coordinates"></div>
+
+    <a href="index.html">← Back to Programs</a>
+</div>
+
+<script>
+function getCoordinates() {
+
+    if (navigator.geolocation) {
+
+        navigator.geolocation.getCurrentPosition(
+            function(position) {
+
+                let latitude = position.coords.latitude;
+                let longitude = position.coords.longitude;
+
+                document.getElementById("coordinates").innerHTML =
+                    "Latitude: " + latitude +
+                    "<br>Longitude: " + longitude;
+            },
+
+            function() {
+                document.getElementById("coordinates").innerHTML =
+                    "Unable to get location.";
+            }
+        );
+
+    } else {
+        document.getElementById("coordinates").innerHTML =
+            "Geolocation is not supported.";
+    }
+}
+</script>
+
+</body>
+</html>

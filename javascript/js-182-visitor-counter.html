@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Visitor Counter</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            padding: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Visitor Counter</h1>
+
+    <h2 id="counter"></h2>
+
+    <br>
+    <a href="index.html">← Back to Programs</a>
+
+    <script>
+        var count = localStorage.getItem("visitorCount");
+
+        if (count === null) {
+            count = 1;
+        } else {
+            count = Number(count) + 1;
+        }
+
+        localStorage.setItem("visitorCount", count);
+
+        document.getElementById("counter").innerHTML =
+            "Number of Visits: " + count;
+    </script>
+
+</body>
+</html>

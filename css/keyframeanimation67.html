@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 67 - Keyframe Animation</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: #f1f5f9;
+            padding: 40px;
+        }
+
+        nav a {
+            color: #2563eb;
+            text-decoration: none;
+            margin: 15px;
+        }
+
+        .circle {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: #2563eb;
+            margin: 80px auto;
+
+            animation: moveBox 3s infinite alternate ease-in-out;
+        }
+
+        @keyframes moveBox {
+
+            0% {
+                transform: translateX(-150px);
+            }
+
+            100% {
+                transform: translateX(150px);
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+<nav>
+    <a href="../index.html">Home</a>
+    <a href="index.html">CSS Programs</a>
+</nav>
+
+<h1>CSS Keyframe Animation</h1>
+
+<div class="circle"></div>
+
+</body>
+</html>

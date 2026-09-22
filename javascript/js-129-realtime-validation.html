@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Real-Time Validation</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f4f6f8;
+            padding: 40px;
+        }
+
+        .box {
+            max-width: 450px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            box-sizing: border-box;
+        }
+
+        #msg {
+            font-weight: bold;
+        }
+
+        a {
+            display: block;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+    <h2>Real-Time Validation</h2>
+
+    <input type="text" id="name" placeholder="Enter your name">
+
+    <p id="msg"></p>
+
+    <a href="index.html">Back to Programs</a>
+</div>
+
+<script>
+document.getElementById("name").addEventListener("input", function() {
+
+    let name = this.value;
+
+    if (name.length >= 3) {
+        document.getElementById("msg").innerHTML = "Valid Name";
+        document.getElementById("msg").style.color = "green";
+    } else {
+        document.getElementById("msg").innerHTML =
+            "Name must contain at least 3 characters.";
+        document.getElementById("msg").style.color = "red";
+    }
+
+});
+</script>
+
+</body>
+</html>

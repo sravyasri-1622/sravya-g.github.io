@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tabs Interface</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .box {
+            background: white;
+            max-width: 650px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px #ccc;
+        }
+
+        .tabs {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .tabs button {
+            padding: 10px 20px;
+            border: none;
+            background: #e5e7eb;
+            cursor: pointer;
+            border-radius: 6px;
+        }
+
+        .tabs button.active {
+            background: #2563eb;
+            color: white;
+        }
+
+        .content {
+            display: none;
+            padding: 25px;
+            margin-top: 20px;
+            background: #eff6ff;
+            border-radius: 10px;
+        }
+
+        .content.active {
+            display: block;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+
+        <h1>Tabs Interface</h1>
+
+        <div class="tabs">
+
+            <button class="tab active"
+                onclick="openTab('home', this)">
+                Home
+            </button>
+
+            <button class="tab"
+                onclick="openTab('about', this)">
+                About
+            </button>
+
+            <button class="tab"
+                onclick="openTab('contact', this)">
+                Contact
+            </button>
+
+        </div>
+
+        <div id="home"
+            class="content active">
+
+            <h2>Home</h2>
+
+            <p>
+                Welcome to the Home tab.
+            </p>
+
+        </div>
+
+        <div id="about"
+            class="content">
+
+            <h2>About</h2>
+
+            <p>
+                This page demonstrates tabs using JavaScript.
+            </p>
+
+        </div>
+
+        <div id="contact"
+            class="content">
+
+            <h2>Contact</h2>
+
+            <p>
+                Email: student@example.com
+            </p>
+
+        </div>
+
+        <a href="index.html">Back to Programs</a>
+
+    </div>
+
+    <script>
+
+        function openTab(tabName, button) {
+
+            let contents =
+                document.getElementsByClassName("content");
+
+            for (let i = 0; i < contents.length; i++) {
+
+                contents[i].classList.remove("active");
+
+            }
+
+            let buttons =
+                document.getElementsByClassName("tab");
+
+            for (let i = 0; i < buttons.length; i++) {
+
+                buttons[i].classList.remove("active");
+
+            }
+
+            document.getElementById(tabName)
+                .classList.add("active");
+
+            button.classList.add("active");
+
+        }
+
+    </script>
+
+</body>
+
+</html>

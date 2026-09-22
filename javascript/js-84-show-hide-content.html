@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Show Hide Content</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .box {
+            background: white;
+            max-width: 600px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px #ccc;
+        }
+
+        #content {
+            background: #eff6ff;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        button {
+            padding: 10px 20px;
+            background: #7c3aed;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+
+        <h1>Show / Hide Content</h1>
+
+        <div id="content">
+
+            <p>
+                This is hidden and shown using JavaScript.
+            </p>
+
+            <p>
+                JavaScript can change the display property
+                of HTML elements dynamically.
+            </p>
+
+        </div>
+
+        <button onclick="toggleContent()">
+            Hide Content
+        </button>
+
+        <br>
+
+        <a href="index.html">Back to Programs</a>
+
+    </div>
+
+    <script>
+
+        function toggleContent() {
+
+            let content =
+                document.getElementById("content");
+
+            let button = event.target;
+
+            if (content.style.display === "none") {
+
+                content.style.display = "block";
+                button.innerText = "Hide Content";
+
+            } else {
+
+                content.style.display = "none";
+                button.innerText = "Show Content";
+
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>

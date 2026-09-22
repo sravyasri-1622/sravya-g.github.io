@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Preferred Font Size</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            padding: 40px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+        }
+
+        #content {
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Preferred Font Size</h1>
+
+    <div id="content">
+        <p>This text size will be saved in localStorage.</p>
+    </div>
+
+    <button onclick="setSize('16px')">Small</button>
+    <button onclick="setSize('22px')">Medium</button>
+    <button onclick="setSize('28px')">Large</button>
+
+    <br><br>
+    <a href="index.html">← Back to Programs</a>
+
+    <script>
+        function setSize(size) {
+            document.getElementById("content").style.fontSize = size;
+
+            localStorage.setItem("fontSize", size);
+        }
+
+        var savedSize = localStorage.getItem("fontSize");
+
+        if (savedSize) {
+            document.getElementById("content").style.fontSize = savedSize;
+        }
+    </script>
+
+</body>
+</html>

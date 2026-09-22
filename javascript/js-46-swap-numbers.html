@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript - Swap Numbers</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #f1f5f9;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .box {
+            max-width: 450px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+        }
+
+        input, button {
+            padding: 12px;
+            margin: 10px;
+        }
+
+        button {
+            background: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 8px;
+        }
+
+        #result {
+            font-weight: bold;
+            margin: 20px;
+        }
+
+        a {
+            display: block;
+            margin: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+
+    <h1>Swap Two Numbers</h1>
+
+    <input type="number" id="a" placeholder="First number">
+
+    <input type="number" id="b" placeholder="Second number">
+
+    <button onclick="swap()">Swap</button>
+
+    <div id="result"></div>
+
+    <a href="index.html">← Back to JavaScript Programs</a>
+    <a href="../index.html">← Home</a>
+
+</div>
+
+<script>
+
+function swap() {
+
+    let a = Number(document.getElementById("a").value);
+    let b = Number(document.getElementById("b").value);
+
+    let temp = a;
+    a = b;
+    b = temp;
+
+    document.getElementById("result").innerHTML =
+        "After Swapping:<br>" +
+        "First Number: " + a +
+        "<br>Second Number: " + b;
+}
+
+</script>
+
+</body>
+</html>

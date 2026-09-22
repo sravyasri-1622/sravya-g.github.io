@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Auto Save Form</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            padding: 40px;
+        }
+
+        input {
+            padding: 10px;
+            margin: 5px;
+            width: 250px;
+        }
+
+        #message {
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Auto-Save Form</h1>
+
+    <input type="text" id="name" placeholder="Enter your name">
+    <br>
+
+    <input type="email" id="email" placeholder="Enter your email">
+    <br>
+
+    <p id="message">Your data is automatically saved.</p>
+
+    <br>
+    <a href="index.html">← Back to Programs</a>
+
+    <script>
+        var nameInput = document.getElementById("name");
+        var emailInput = document.getElementById("email");
+
+        nameInput.value = localStorage.getItem("autoName") || "";
+        emailInput.value = localStorage.getItem("autoEmail") || "";
+
+        nameInput.addEventListener("input", function() {
+            localStorage.setItem("autoName", nameInput.value);
+        });
+
+        emailInput.addEventListener("input", function() {
+            localStorage.setItem("autoEmail", emailInput.value);
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript - Fetch API</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #f1f5f9;
+            padding: 40px 20px;
+        }
+
+        .box {
+            max-width: 700px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+        }
+
+        button {
+            padding: 12px 25px;
+            background: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 8px;
+        }
+
+        #output {
+            margin-top: 20px;
+            padding: 20px;
+            background: #eef2ff;
+        }
+
+        a {
+            display: block;
+            margin: 15px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+
+    <h1>Fetch API</h1>
+
+    <p>Click the button to fetch data from an API.</p>
+
+    <button onclick="fetchData()">Fetch Data</button>
+
+    <div id="output"></div>
+
+    <a href="index.html">← Back to JavaScript Programs</a>
+    <a href="../index.html">← Home</a>
+
+</div>
+
+<script>
+
+function fetchData() {
+
+    fetch("https://jsonplaceholder.typicode.com/posts/1")
+
+    .then(function(response) {
+        return response.json();
+    })
+
+    .then(function(data) {
+
+        document.getElementById("output").innerHTML =
+            "<b>Title:</b> " + data.title +
+            "<br><br><b>Body:</b> " + data.body;
+
+    })
+
+    .catch(function(error) {
+
+        document.getElementById("output").innerHTML =
+            "Unable to fetch data.";
+
+    });
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>JavaScript Objects</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #f4f7fb;
+            text-align: center;
+            padding: 50px;
+        }
+
+        .box {
+            background: white;
+            max-width: 600px;
+            margin: auto;
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px #ccc;
+        }
+
+        button {
+            padding: 12px 20px;
+            background: #f7971e;
+            color: white;
+            border: none;
+            border-radius: 7px;
+        }
+
+        #output {
+            margin-top: 20px;
+            line-height: 2;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+
+        <h1>JavaScript Objects</h1>
+
+        <button onclick="showObject()">Display Object</button>
+
+        <div id="output"></div>
+
+        <a href="index.html">← Back to JavaScript Programs</a>
+
+    </div>
+
+    <script>
+
+        function showObject() {
+
+            let student = {
+                name: "Sravya",
+                age: 18,
+                course: "BTech",
+                college: "Sai University"
+            };
+
+            document.getElementById("output").innerHTML =
+                "Name: " + student.name + "<br>" +
+                "Age: " + student.age + "<br>" +
+                "Course: " + student.course + "<br>" +
+                "College: " + student.college;
+        }
+
+    </script>
+
+</body>
+
+</html>

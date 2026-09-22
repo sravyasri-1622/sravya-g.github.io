@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 68 - Loading Spinner</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f8fafc;
+            text-align: center;
+            padding: 40px;
+        }
+
+        nav a {
+            color: #2563eb;
+            text-decoration: none;
+            margin: 15px;
+        }
+
+        .spinner {
+            width: 70px;
+            height: 70px;
+            margin: 80px auto;
+            border: 7px solid #dbeafe;
+            border-top: 7px solid #2563eb;
+            border-radius: 50%;
+
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<nav>
+    <a href="../index.html">Home</a>
+    <a href="index.html">CSS Programs</a>
+</nav>
+
+<h1>Loading Spinner</h1>
+
+<div class="spinner"></div>
+
+<p>Loading...</p>
+
+</body>
+</html>

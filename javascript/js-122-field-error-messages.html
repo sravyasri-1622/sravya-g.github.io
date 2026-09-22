@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Field Error Messages</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            padding: 30px;
+            background: #f4f4f4;
+        }
+
+        .box {
+            max-width: 450px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+        input {
+            padding: 10px;
+            width: 60%;
+        }
+
+        .error {
+            color: red;
+            font-size: 14px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+
+    <h2>Registration Form</h2>
+
+    <label>Name:</label><br>
+    <input type="text" id="name">
+    <span id="nameError" class="error"></span>
+
+    <br><br>
+
+    <label>Email:</label><br>
+    <input type="text" id="email">
+    <span id="emailError" class="error"></span>
+
+    <br>
+
+    <button onclick="validateForm()">Submit</button>
+
+    <p id="result"></p>
+
+    <a href="index.html">← Back to Programs</a>
+
+</div>
+
+<script>
+function validateForm() {
+
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+
+    document.getElementById("nameError").textContent = "";
+    document.getElementById("emailError").textContent = "";
+
+    if (name === "") {
+        document.getElementById("nameError").textContent = " Name is required";
+    }
+
+    if (email === "") {
+        document.getElementById("emailError").textContent = " Email is required";
+    }
+
+    if (name !== "" && email !== "") {
+        document.getElementById("result").textContent =
+            "Form submitted successfully!";
+    }
+}
+</script>
+
+</body>
+</html>
